@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Morning Brief — 아카이브</title>
+<meta name="description" content="매일 아침 뉴스 요약과 GRE·논문 수준 고급 어휘 다이제스트 모음" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f4f1ea; --ink: #1a1714; --ink-soft: #4a443c; --line: #ddd6c8; --paper: #fffdf8;
+    --accent: #9a2b2b; --accent-2: #b8863b; --shadow: 30,25,20;
+    --hero-grad-1: #2a2622; --hero-grad-2: #4a3b2a;
+  }
+  html[data-theme="dark"] {
+    --bg: #121010; --ink: #ece6db; --ink-soft: #a89f90; --line: #322d27; --paper: #1c1916;
+    --accent: #e0716f; --accent-2: #d9ac5e; --shadow: 0,0,0;
+    --hero-grad-1: #0d0b0a; --hero-grad-2: #2a201a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink); font-family: "Noto Sans KR", system-ui, sans-serif; line-height: 1.7; -webkit-font-smoothing: antialiased; transition: background .5s, color .5s; }
+  .js .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1 !important; transform: none !important; } }
+
+  .topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 90; display: flex; align-items: center; justify-content: space-between; padding: 13px clamp(16px,5vw,60px); backdrop-filter: blur(12px); background: color-mix(in srgb, var(--bg) 70%, transparent); border-bottom: 1px solid transparent; transition: border-color .4s, background .4s; }
+  .topbar.scrolled { border-bottom-color: var(--line); }
+  .brand { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.05rem; letter-spacing: .5px; }
+  .brand b { color: var(--accent); }
+  .theme-toggle { background: none; border: 1px solid var(--line); color: var(--ink); width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 1rem; display: grid; place-items: center; transition: transform .4s, border-color .25s; }
+  .theme-toggle:hover { transform: rotate(20deg); border-color: var(--accent); }
+
+  .hero { min-height: 62vh; display: flex; flex-direction: column; justify-content: center; padding: 120px clamp(20px,6vw,80px) 70px; position: relative; overflow: hidden;
+    background: radial-gradient(ellipse 80% 60% at 70% 10%, color-mix(in srgb, var(--accent-2) 22%, transparent), transparent 60%), linear-gradient(160deg, var(--hero-grad-1), var(--hero-grad-2)); color: #f4ede0; }
+  .hero-kicker { font-family: "Fraunces", serif; letter-spacing: 4px; text-transform: uppercase; font-size: .8rem; color: var(--accent-2); margin-bottom: 22px; }
+  .hero h1 { font-family: "Noto Serif KR", serif; font-weight: 900; font-size: clamp(2.6rem,7vw,5rem); line-height: 1.05; letter-spacing: -1px; }
+  .hero h1 .accent { color: var(--accent-2); font-style: italic; font-family: "Fraunces", serif; }
+  .hero p { margin-top: 26px; max-width: 56ch; font-size: clamp(1rem,1.6vw,1.15rem); line-height: 1.9; color: #ded3c0; font-weight: 300; border-left: 2px solid var(--accent-2); padding-left: 22px; }
+
+  main { max-width: 1100px; margin: 0 auto; padding: 0 clamp(16px,5vw,40px); }
+  .archive-head { display: flex; align-items: baseline; gap: 16px; margin: 70px 0 36px; flex-wrap: wrap; }
+  .archive-head h2 { font-family: "Noto Serif KR", serif; font-weight: 900; font-size: clamp(1.6rem,3.5vw,2.2rem); }
+  .archive-head .en { font-family: "Fraunces", serif; font-style: italic; color: var(--accent); font-size: clamp(1rem,2vw,1.3rem); }
+  .archive-head .rule { flex: 1; height: 1px; background: var(--line); min-width: 40px; }
+
+  .entries { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; padding-bottom: 30px; }
+  .entry { display: flex; flex-direction: column; text-decoration: none; color: inherit; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 30px 28px; position: relative; overflow: hidden; box-shadow: 0 1px 2px rgba(var(--shadow),.04); transition: box-shadow .35s, transform .25s, border-color .35s, background .5s; }
+  .entry::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(var(--accent), var(--accent-2)); opacity: .85; }
+  .entry:hover { box-shadow: 0 18px 50px -22px rgba(var(--shadow),.32); transform: translateY(-4px); border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+  .entry-date { font-family: "Fraunces", serif; font-weight: 600; font-size: 2rem; letter-spacing: 1px; line-height: 1; }
+  .entry-day { font-size: .82rem; color: var(--accent); margin-top: 8px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; }
+  .entry-summary { margin-top: 16px; font-size: .95rem; color: var(--ink-soft); line-height: 1.7; flex: 1; }
+  .entry-meta { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .entry-meta span { font-size: .72rem; letter-spacing: .5px; color: var(--ink-soft); background: color-mix(in srgb, var(--accent) 9%, transparent); border: 1px solid var(--line); padding: 4px 10px; border-radius: 20px; }
+  .entry-go { margin-top: 20px; font-family: "Fraunces", serif; font-style: italic; color: var(--accent); font-size: 1rem; }
+
+  .empty { color: var(--ink-soft); padding: 30px 0; font-weight: 300; }
+
+  footer { margin-top: 70px; padding: 50px clamp(16px,5vw,40px); border-top: 1px solid var(--line); text-align: center; color: var(--ink-soft); }
+  footer .f-brand { font-family: "Fraunces", serif; font-size: 1.3rem; color: var(--ink); margin-bottom: 10px; }
+  footer .f-brand b { color: var(--accent); }
+  footer .f-meta { font-size: .82rem; line-height: 1.8; }
+</style>
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+  <div class="brand"><b>Morning</b> Brief · Archive</div>
+  <button class="theme-toggle" id="themeToggle" aria-label="테마 전환" title="다크/라이트 전환">◐</button>
+</header>
+
+<section class="hero">
+  <div class="hero-kicker">Daily News &amp; Vocabulary Digest</div>
+  <h1>매일 아침의 <span class="accent">세계</span>와 <span class="accent">언어</span>.</h1>
+  <p>매일 아침 주요 외신을 한국어로 요약하고, 기사에 등장한 GRE·논문 수준 고급 어휘를 뜻·동의어와 함께 정리한 다이제스트 모음입니다.</p>
+</section>
+
+<main>
+  <div class="archive-head">
+    <h2>지난 다이제스트</h2><span class="en">Archive</span><span class="rule"></span>
+  </div>
+  <div class="entries" id="entries">
+    <!-- ENTRIES:START -->
+    <a class="entry reveal" href="news-digest-2026-06-27.html">
+      <div class="entry-date">06 · 27</div>
+      <div class="entry-day">2026 · 토요일</div>
+      <div class="entry-summary">이란-미국 충돌 재발, 베네수엘라 대지진, 미 대법원 이민 권한 확대, AI·반도체 붐의 전방위 파급.</div>
+      <div class="entry-meta"><span>매체 6</span><span>기사 43</span><span>어휘 15</span></div>
+      <div class="entry-go">읽기 →</div>
+    </a>
+    <!-- ENTRIES:END -->
+  </div>
+</main>
+
+<footer>
+  <div class="f-brand"><b>Morning</b> Brief</div>
+  <div class="f-meta">
+    뉴스 &amp; GRE 어휘 다이제스트<br />
+    GRE Verbal 송종옥
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  root.classList.add("js");
+  var reveals = [].slice.call(document.querySelectorAll(".reveal"));
+  function showAll() { reveals.forEach(function (el) { el.classList.add("in"); }); }
+  if (!("IntersectionObserver" in window)) { showAll(); }
+  else {
+    try {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+      }, { threshold: 0.1 });
+      reveals.forEach(function (el) { io.observe(el); });
+    } catch (e) { showAll(); }
+  }
+  setTimeout(showAll, 1500);
+
+  try { var s = localStorage.getItem("mb-theme"); if (s) root.setAttribute("data-theme", s); } catch (e) {}
+  var tgl = document.getElementById("themeToggle");
+  if (tgl) tgl.addEventListener("click", function () {
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("mb-theme", next); } catch (e) {}
+  });
+
+  var topbar = document.getElementById("topbar");
+  window.addEventListener("scroll", function () {
+    if (topbar) topbar.classList.toggle("scrolled", document.documentElement.scrollTop > 40);
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>
