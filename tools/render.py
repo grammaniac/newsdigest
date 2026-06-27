@@ -352,6 +352,40 @@ def main():
     open(fname, "w", encoding="utf-8").write(out)
     print(f"렌더 완료: {os.path.basename(fname)} — 매체 {n_outlets}·기사 {n_stories}·어휘 {n_words}")
 
+    update_index(repo, date, data, n_outlets, n_stories, n_words)
+
+
+def update_index(repo, date, data, n_outlets, n_stories, n_words):
+    """아카이브 index.html 맨 위에 그날 카드를 추가(중복이면 건너뜀). publish.sh와 동일 로직."""
+    idx_path = os.path.join(repo, "index.html")
+    if not os.path.exists(idx_path):
+        return
+    idx = open(idx_path, encoding="utf-8").read()
+    href = f'href="news-digest-{date}.html"'
+    if href in idx:
+        print(f"인덱스에 이미 있음: {date} (건너뜀)")
+        return
+    y, mo, d = map(int, date.split("-"))
+    kdays = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"]
+    day = kdays[datetime.date(y, mo, d).weekday()]
+    mmdd = f"{mo:02d} · {d:02d}"
+    summary = data["heroSummary"].split(". ")[0].strip()
+    if len(summary) > 88:
+        summary = summary[:88].rstrip() + "…"
+    card = (
+        f'    <a class="entry reveal" href="news-digest-{date}.html">\n'
+        f'      <div class="entry-date">{mmdd}</div>\n'
+        f'      <div class="entry-day">{y} · {day}</div>\n'
+        f'      <div class="entry-summary">{esc(summary)}</div>\n'
+        f'      <div class="entry-meta"><span>매체 {n_outlets}</span><span>기사 {n_stories}</span><span>어휘 {n_words}</span></div>\n'
+        f'      <div class="entry-go">읽기 →</div>\n'
+        f'    </a>'
+    )
+    START = "<!-- ENTRIES:START -->"
+    idx = idx.replace(START, START + "\n" + card, 1)
+    open(idx_path, "w", encoding="utf-8").write(idx)
+    print(f"인덱스에 카드 추가: {date} ({day}) — 매체 {n_outlets}·기사 {n_stories}·어휘 {n_words}")
+
 
 if __name__ == "__main__":
     main()
