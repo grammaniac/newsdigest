@@ -1,9 +1,34 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+결정론적 렌더러: data/YYYY-MM-DD.json  →  news-digest-YYYY-MM-DD.html
+LLM 개입 없음. 내용은 전부 HTML 본문에 박힌다(progressive enhancement) — 절대 빈 페이지가 되지 않는다.
+템플릿은 이 파일 안에 박아둔다(외부 파일 의존 금지: 과거에 template.html 삭제로 파이프라인이 깨진 적 있음).
+
+사용법:  python3 tools/render.py data/2026-06-28.json
+JSON 스키마:
+{
+  "date": "2026-06-28",
+  "heroSummary": "...",            # 히어로 좌측 인용 박스
+  "bigPicture": "...",             # '오늘의 핵심' 본문
+  "outlets": [
+    {"name": "The New York Times", "tag": "Headlines · World",
+     "stories": [{"lead": "미국, 이란 군사 보복 타격", "body": "이란이 ..."}]}
+  ],
+  "vocab": [
+    {"w": "retaliation", "pos": "명사", "def": "보복, 앙갚음",
+     "syns": ["reprisal","retribution","requital","vengeance"], "src": "..."}
+  ]
+}
+"""
+import sys, json, html, datetime, os
+
+TEMPLATE = r'''<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Morning Brief · 2026-06-28 — 뉴스 & GRE 어휘</title>
+<title>Morning Brief · @@DATE@@ — 뉴스 & GRE 어휘</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Newsreader:ital@0;1&display=swap" rel="stylesheet" />
@@ -123,13 +148,13 @@
 
 <section class="hero">
   <div class="hero-kicker">Daily News &amp; Vocabulary Digest</div>
-  <div class="hero-date"><span class="dot"></span><span>2026년 6월 28일 · 한국 시각 기준</span></div>
+  <div class="hero-date"><span class="dot"></span><span>@@HERO_DATE@@ · 한국 시각 기준</span></div>
   <h1>오늘 아침의 <span class="accent">세계</span>, 그리고 오늘의 <span class="accent">언어</span>.</h1>
-  <p class="hero-summary">미국이 이란의 호르무즈 해협 선박 공격에 군사 보복을 단행하며 중동 긴장이 전면으로 재점화되었습니다. 베네수엘라 대지진으로 수백 명이 사망하고 의료·구조 체계가 붕괴 위기에 처한 가운데, 트럼프 행정부는 EU에 100% 관세를 위협하고 볼턴 전 안보보좌관이 기밀 유출 혐의를 인정하는 등 미국발 외교·정치 뉴스가 이어졌습니다. 이코노미스트는 36개국 보육비 분석과 'AI 반발' 확산을 주요 의제로 다루었습니다.</p>
+  <p class="hero-summary">@@HERO_SUMMARY@@</p>
   <div class="hero-stats">
-    <div class="stat"><div class="num" data-target="2">2</div><div class="lbl">News Outlets</div></div>
-    <div class="stat"><div class="num" data-target="20">20</div><div class="lbl">Stories</div></div>
-    <div class="stat"><div class="num" data-target="11">11</div><div class="lbl">GRE Words</div></div>
+    <div class="stat"><div class="num" data-target="@@N_OUTLETS@@">@@N_OUTLETS@@</div><div class="lbl">News Outlets</div></div>
+    <div class="stat"><div class="num" data-target="@@N_STORIES@@">@@N_STORIES@@</div><div class="lbl">Stories</div></div>
+    <div class="stat"><div class="num" data-target="@@N_WORDS@@">@@N_WORDS@@</div><div class="lbl">GRE Words</div></div>
   </div>
   <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
 </section>
@@ -137,43 +162,13 @@
 <main>
   <section class="section">
     <div class="section-head"><h2>오늘의 핵심</h2><span class="en">The Big Picture</span><span class="rule"></span></div>
-    <p class="big-picture reveal">중동에서 미국과 이란의 충돌이 군사 보복으로 다시 불붙었고, 베네수엘라 대지진은 한 나라의 재난 대응 체계를 시험대에 올렸다. 트럼프 행정부의 EU 100% 관세 위협과 볼턴 전 보좌관의 유죄 인정이 미국 정치를 흔드는 사이, 이코노미스트는 보육비와 'AI 반발'이라는 더 길게 갈 구조적 의제를 짚었다.</p>
+    <p class="big-picture reveal">@@BIG_PICTURE@@</p>
   </section>
 
   <section class="section">
     <div class="section-head"><h2>매체별 브리핑</h2><span class="en">By Outlet</span><span class="rule"></span></div>
     <div class="outlets">
-      <article class="outlet reveal">
-        <div class="outlet-top"><div class="outlet-name">The New York Times</div><div class="outlet-tag">Headlines · World</div></div>
-        <ul class="stories">
-          <li class="story"><span class="mark">▸</span><p><b>미국, 이란 군사 보복 타격.</b> 이란이 호르무즈 해협을 통과하던 컨테이너선을 공격한 다음 날, 트럼프 대통령이 이를 "어리석은 짓"으로 규탄하며 미군이 이란을 공습했다. 중동 전선 확대 가능성에 국제 사회가 긴장하고 있다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>베네수엘라 대지진 — 붕괴한 보건 체계.</b> 건물이 무너지고 수백 명이 사망한 가운데 현지 병원은 단수 상태로 운영되고, 소방관들은 손전등 부족으로 휴대폰 불빛에 의존하고 있다. 정부 지원이 부족하다는 주민 비판도 잇따른다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>유럽 폭염, 기반시설의 민낯을 드러내다.</b> 기차·원전·공장 등 유럽 기반시설이 한계에 달했다. 대부분 지금보다 시원했던 기후 시대에 설계된 것들로, 기후 적응의 시급성이 부각됐다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>우크라이나의 크림반도 집중 타격.</b> 수 주간의 강도 높은 공격으로 2014년 러시아의 불법 병합 이후 유례없는 수준의 비상사태가 크림반도에 선포됐다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>볼턴 전 안보보좌관, 기밀 오취급 유죄 인정.</b> 트럼프·바이든 두 행정부에 걸친 수사 끝에 존 볼턴이 혐의를 인정했으며, 실형 가능성도 있다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>밴스 부통령, 워터게이트 축소 발언 논란.</b> 닉슨을 실각시킨 워터게이트가 오늘 일어났다면 "12시간짜리 뉴스"에 불과했을 것이라며 자신을 닉슨에 비유해 파장을 일으켰다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>예일대, 법무부와 합의 모색.</b> 입학 전형이 백인·아시아계 지원자에게 불리하다는 법무부의 광범위한 조사에 맞서 예일대가 거물급 로펌을 선임하고 합의를 추진하고 있다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>EU에 100% 관세 위협.</b> 유럽의 디지털세에 반발한 트럼프 대통령이 유럽산 제품에 100% 관세를 경고하며 EU와의 무역 긴장이 다시 고조됐다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>Anthropic AI 모델 규제 완화.</b> 트럼프 행정부가 Anthropic의 첨단 AI 모델 'Mythos'에 대한 수출·사용 제한을 풀어 기업과의 갈등을 봉합했다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>삭스(Saks), 파산에서 부활.</b> 고급 백화점 삭스가 'Exemplar Luxury Group'으로 사명을 바꾸고 파산에서 벗어나 럭셔리 백화점에만 집중하는 전략을 발표했다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>우버, 운전자 신원조회 강화.</b> 강력 범죄 전과자도 승인됐다는 NYT 탐사 보도가 나온 뒤, 우버가 운전자 신원조회 기준을 대폭 강화했다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>오레곤 기후 소송 500억 달러.</b> 2021년 포틀랜드 폭염의 책임을 묻는 사상 최대 규모의 기후 소송에서 석유 기업 측 변호인단이 케이스 기각을 요청했다.</p></li>
-        </ul>
-      </article>
-
-      <article class="outlet reveal">
-        <div class="outlet-top"><div class="outlet-name">The Economist</div><div class="outlet-tag">Analysis · Bartleby</div></div>
-        <ul class="stories">
-          <li class="story"><span class="mark">▸</span><p><b>보육비 부담, 예상보다 빠르게 낮아지고 있다.</b> 36개 선진국의 보육비를 소득 대비로 비교 분석한 결과, 많은 나라에서 비용 부담이 낮아지고 있다는 예상 밖의 결과가 나타났다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>AI 반발, 이제 시작이다.</b> 이번 주 커버스토리. AI에 대한 사회적·정치적 반발이 이제 막 시작됐으며, 이에 어떻게 대처해야 할지를 집중 분석한다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>이란 강세 속 걸프 국가들의 과제.</b> 이란이 기세를 올리는 상황에서 걸프 국가들이 소소한 내분을 버리고 단합해야 한다고 이코노미스트는 촉구한다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>UPS vs FedEx — 물류 전쟁의 새 국면.</b> 비슷한 전략을 구사하는 두 물류 공룡 사이에서 UPS가 FedEx에 뒤처지는 이유와, 두 회사가 공통으로 직면한 위협을 분석한다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>일본 애니메이터 실종의 역설.</b> 애니메이션이 사상 최고 인기를 누리는데도 업계가 심각한 인력 위기에 시달리는 이유를 추적한다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>[Bartleby] 낙관주의를 지지하라.</b> 낙관적인 사람이 조직에서 더 성공하고 더 건강하다는 연구를 바탕으로, 낙관주의의 효용과 지나친 낙관의 함정을 균형 있게 분석한다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>[Bartleby] 피터의 법칙은 살아있다.</b> 사람은 자신의 무능이 드러나는 직급까지 승진한다는 '피터의 법칙'이 여전히 유효함을 검증한다.</p></li>
-          <li class="story"><span class="mark">▸</span><p><b>[Bartleby] 직장의 숨겨진 통화.</b> 지위(status)가 동기 부여, 갈등, 경력 선택에 얼마나 결정적인 영향을 미치는지를 분석한다.</p></li>
-        </ul>
-      </article>
+@@OUTLETS@@
     </div>
   </section>
 
@@ -186,82 +181,7 @@
       <button class="vbtn" id="shuffle">섞기 🔀</button>
     </div>
     <div class="vocab-grid" id="vocabGrid">
-      <div class="card reveal" tabindex="0">
-        <div class="card-inner">
-          <div class="face face-front"><span class="pos">명사</span><span class="flip-hint">hover ⟳</span><div class="word">retaliation</div><div class="word-sub">보복, 앙갚음</div></div>
-          <div class="face face-back"><div class="def">보복, 앙갚음</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>reprisal</span><span>retribution</span><span>requital</span><span>vengeance</span></div><div class="src">미국이 이란의 해협 선박 공격에 가한 군사 보복 — NYT</div></div>
-        </div>
-      </div>
-
-      <div class="card reveal" tabindex="0">
-        <div class="card-inner">
-          <div class="face face-front"><span class="pos">형용사</span><span class="flip-hint">hover ⟳</span><div class="word">emboldened</div><div class="word-sub">더욱 대담해진, 기세가 오른</div></div>
-          <div class="face face-back"><div class="def">더욱 대담해진, 기세가 오른</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>galvanized</span><span>fortified</span><span>heartened</span><span>invigorated</span></div><div class="src">기세를 올리는 이란과 걸프 국가들의 단합 과제 — The Economist</div></div>
-        </div>
-      </div>
-
-      <div class="card reveal" tabindex="0">
-        <div class="card-inner">
-          <div class="face face-front"><span class="pos">형용사</span><span class="flip-hint">hover ⟳</span><div class="word">opaque</div><div class="word-sub">불투명한; (비유) 이해하기 어려운, 난해한</div></div>
-          <div class="face face-back"><div class="def">불투명한; (비유) 이해하기 어려운, 난해한</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>inscrutable</span><span>impenetrable</span><span>cryptic</span><span>abstruse</span></div><div class="src">베네수엘라 정부의 불투명한 재난 대응 비판 — NYT</div></div>
-        </div>
-      </div>
-
-      <div class="card reveal" tabindex="0">
-        <div class="card-inner">
-          <div class="face face-front"><span class="pos">명사</span><span class="flip-hint">hover ⟳</span><div class="word">annexation</div><div class="word-sub">영토 병합, 합병</div></div>
-          <div class="face face-back"><div class="def">영토 병합, 합병</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>appropriation</span><span>incorporation</span><span>seizure</span><span>subjugation</span></div><div class="src">2014년 러시아의 크림반도 불법 병합 — NYT</div></div>
-        </div>
-      </div>
-
-      <div class="card reveal" tabindex="0">
-        <div class="card-inner">
-          <div class="face face-front"><span class="pos">명사</span><span class="flip-hint">hover ⟳</span><div class="word">scrutiny</div><div class="word-sub">면밀한 검토, 정밀 조사</div></div>
-          <div class="face face-back"><div class="def">면밀한 검토, 정밀 조사</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>examination</span><span>inspection</span><span>surveillance</span><span>investigation</span></div><div class="src">예일대 입학 전형에 대한 법무부의 조사 — NYT</div></div>
-        </div>
-      </div>
-
-      <div class="card reveal" tabindex="0">
-        <div class="card-inner">
-          <div class="face face-front"><span class="pos">명사</span><span class="flip-hint">hover ⟳</span><div class="word">melodrama</div><div class="word-sub">과장된 극적 상황, 멜로드라마</div></div>
-          <div class="face face-back"><div class="def">과장된 극적 상황, 멜로드라마</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>histrionics</span><span>sensationalism</span><span>theatrics</span><span>pathos</span></div><div class="src">밴스의 워터게이트 '12시간 뉴스' 축소 발언 맥락 — NYT</div></div>
-        </div>
-      </div>
-
-      <div class="card reveal" tabindex="0">
-        <div class="card-inner">
-          <div class="face face-front"><span class="pos">명사</span><span class="flip-hint">hover ⟳</span><div class="word">pied-à-terre</div><div class="word-sub">대도시의 임시 거처, 소형 세컨드홈 (프랑스어 차용)</div></div>
-          <div class="face face-back"><div class="def">대도시의 임시 거처, 소형 세컨드홈 (프랑스어 차용)</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>secondary residence</span><span>hideaway</span><span>retreat</span><span>townhouse</span></div><div class="src">도시 부동산·럭셔리 소비 관련 고급 어휘</div></div>
-        </div>
-      </div>
-
-      <div class="card reveal" tabindex="0">
-        <div class="card-inner">
-          <div class="face face-front"><span class="pos">형용사</span><span class="flip-hint">hover ⟳</span><div class="word">unprecedented</div><div class="word-sub">전례 없는, 유례없는</div></div>
-          <div class="face face-back"><div class="def">전례 없는, 유례없는</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>unparalleled</span><span>unrivaled</span><span>singular</span><span>novel</span></div><div class="src">크림반도에 선포된 유례없는 수준의 비상사태 — NYT</div></div>
-        </div>
-      </div>
-
-      <div class="card reveal" tabindex="0">
-        <div class="card-inner">
-          <div class="face face-front"><span class="pos">명사</span><span class="flip-hint">hover ⟳</span><div class="word">backlash</div><div class="word-sub">강한 반발, 역풍</div></div>
-          <div class="face face-back"><div class="def">강한 반발, 역풍</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>pushback</span><span>blowback</span><span>repercussion</span><span>counterreaction</span></div><div class="src">'AI 반발, 이제 시작이다' 커버스토리 — The Economist</div></div>
-        </div>
-      </div>
-
-      <div class="card reveal" tabindex="0">
-        <div class="card-inner">
-          <div class="face face-front"><span class="pos">형용사</span><span class="flip-hint">hover ⟳</span><div class="word">sprawling</div><div class="word-sub">광범위하게 퍼진, 무질서하게 확장된</div></div>
-          <div class="face face-back"><div class="def">광범위하게 퍼진, 무질서하게 확장된</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>expansive</span><span>wide-ranging</span><span>sweeping</span><span>extensive</span></div><div class="src">예일대를 겨눈 법무부의 '광범위한' 조사 — NYT</div></div>
-        </div>
-      </div>
-
-      <div class="card reveal" tabindex="0">
-        <div class="card-inner">
-          <div class="face face-front"><span class="pos">형용사</span><span class="flip-hint">hover ⟳</span><div class="word">soaring</div><div class="word-sub">치솟는, 급등하는</div></div>
-          <div class="face face-back"><div class="def">치솟는, 급등하는</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>skyrocketing</span><span>escalating</span><span>surging</span><span>burgeoning</span></div><div class="src">EU에 대한 100% 관세 위협 등 비용·긴장 급등 맥락</div></div>
-        </div>
-      </div>
+@@VOCAB@@
     </div>
   </section>
 </main>
@@ -269,8 +189,8 @@
 <footer>
   <div class="f-brand"><b>Morning</b> Brief</div>
   <div class="f-meta">
-    뉴스 &amp; GRE 어휘 다이제스트 · 2026년 6월 28일<br />
-    출처: The New York Times · The Economist<br />
+    뉴스 &amp; GRE 어휘 다이제스트 · @@HERO_DATE@@<br />
+    출처: @@SOURCES@@<br />
     GRE Verbal 송종옥
   </div>
 </footer>
@@ -349,3 +269,89 @@
 </script>
 </body>
 </html>
+'''
+
+
+def esc(s):
+    return html.escape(str(s), quote=False)
+
+
+def render_outlet(o):
+    rows = []
+    for st in o.get("stories", []):
+        lead = esc(st["lead"]).rstrip("。.")
+        body = esc(st["body"])
+        rows.append(
+            '          <li class="story"><span class="mark">▸</span>'
+            f'<p><b>{lead}.</b> {body}</p></li>'
+        )
+    return (
+        '      <article class="outlet reveal">\n'
+        '        <div class="outlet-top">'
+        f'<div class="outlet-name">{esc(o["name"])}</div>'
+        f'<div class="outlet-tag">{esc(o["tag"])}</div></div>\n'
+        '        <ul class="stories">\n'
+        + "\n".join(rows) + "\n"
+        '        </ul>\n'
+        '      </article>'
+    )
+
+
+def render_card(v):
+    syns = "".join(f"<span>{esc(s)}</span>" for s in v.get("syns", []))
+    src = esc(v.get("src", ""))
+    src_html = f'<div class="src">{src}</div>' if src else ""
+    return (
+        '      <div class="card reveal" tabindex="0">\n'
+        '        <div class="card-inner">\n'
+        f'          <div class="face face-front"><span class="pos">{esc(v["pos"])}</span>'
+        '<span class="flip-hint">hover ⟳</span>'
+        f'<div class="word">{esc(v["w"])}</div>'
+        f'<div class="word-sub">{esc(v["def"])}</div></div>\n'
+        f'          <div class="face face-back"><div class="def">{esc(v["def"])}</div>'
+        '<div class="syn-label">동의어 · Synonyms</div>'
+        f'<div class="syns">{syns}</div>{src_html}</div>\n'
+        '        </div>\n'
+        '      </div>'
+    )
+
+
+def main():
+    if len(sys.argv) < 2:
+        sys.exit("사용법: python3 tools/render.py data/YYYY-MM-DD.json")
+    data = json.load(open(sys.argv[1], encoding="utf-8"))
+    date = data["date"]
+    y, mo, d = map(int, date.split("-"))
+    hero_date = f"{y}년 {mo}월 {d}일"
+
+    outlets = data.get("outlets", [])
+    vocab = data.get("vocab", [])
+    n_outlets = len(outlets)
+    n_stories = sum(len(o.get("stories", [])) for o in outlets)
+    n_words = len(vocab)
+    sources = " · ".join(o["name"] for o in outlets)
+
+    out = TEMPLATE
+    repl = {
+        "@@DATE@@": date,
+        "@@HERO_DATE@@": hero_date,
+        "@@HERO_SUMMARY@@": esc(data["heroSummary"]),
+        "@@BIG_PICTURE@@": esc(data["bigPicture"]),
+        "@@N_OUTLETS@@": str(n_outlets),
+        "@@N_STORIES@@": str(n_stories),
+        "@@N_WORDS@@": str(n_words),
+        "@@OUTLETS@@": "\n\n".join(render_outlet(o) for o in outlets),
+        "@@VOCAB@@": "\n\n".join(render_card(v) for v in vocab),
+        "@@SOURCES@@": esc(sources),
+    }
+    for k, v in repl.items():
+        out = out.replace(k, v)
+
+    repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    fname = os.path.join(repo, f"news-digest-{date}.html")
+    open(fname, "w", encoding="utf-8").write(out)
+    print(f"렌더 완료: {os.path.basename(fname)} — 매체 {n_outlets}·기사 {n_stories}·어휘 {n_words}")
+
+
+if __name__ == "__main__":
+    main()
