@@ -1,0 +1,217 @@
+{
+  "date": "2026-06-28",
+  "heroSummary": "미국이 호르무즈 해협에서의 이란 공격에 보복 타격을 가하면서 중동 긴장이 위험 수위로 치솟았다. 베네수엘라 대규모 지진 피해와 유럽의 전례 없는 폭염이 인프라 위기를 부르고 있으며, 트럼프 행정부는 유럽에 100% 관세를 위협하고 볼턴 전 안보보좌관이 기밀유출 유죄를 인정하는 등 국내 정치 전선도 어수선한 하루였다.",
+  "bigPicture": "이란과의 군사적 충돌이 현실화되고 기후 위기가 글로벌 인프라를 흔드는 가운데, 트럼프 행정부의 관세·AI·법무 전선이 동시에 요동쳤다.",
+  "outlets": [
+    {
+      "name": "The New York Times",
+      "tag": "Headlines · World · Politics",
+      "stories": [
+        {
+          "lead": "US strikes Iran after container ship attack in Strait of Hormuz",
+          "body": "트럼프 대통령은 이란의 컨테이너선 공격을 '어리석은' 행동이라 비난하며 보복 타격을 명령했다."
+        },
+        {
+          "lead": "Venezuela earthquake rescue underway amid infrastructure crisis",
+          "body": "정부가 중장비 100여 대를 파견했지만 재난 지역 병원은 수도 없이 운영 중이다."
+        },
+        {
+          "lead": "Europe's heat wave exposes crumbling infrastructure",
+          "body": "열차, 원전, 공장 등이 고온에 무력화되며 대륙 전반의 인프라 취약성이 드러났다."
+        },
+        {
+          "lead": "Ukraine attacks spark state of emergency in Crimea",
+          "body": "2014년 러시아 병합 이래 가장 강도 높은 우크라이나의 타격으로 크름반도에 비상사태가 선포됐다."
+        },
+        {
+          "lead": "John Bolton pleads guilty to mishandling classified information",
+          "body": "전 트럼프 안보보좌관 볼턴이 기밀 오취급 혐의로 유죄를 인정했으며 실형 가능성도 있다."
+        },
+        {
+          "lead": "Trump threatens 100% tariff on European nations over tech taxes",
+          "body": "유럽의 빅테크 디지털세에 반발한 이 위협은 방금 타결된 미-EU 무역 합의와 정면 충돌한다."
+        },
+        {
+          "lead": "US eases restrictions on Anthropic's Mythos AI model",
+          "body": "트럼프 행정부가 앤트로픽 AI 모델 제한을 완화하면서 정부와 AI 기업 간 갈등이 일부 해소됐다."
+        },
+        {
+          "lead": "Vance downplays Watergate, compares himself to Nixon",
+          "body": "부통령 밴스가 워터게이트를 '12시간짜리 뉴스'로 폄하하고 '딥스테이트'가 닉슨을 끌어냈다고 주장했다."
+        },
+        {
+          "lead": "Pete Buttigieg separated from children after swatting tip",
+          "body": "허위 신고로 전 교통부 장관이 4세 쌍둥이와 강제 분리되는 사건이 발생했다."
+        },
+        {
+          "lead": "Yale seeks deal with Trump administration amid sprawling investigation",
+          "body": "입학 전형 차별 의혹 수사에 대응해 예일대가 고파워 로펌을 고용, 법무부와 합의를 모색하고 있다."
+        }
+      ]
+    },
+    {
+      "name": "The Economist",
+      "tag": "Analysis · Business · Society",
+      "stories": [
+        {
+          "lead": "Child care is becoming more affordable in some rich countries",
+          "body": "36개 부유국 비교 결과, 보육비가 소득 대비 여전히 높지만 일부 국가에서는 개선 추세가 나타났다."
+        },
+        {
+          "lead": "The AI backlash is only getting started",
+          "body": "이코노미스트 표지 기사로, 사회 전반에 AI 반감이 확산되는 원인과 대응 방안을 집중 분석했다."
+        },
+        {
+          "lead": "Gulf neighbours must unite as Iran grows bolder",
+          "body": "이란이 더욱 대담해진 상황에서 걸프 국가들이 내부 갈등을 내려놓고 공동 대응에 나서야 한다고 촉구했다."
+        },
+        {
+          "lead": "UPS is losing ground to FedEx in the logistics wars",
+          "body": "두 물류 거인은 유사한 전략을 추구하면서도 공통의 외부 위협에 직면해 있다."
+        },
+        {
+          "lead": "Japan's anime industry faces a labour crisis despite global popularity",
+          "body": "세계적 붐에도 불구하고 저임금과 혹독한 노동환경으로 일본 내 애니메이터가 사라지고 있다."
+        },
+        {
+          "lead": "Why you should almost always look on the bright side of life",
+          "body": "Bartleby 칼럼은 낙관주의의 함정과 이점을 균형 있게 분석하며, 낙관론자가 조직에서 더 성공한다는 연구를 소개했다."
+        },
+        {
+          "lead": "The Peter principle is alive and well in modern workplaces",
+          "body": "직원이 자신의 무능 수준까지 승진하는 현상이 오늘날 기업에서도 여전히 건재함을 분석했다."
+        }
+      ]
+    },
+    {
+      "name": "New York Review of Books",
+      "tag": "Ideas · Literary Criticism",
+      "stories": [
+        {
+          "lead": "The long, strange history of pedantry — an interview with Clare Bucknell",
+          "body": "Oxford 연구원 클레어 버크넬이 pedant라는 개념의 역사를 추적하며, 17~18세기 지적 여성 비하 수단으로 악용된 경위를 밝혔다."
+        },
+        {
+          "lead": "Against hedgehoggery: the politics of literary criticism",
+          "body": "이사야 베를린의 고슴도치 vs 여우 구분을 빌려, 이론 틀에 작품을 끼워 맞추는 '나쁜 고슴도치 식 비평'을 신랄하게 비판했다."
+        },
+        {
+          "lead": "Breaking down the wall between literature and visual art",
+          "body": "18세기 ut pictura poesis 전통을 논하며 문학 비평가와 미술사학자의 교류가 양쪽 학문을 풍요롭게 한다고 주장했다."
+        }
+      ]
+    },
+    {
+      "name": "The Athletic",
+      "tag": "Sports · WNBA · World Cup · NHL",
+      "stories": [
+        {
+          "lead": "Caitlin Clark injured amid WNBA officiating controversy",
+          "body": "통산 최고 성적을 기록 중인 클락이 등 부상으로 결장했다. 백인 스타 선수와 다수 흑인 선수로 구성된 리그 사이의 복잡한 역학이 논란을 증폭시키고 있다."
+        },
+        {
+          "lead": "Cape Verde becomes smallest nation ever to reach World Cup knockouts",
+          "body": "로드아일랜드보다 작은 카보베르데가 사우디아라비아와 무승부로 16강에 진출하며 역사를 썼다."
+        },
+        {
+          "lead": "Toronto Maple Leafs select Gavin McKenna first overall in NHL Draft",
+          "body": "시즌 100득점 잠재력으로 주목받은 펜실베이니아주립대 출신 맥케나가 전체 1순위에 호명됐다."
+        },
+        {
+          "lead": "New York Mets fire manager Carlos Mendoza after 34-47 start",
+          "body": "MLB 두 번째로 높은 연봉 지출에도 최악의 성적을 거두자 멘도사 감독이 경질됐다."
+        },
+        {
+          "lead": "Serena Williams set to return at Wimbledon at age 44",
+          "body": "9년 만의 그랜드슬램 복귀를 앞둔 세레나 윌리엄스가 윔블던 최대 관심사로 떠올랐다."
+        }
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "w": "erudition",
+      "pos": "명사",
+      "def": "박학다식함, 깊은 학식",
+      "syns": ["scholarship", "learnedness", "learning", "acumen"],
+      "src": "NYRB 인터뷰에서 페단트의 평판이 실제 학식(erudition)이 아닌 행동에 좌우됐다는 맥락으로 등장"
+    },
+    {
+      "w": "dilettante",
+      "pos": "명사",
+      "def": "피상적 취미가, 어설픈 교양인",
+      "syns": ["dabbler", "amateur", "aesthete", "trifler"],
+      "src": "NYRB에서 지식인과 딜레탕트들의 나쁜 행태에 대한 역사적 관심을 논하며 사용"
+    },
+    {
+      "w": "polemical",
+      "pos": "형용사",
+      "def": "논쟁적인, 반박을 목적으로 하는",
+      "syns": ["contentious", "disputatious", "tendentious", "combative"],
+      "src": "NYRB에서 페단트라는 낙인찍기가 본질적으로 논쟁적 행위(polemical)임을 설명하며 사용"
+    },
+    {
+      "w": "valence",
+      "pos": "명사",
+      "def": "(단어나 개념의) 함의, 의미론적 힘",
+      "syns": ["resonance", "import", "potency", "significance"],
+      "src": "NYRB에서 pedantry라는 단어의 현대적 함의(contemporary valence)를 묻는 질문에서 등장"
+    },
+    {
+      "w": "crotchet",
+      "pos": "명사",
+      "def": "별난 고집, 기이한 집착",
+      "syns": ["whim", "idiosyncrasy", "caprice", "quirk"],
+      "src": "NYRB에서 기행, 별난 고집, 취미마가(eccentricities, crotchets, and hobbyhorses)가 훌륭한 지적 동력이라고 언급"
+    },
+    {
+      "w": "centripetal",
+      "pos": "형용사",
+      "def": "구심적인, 중심을 향해 통합하는",
+      "syns": ["unifying", "convergent", "centralizing", "cohesive"],
+      "src": "NYRB에서 이사야 베를린의 원심적(centrifugal) vs 구심적(centripetal) 사상가 구분을 소개하며 등장"
+    },
+    {
+      "w": "trite",
+      "pos": "형용사",
+      "def": "진부한, 상투적인",
+      "syns": ["hackneyed", "banal", "platitudinous", "worn-out"],
+      "src": "NYRB에서 18세기 풍자 작가가 진부한 관찰(trite observations)을 빠뜨리지 말라고 조언한 대목에서 인용"
+    },
+    {
+      "w": "slattern",
+      "pos": "명사",
+      "def": "단정치 못한 여자 (역사적 모욕어)",
+      "syns": ["sloven", "trollop", "slovenly woman"],
+      "src": "NYRB에서 18세기에 지적 여성을 slatterns라고 부르며 성적 낙인을 찍은 역사를 설명할 때 인용"
+    },
+    {
+      "w": "prerogative",
+      "pos": "명사",
+      "def": "특권, 고유한 권한",
+      "syns": ["privilege", "entitlement", "perquisite", "birthright"],
+      "src": "NYRB에서 시간성이라는 서사의 특권(narrative's prerogative of temporality)을 회화가 단일 순간 안에 담아야 한다는 맥락에서 사용"
+    },
+    {
+      "w": "furor",
+      "pos": "명사",
+      "def": "대소동, 격분, 공분",
+      "syns": ["uproar", "tumult", "brouhaha", "commotion"],
+      "src": "The Athletic에서 클락과 타우라시가 WNBA 30주년 기념 포스터에 빠진 것을 둘러싼 인터넷 대소동(internet furor)을 묘사할 때 사용"
+    },
+    {
+      "w": "overreach",
+      "pos": "명사/동사",
+      "def": "분수를 넘는 야망, 지나친 확장",
+      "syns": ["hubris", "presumption", "excess", "arrogance"],
+      "src": "NYRB에서 이탈리아 르네상스 시대의 페단테가 어리석음과 지적 과욕(intellectual overreach)의 상징이었다고 설명할 때 사용"
+    },
+    {
+      "w": "temporality",
+      "pos": "명사",
+      "def": "시간성, 시간에 귀속된 성질",
+      "syns": ["transience", "ephemerality", "impermanence", "time-boundedness"],
+      "src": "NYRB에서 회화가 서사의 특권인 시간성(temporality)—과거, 현재, 미래—을 단일 장면 안에 압축해야 한다는 논의에서 등장"
+    }
+  ]
+}
