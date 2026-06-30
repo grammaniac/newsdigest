@@ -21,10 +21,21 @@ if [ ! -f "$TXT" ]; then
   exit 0
 fi
 
+# Google Drive 파일을 직접 읽으면 백그라운드(launchd)에서 'Resource deadlock avoided'(EDEADLK)가
+# 날 수 있다 — 온라인 전용 파일을 즉석 materialize 하려다 충돌. 그래서 먼저 로컬로 복사한 뒤
+# 그 복사본을 파싱한다. 복사가 곧 강제 다운로드 역할을 하며, 실패 시 재시도.
+LOCAL_TXT="$REPO/.today.txt"
+copied=0
+for try in 1 2 3 4 5; do
+  if cp "$TXT" "$LOCAL_TXT" 2>>"$LOG"; then copied=1; break; fi
+  log "복사 재시도 $try (Drive materialize 대기)…"; sleep 20
+done
+if [ "$copied" != "1" ]; then log "❌ Drive .txt 로컬 복사 실패 — 중단"; exit 1; fi
+
 # 원격과 동기화 (로컬이 뒤처져 push 거부되는 일 방지)
 git pull --rebase --quiet 2>>"$LOG" || log "git pull 경고(무시하고 진행)"
 
-python3 tools/parse_doc.py "$TXT" "$DATE" >>"$LOG" 2>&1 || { log "파싱 실패 — 중단"; exit 1; }
+python3 tools/parse_doc.py "$LOCAL_TXT" "$DATE" >>"$LOG" 2>&1 || { log "파싱 실패 — 중단"; exit 1; }
 python3 tools/render.py "data/$DATE.json" >>"$LOG" 2>&1 || { log "렌더 실패 — 중단"; exit 1; }
 
 git add -A
