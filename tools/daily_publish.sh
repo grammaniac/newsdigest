@@ -41,6 +41,22 @@ python3 tools/render.py "data/$DATE.json" >>"$LOG" 2>&1 || { log "렌더 실패 
 git add -A
 if git diff --cached --quiet; then
   log "변경 없음 — 이미 최신"
+  # 이전 실행에서 push는 됐는데 GitHub Pages 배포 단계만 일시 실패했을 수 있다
+  # (예: 2026-07-05, "deploy Failed in 8 seconds"). 라이브 URL이 404면 빈 커밋으로 재배포 트리거.
+  LIVE_URL="https://grammaniac.github.io/newsdigest/news-digest-$DATE.html"
+  code="$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "$LIVE_URL" || echo 000)"
+  if [ "$code" = "404" ]; then
+    log "⚠ 라이브 페이지 404 — Pages 배포 실패로 판단, 빈 커밋으로 재배포 트리거"
+    git commit --allow-empty -m "Retrigger Pages deploy ($DATE)" >>"$LOG" 2>&1
+    if git push >>"$LOG" 2>&1; then
+      log "🔁 재배포 트리거 push 완료 → $LIVE_URL"
+    else
+      log "❌ 재배포 트리거 push 실패"
+      exit 1
+    fi
+  else
+    log "라이브 확인: HTTP $code — 정상"
+  fi
   exit 0
 fi
 git commit -m "Digest $DATE (Mac auto-publish)" >>"$LOG" 2>&1
