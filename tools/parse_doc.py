@@ -83,8 +83,17 @@ def parse(text, date):
         blocks.append(cur)
 
     hero, big, outlets, vocab = "", "", [], []
+    _SECTION_HEADERS = ("오늘의 핵심", "큰 그림", "[큰 그림", "오늘의 고급 어휘")
     for b in blocks:
-        title, body = b[0], b[1:]
+        # 블록 맨 위에 문서 제목 줄(예: "뉴스 브리핑 — 2026년 7월 16일 (KST)")이
+        # 붙는 경우가 있어, 알려진 섹션 헤더를 블록 안에서 찾아 그 지점부터 본문으로 삼는다.
+        # (헤더가 없으면 hidx=0 → 매체 블록은 종전대로 제목=매체명.)
+        hidx = 0
+        for i, ln in enumerate(b):
+            if any(ln.startswith(h) for h in _SECTION_HEADERS):
+                hidx = i
+                break
+        title, body = b[hidx], b[hidx + 1:]
         if title.startswith("오늘의 핵심"):
             hero = " ".join(body).strip()
         elif title.startswith("큰 그림") or title.startswith("[큰 그림"):
