@@ -17,6 +17,8 @@ TAGS = [
     ("New York Review of Books", "Essays"),
     ("Athletic", "Sports"),
     ("Washington Post", "Politics"),
+    ("Word Smarts", "표현·언어"),
+    ("All Healthy", "건강"),
 ]
 
 
@@ -52,6 +54,12 @@ def parse_vocab(ln):
         return None
     w = t[:m.start()].strip()
     rest = t[m.end():].strip()
+    # 출처(선택): "| 출처: ..." 를 먼저 떼어낸다 (없으면 기존과 동일 — 하위호환)
+    src = ""
+    sm = re.search(r"\|?\s*출처\s*:", rest)
+    if sm:
+        src = rest[sm.end():].strip()
+        rest = rest[:sm.start()].rstrip().rstrip("|").strip()
     syns = []
     left = rest
     if "동의어:" in rest:
@@ -65,7 +73,7 @@ def parse_vocab(ln):
         defn = left[:pm.start()].strip()
     else:
         defn = left.strip()
-    return {"w": w, "pos": pos, "def": defn, "syns": syns, "src": ""}
+    return {"w": w, "pos": pos, "def": defn, "syns": syns, "src": src}
 
 
 def parse(text, date):
