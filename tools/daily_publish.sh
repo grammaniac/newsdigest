@@ -16,21 +16,30 @@ log() { echo "[$(TZ=Asia/Seoul date '+%F %T')] $*" >> "$LOG"; }
 cd "$REPO" || { log "repo cd 실패"; exit 1; }
 log "=== run for $DATE ==="
 
-if [ ! -f "$TXT" ]; then
-  log "아직 .txt 없음 (동기화 대기 또는 루틴 미실행): $TXT"
-  exit 0
-fi
-
-# Google Drive 파일을 직접 읽으면 백그라운드(launchd)에서 'Resource deadlock avoided'(EDEADLK)가
-# 날 수 있다 — 온라인 전용 파일을 즉석 materialize 하려다 충돌. 그래서 먼저 로컬로 복사한 뒤
-# 그 복사본을 파싱한다. 복사가 곧 강제 다운로드 역할을 하며, 실패 시 재시도.
 LOCAL_TXT="$REPO/.today.txt"
-copied=0
-for try in 1 2 3 4 5; do
-  if cp "$TXT" "$LOCAL_TXT" 2>>"$LOG"; then copied=1; break; fi
-  log "복사 재시도 $try (Drive materialize 대기)…"; sleep 20
-done
-if [ "$copied" != "1" ]; then log "❌ Drive .txt 로컬 복사 실패 — 중단"; exit 1; fi
+if [ ! -f "$TXT" ]; then
+  # 폴백(2026-07-24 장애 재발 방지): Drive 앱이 죽어 동기화가 멈춰 있어도 클라우드
+  # 루틴이 만든 파일을 API로 직접 내려받아 진행한다. Drive에도 없으면 루틴 미실행.
+  if python3 tools/fetch_from_drive.py "$DATE" "$LOCAL_TXT" >>"$LOG" 2>&1; then
+    log "🩹 동기화 파일 없음 → Drive API 직접 다운로드로 우회 진행"
+    if ! pgrep -f "Google Drive.app/Contents/MacOS/Google Drive" >/dev/null 2>&1; then
+      open -a "Google Drive" 2>>"$LOG" && log "⚠ Google Drive 앱이 죽어 있어 재기동함 (동기화 복구)"
+    fi
+  else
+    log "아직 .txt 없음 (동기화 대기 또는 루틴 미실행): $TXT"
+    exit 0
+  fi
+else
+  # Google Drive 파일을 직접 읽으면 백그라운드(launchd)에서 'Resource deadlock avoided'(EDEADLK)가
+  # 날 수 있다 — 온라인 전용 파일을 즉석 materialize 하려다 충돌. 그래서 먼저 로컬로 복사한 뒤
+  # 그 복사본을 파싱한다. 복사가 곧 강제 다운로드 역할을 하며, 실패 시 재시도.
+  copied=0
+  for try in 1 2 3 4 5; do
+    if cp "$TXT" "$LOCAL_TXT" 2>>"$LOG"; then copied=1; break; fi
+    log "복사 재시도 $try (Drive materialize 대기)…"; sleep 20
+  done
+  if [ "$copied" != "1" ]; then log "❌ Drive .txt 로컬 복사 실패 — 중단"; exit 1; fi
+fi
 
 # 원격과 동기화 (로컬이 뒤처져 push 거부되는 일 방지)
 git pull --rebase --quiet 2>>"$LOG" || log "git pull 경고(무시하고 진행)"
