@@ -1,0 +1,140 @@
+{
+  "date": "2026-08-13",
+  "heroSummary": "트럼프 대통령이 이란의 위협을 피해 터키에서 케이터링 컨테이너에 숨겨진 채 비밀 대피했으며, 기자와 직원들을 태운 에어포스원은 미끼 역할로 허공을 날았다는 사실이 뒤늦게 밝혀졌다. 미국 예비선거에서는 위스콘신 민주당 주지사 경선이 초박빙 접전을 이루며 진보 대 온건파의 전국적 내전이 미결 상태로 남았다. 탈레반 집권 5주년을 맞은 아프가니스탄은 파키스탄과 준전쟁 상태, 400만 명 강제 귀환, 여학생 240만 명 교육 차단 속에서 '참담한 평온'을 유지하고 있으며 국제사회의 고립이 계속되고 있다.",
+  "bigPicture": "트럼프 대통령이 이란의 위협을 피해 터키에서 케이터링 컨테이너에 숨겨진 채 비밀 대피했으며, 기자와 직원들을 태운 에어포스원은 미끼 역할로 허공을 날았다는 사실이 뒤늦게 밝혀졌다. 미국 예비선거에서는 위스콘신 민주당 주지사 경선이 초박빙 접전을 이루며 진보 대 온건파의 전국적 내전이 미결 상태로 남았다. 탈레반 집권 5주년을 맞은 아프가니스탄은 파키스탄과 준전쟁 상태, 400만 명 강제 귀환, 여학생 240만 명 교육 차단 속에서 '참담한 평온'을 유지하고 있으며 국제사회의 고립이 계속되고 있다.",
+  "outlets": [],
+  "vocab": [
+    {
+      "w": "camber",
+      "pos": "명사·동사",
+      "def": "위로 완만하게 굽은 아치형 곡선",
+      "syns": [
+        "arch",
+        "convexity",
+        "curvature"
+      ],
+      "src": "Word Daily"
+    },
+    {
+      "w": "thrall",
+      "pos": "명사",
+      "def": "예속 상태, 강한 지배력에 완전히 사로잡힘",
+      "syns": [
+        "bondage",
+        "captivity",
+        "subjugation"
+      ],
+      "src": "Word Genius"
+    },
+    {
+      "w": "scintillation",
+      "pos": "명사",
+      "def": "번쩍이는 빛, 불꽃 같은 매력·재기",
+      "syns": [
+        "sparkle",
+        "coruscation",
+        "brilliance"
+      ],
+      "src": "Word Genius"
+    },
+    {
+      "w": "pariah",
+      "pos": "명사",
+      "def": "사회에서 배척된 추방자, 천민",
+      "syns": [
+        "outcast",
+        "leper",
+        "exile"
+      ],
+      "src": ""
+    },
+    {
+      "w": "veneer",
+      "pos": "명사",
+      "def": "얇은 겉치레, 표면상의 외양",
+      "syns": [
+        "facade",
+        "gloss",
+        "pretense"
+      ],
+      "src": ""
+    },
+    {
+      "w": "overweening",
+      "pos": "형용사",
+      "def": "지나치게 자만하는, 오만 불손한",
+      "syns": [
+        "arrogant",
+        "presumptuous",
+        "hubris"
+      ],
+      "src": ""
+    },
+    {
+      "w": "geomancy",
+      "pos": "명사",
+      "def": "지리적 특징이나 지형에 의한 점술, 풍수",
+      "syns": [
+        "divination",
+        "augury",
+        "prognostication"
+      ],
+      "src": ""
+    },
+    {
+      "w": "pragmatic",
+      "pos": "형용사",
+      "def": "이론보다 현실에 기반한, 실용적인",
+      "syns": [
+        "practical",
+        "utilitarian",
+        "empirical"
+      ],
+      "src": ""
+    },
+    {
+      "w": "chokepoint",
+      "pos": "명사",
+      "def": "전략적 병목 지점, 통제 가능한 요충지",
+      "syns": [
+        "bottleneck",
+        "strait",
+        "nexus"
+      ],
+      "src": ""
+    },
+    {
+      "w": "insurgency",
+      "pos": "명사",
+      "def": "정권에 저항하는 무장 반란 운동",
+      "syns": [
+        "rebellion",
+        "uprising",
+        "insurrection"
+      ],
+      "src": ""
+    },
+    {
+      "w": "embattled",
+      "pos": "형용사",
+      "def": "사방의 공격과 비판을 받고 있는, 궁지에 몰린",
+      "syns": [
+        "beleaguered",
+        "besieged",
+        "harassed"
+      ],
+      "src": ""
+    },
+    {
+      "w": "decimated",
+      "pos": "형용사",
+      "def": "전력이나 수가 극적으로 감소·파괴된",
+      "syns": [
+        "devastated",
+        "ravaged",
+        "annihilated"
+      ],
+      "src": ""
+    }
+  ]
+}
