@@ -131,84 +131,102 @@ def parse_vocab_lines(lines):
     return out
 
 
-def parse(text, date):
-    lines = [ln.strip() for ln in text.split("\n")]
-    lines = [ln for ln in lines if ln and ln != "\\"]
+_SECTION_HEADERS = ("오늘의 핵심", "큰 그림", "[큰 그림", "오늘의 고급 어휘")
 
-    blocks, cur = [], []
-    for ln in lines:
-        if is_divider(ln):
-            if cur:
-                blocks.append(cur); cur = []
-        else:
-            cur.append(ln)
-    if cur:
-        blocks.append(cur)
+# 제목 판별용 매체명 힌트. TAGS(태그 부여용)와 분리해 둔다 — 여기에 별칭을 넣어도
+# 기존 태그 결과가 바뀌지 않도록 하기 위함.
+_OUTLET_HINTS = (
+    "New York Times", "NYT", "Wall Street Journal", "WSJ", "Economist",
+    "New York Review of Books", "NY Review of Books", "NYRB",
+    "Athletic", "Washington Post", "Word Smarts", "Word Daily",
+    "Word Genius", "All Healthy",
+)
+
+
+def _is_content(s):
+    """제목이 될 수 없는 줄 — 불릿·번호 어휘 항목·동의어/어원 부속 줄."""
+    return (s.startswith("•") or s.startswith("-")
+            or bool(re.match(r"^\d+[.)]\s", s))
+            or s.startswith("동의어") or s.startswith("어원"))
+
+
+def _strip_the(s):
+    return re.sub(r"^[Tt]he\s+", "", s).strip()
+
+
+def _starts_with_outlet(s):
+    """줄이 알려진 매체명으로 '시작'하는가. 매체 제목은 뒤에 부제가 길게 붙는 날이 있어
+    (예: 'The Economist (August 3rd 2026 — The World in Brief 등)') 길이로는 가를 수 없다."""
+    t = _strip_the(s).lower()
+    return any(t.startswith(_strip_the(k).lower()) for k in _OUTLET_HINTS)
+
+
+def _is_heading(s, nxt):
+    """섹션/매체 제목 줄인지 판정. 구분선·불릿 유무에 의존하지 않는다."""
+    if any(s.startswith(h) for h in _SECTION_HEADERS):
+        return True
+    if _is_content(s):
+        return False
+    # 알려진 매체명으로 시작하고 문장으로 끝나지 않는 줄 = 매체 제목
+    if _starts_with_outlet(s) and not s.endswith((".", "다", "!", "?")):
+        return True
+    # 모르는 매체라도, 짧고 문장으로 끝나지 않으며 바로 다음 줄이 불릿이면 제목으로 본다
+    if len(s) <= 40 and not s.endswith((".", "다", "!", "?")) and nxt.startswith("•"):
+        return True
+    return False
+
+
+def _pick(body):
+    """본문 줄 고르기: 불릿이 하나라도 있으면 불릿만(종전 동작 그대로),
+    하나도 없으면 모든 줄을 본문으로 본다(2026-08-13처럼 불릿 없이 산문으로 오는 형식)."""
+    bullets = [l for l in body if l.startswith("•")]
+    return bullets if bullets else body
+
+
+def parse(text, date):
+    """구분선에 의존하지 않는 제목/본문 상태기계.
+    각 줄을 '제목'과 '본문'으로 분류해 섹션을 만들고, 섹션 종류에 따라 해석한다.
+    구분선·빈 줄은 구조로 쓰지 않고 버린다 — 형식이 바뀌어도(구분선 유무, 불릿 유무,
+    어휘 한 줄/두 줄 형식) 같은 결과가 나오도록 하기 위함."""
+    raw = [ln.strip() for ln in text.split("\n")]
+    lines = [ln for ln in raw if ln and ln != "\\" and not is_divider(ln)]
+
+    sections = []   # [kind, name, [본문 줄]]
+    cur = None
+    for i, s in enumerate(lines):
+        nxt = lines[i + 1] if i + 1 < len(lines) else ""
+        if _is_heading(s, nxt):
+            if s.startswith("오늘의 핵심"):
+                kind = "hero"
+            elif s.startswith("큰 그림") or s.startswith("[큰 그림"):
+                kind = "big"
+            elif s.startswith("오늘의 고급 어휘"):
+                kind = "vocab"
+            else:
+                kind = "outlet"
+            cur = [kind, s, []]
+            sections.append(cur)
+        elif cur is not None:
+            cur[2].append(s)
+        # cur 가 None 인 줄 = 첫 제목 이전의 문서 제목 줄 → 버린다
+
+    def joined(body):
+        return " ".join(l.lstrip("•").strip() for l in body).strip()
 
     hero, big, outlets, vocab = "", "", [], []
-    # 섹션/매체 제목이 구분선으로 위아래 밑줄 쳐져 제목만의 블록이 되고 본문이 다음 블록으로
-    # 분리되는 형식(2026-08-11 드리프트)이 있다. 제목만의 블록은 pending에 기억해 두고
-    # 다음 블록을 그 섹션의 본문으로 삼는다. 종전 형식(제목+본문 한 블록)은 그대로 동작.
-    pending = None  # ("hero"|"big"|"vocab", None) 또는 ("outlet", 매체명)
-    _SECTION_HEADERS = ("오늘의 핵심", "큰 그림", "[큰 그림", "오늘의 고급 어휘")
-
-    def joined(lines):
-        return " ".join(ln.lstrip("•").strip() for ln in lines).strip()
-
-    for b in blocks:
-        # 블록 맨 위에 문서 제목 줄(예: "뉴스 브리핑 — 2026년 7월 16일 (KST)")이
-        # 붙는 경우가 있어, 알려진 섹션 헤더를 블록 안에서 찾아 그 지점부터 본문으로 삼는다.
-        # (헤더가 없으면 hidx=0 → 매체 블록은 종전대로 제목=매체명.)
-        hidx = 0
-        for i, ln in enumerate(b):
-            if any(ln.startswith(h) for h in _SECTION_HEADERS):
-                hidx = i
-                break
-        title, body = b[hidx], b[hidx + 1:]
-        if title.startswith("오늘의 핵심"):
-            if body:
+    for kind, name, body in sections:
+        if kind == "hero":
+            if not hero:
                 hero = joined(body)
-                pending = None
-            else:
-                pending = ("hero", None)
-        elif title.startswith("큰 그림") or title.startswith("[큰 그림"):
-            if body:
+        elif kind == "big":
+            if not big:
                 big = joined(body)
-                pending = None
-            else:
-                pending = ("big", None)
-        elif title.startswith("오늘의 고급 어휘"):
-            if body:
-                vocab.extend(parse_vocab_lines(body))
-                pending = None
-            else:
-                pending = ("vocab", None)
-        elif pending is not None and pending[0] in ("hero", "big", "vocab"):
-            kind = pending[0]
-            pending = None
-            allv = [title] + body
-            if kind == "hero":
-                hero = joined(allv)
-            elif kind == "big":
-                big = joined(allv)
-            else:
-                vocab.extend(parse_vocab_lines(allv))
-        elif title.startswith("•"):
-            # 블록 전체가 기사 불릿 — 직전 블록이 매체명 단독 블록이었던 형식
-            if pending is not None and pending[0] == "outlet":
-                name = pending[1]
-                stories = [parse_story(ln) for ln in [title] + body if ln.startswith("•")]
-                if stories:
-                    outlets.append({"name": name, "tag": tag_for(name), "stories": stories})
-            pending = None
+        elif kind == "vocab":
+            vocab.extend(parse_vocab_lines(_pick(body)))
         else:
-            stories = [parse_story(ln) for ln in body if ln.startswith("•")]
+            stories = [parse_story(l) for l in _pick(body)]
             if stories:
-                outlets.append({"name": title, "tag": tag_for(title), "stories": stories})
-                pending = None
-            elif not body:
-                # 제목 한 줄짜리 블록 — 매체명이 구분선 사이에 홀로 온 것으로 보고 다음 블록을 기다린다
-                pending = ("outlet", title)
+                outlets.append({"name": name, "tag": tag_for(name), "stories": stories})
 
     if not big:
         big = hero
@@ -224,12 +242,18 @@ def main():
     data = parse(text, date)
     repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     out = os.path.join(repo, "data", f"{date}.json")
+    n_st = sum(len(o["stories"]) for o in data["outlets"])
+    print(f"파싱 결과: {os.path.basename(out)} — 매체 {len(data['outlets'])}·기사 {n_st}·어휘 {len(data['vocab'])}")
+
+    # 검증 실패 시에는 JSON을 쓰지 않는다. 예전엔 깨진 JSON을 그대로 써 두는 바람에
+    # 다음날 성공한 실행의 `git add -A`에 딸려 커밋돼 빈 페이지가 발행됐다(2026-08-13 사고).
+    if not data["heroSummary"] or not data["outlets"] or not data["vocab"]:
+        print("⚠ 경고: 비어 있는 핵심 필드가 있습니다 — Doc 형식 확인 필요 (JSON 미기록)")
+        sys.exit(2)
+
     with open(out, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    n_st = sum(len(o["stories"]) for o in data["outlets"])
-    print(f"파싱 완료: {os.path.basename(out)} — 매체 {len(data['outlets'])}·기사 {n_st}·어휘 {len(data['vocab'])}")
-    if not data["heroSummary"] or not data["outlets"] or not data["vocab"]:
-        print("⚠ 경고: 비어 있는 핵심 필드가 있습니다 — Doc 형식 확인 필요"); sys.exit(2)
+    print(f"파싱 완료: {os.path.basename(out)}")
 
 
 if __name__ == "__main__":
