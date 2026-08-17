@@ -16,6 +16,11 @@ log() { echo "[$(TZ=Asia/Seoul date '+%F %T')] $*" >> "$LOG"; }
 cd "$REPO" || { log "repo cd 실패"; exit 1; }
 log "=== run for $DATE ==="
 
+# 원격과 먼저 동기화한다(로컬이 뒤처져 push가 거부되는 것 방지).
+# 반드시 파일을 만들기 '전'에 — 뒤에서 하면 ingest/parse가 만든 변경 때문에
+# "cannot pull with rebase: You have unstaged changes"로 실패한다.
+git pull --rebase --quiet 2>>"$LOG" || log "git pull 경고(무시하고 진행)"
+
 LOCAL_TXT="$REPO/.today.txt"
 LOCAL_JSON="$REPO/.today.json"
 JSON="$SYNC/뉴스데이터-$DATE.json"
@@ -46,7 +51,6 @@ fetch() {   # fetch <출력경로> <Drive파일명> <동기화폴더경로>
 INGESTED=0
 fetch "$LOCAL_JSON" "뉴스데이터-$DATE.json" "$JSON" || true
 if [ -s "$LOCAL_JSON" ]; then
-  git pull --rebase --quiet 2>>"$LOG" || log "git pull 경고(무시하고 진행)"
   if python3 tools/ingest_json.py "$LOCAL_JSON" "$DATE" >>"$LOG" 2>&1; then
     INGESTED=1
     log "✅ JSON 계약으로 수신 완료 (산문 파서 우회)"
@@ -67,9 +71,6 @@ if [ "$INGESTED" != "1" ]; then
     open -a "Google Drive" 2>>"$LOG" && log "⚠ Google Drive 앱이 죽어 있어 재기동함 (동기화 복구)"
   fi
 fi
-
-# 원격과 동기화 (로컬이 뒤처져 push 거부되는 일 방지)
-git pull --rebase --quiet 2>>"$LOG" || log "git pull 경고(무시하고 진행)"
 
 if [ "$INGESTED" != "1" ]; then
   python3 tools/parse_doc.py "$LOCAL_TXT" "$DATE" >>"$LOG" 2>&1 || { log "파싱 실패 — 중단"; exit 1; }
@@ -98,9 +99,13 @@ if git diff --cached --quiet; then
   exit 0
 fi
 git commit -m "Digest $DATE (Mac auto-publish)" >>"$LOG" 2>&1
-if git push >>"$LOG" 2>&1; then
-  log "✅ push 완료 → https://grammaniac.github.io/newsdigest/news-digest-$DATE.html"
-else
-  log "❌ push 실패"
-  exit 1
+if ! git push >>"$LOG" 2>&1; then
+  # 그 사이 GitHub Action이 커밋을 올려 로컬이 뒤처졌을 수 있다 → rebase 후 한 번 더.
+  log "push 거부됨 — pull --rebase 후 재시도"
+  git pull --rebase --quiet >>"$LOG" 2>&1 || true
+  if ! git push >>"$LOG" 2>&1; then
+    log "❌ push 실패"
+    exit 1
+  fi
 fi
+log "✅ push 완료 → https://grammaniac.github.io/newsdigest/news-digest-$DATE.html"
