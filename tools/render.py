@@ -21,7 +21,7 @@ JSON 스키마:
   ]
 }
 """
-import sys, json, html, datetime, os
+import sys, json, html, datetime, os, re
 
 TEMPLATE = r'''<!DOCTYPE html>
 <html lang="ko">
@@ -362,9 +362,6 @@ def update_index(repo, date, data, n_outlets, n_stories, n_words):
         return
     idx = open(idx_path, encoding="utf-8").read()
     href = f'href="news-digest-{date}.html"'
-    if href in idx:
-        print(f"인덱스에 이미 있음: {date} (건너뜀)")
-        return
     y, mo, d = map(int, date.split("-"))
     kdays = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"]
     day = kdays[datetime.date(y, mo, d).weekday()]
@@ -381,6 +378,21 @@ def update_index(repo, date, data, n_outlets, n_stories, n_words):
         f'      <div class="entry-go">읽기 →</div>\n'
         f'    </a>'
     )
+    if href in idx:
+        # 이미 있는 날짜면 그 카드를 새 내용으로 갈아끼운다. 예전엔 건너뛰기만 해서,
+        # 재생성한 날의 카드에 옛 수치가 남아 손으로 고쳐야 했다(8/13·8/17).
+        m = re.search(r'    <a class="entry reveal" ' + re.escape(href) + r'>.*?\n    </a>', idx, re.S)
+        if not m:
+            print(f"인덱스에 이미 있음: {date} (형태를 못 찾아 건너뜀)")
+            return
+        if m.group(0) == card:
+            print(f"인덱스 이미 최신: {date} (변경 없음)")
+            return
+        idx = idx[:m.start()] + card + idx[m.end():]
+        open(idx_path, "w", encoding="utf-8").write(idx)
+        print(f"인덱스 카드 갱신: {date} ({day}) — 매체 {n_outlets}·기사 {n_stories}·어휘 {n_words}")
+        return
+
     START = "<!-- ENTRIES:START -->"
     idx = idx.replace(START, START + "\n" + card, 1)
     open(idx_path, "w", encoding="utf-8").write(idx)

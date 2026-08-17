@@ -29,6 +29,23 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from parse_doc import tag_for, parse_story  # noqa: E402
 
 
+# 품사를 한국어로 통일한다. 루틴이 날에 따라 "noun"/"adjective"로 보내와(2026-08-17 시험 실행)
+# 산문 시절의 "명사"/"형용사"와 섞이는 것을 막는다.
+_POS = {
+    "noun": "명사", "n": "명사", "n.": "명사",
+    "verb": "동사", "v": "동사", "v.": "동사",
+    "adjective": "형용사", "adj": "형용사", "adj.": "형용사",
+    "adverb": "부사", "adv": "부사", "adv.": "부사",
+    "preposition": "전치사", "conjunction": "접속사", "pronoun": "대명사",
+    "interjection": "감탄사", "phrase": "구",
+}
+
+
+def _pos(v):
+    t = _text(v)
+    return _POS.get(t.lower().strip(), t)
+
+
 def _text(v):
     if isinstance(v, str):
         return v.strip()
@@ -88,7 +105,7 @@ def normalize(raw, date):
         if k in seen:
             continue
         seen.add(k)
-        vocab.append({"w": w, "pos": _text(v.get("pos")), "def": d,
+        vocab.append({"w": w, "pos": _pos(v.get("pos")), "def": d,
                       "syns": _syns(v.get("syns") or v.get("synonyms")),
                       "src": _text(v.get("src") or v.get("source"))})
 
