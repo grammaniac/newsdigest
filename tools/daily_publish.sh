@@ -17,7 +17,30 @@ cd "$REPO" || { log "repo cd 실패"; exit 1; }
 log "=== run for $DATE ==="
 
 LOCAL_TXT="$REPO/.today.txt"
-if [ ! -f "$TXT" ]; then
+LOCAL_JSON="$REPO/.today.json"
+JSON="$SYNC/뉴스데이터-$DATE.json"
+
+# 1순위: 루틴이 만든 JSON 계약 파일. 산문 형식이 계속 바뀌어(7/16~8/17) 파서를 매번
+# 고쳐야 했기에, 기계가 읽는 JSON을 주 경로로 삼는다. 실패하면 아래 .txt 경로로 폴백한다.
+INGESTED=0
+if [ -f "$JSON" ]; then
+  cp "$JSON" "$LOCAL_JSON" 2>>"$LOG" || true
+elif python3 tools/fetch_from_drive.py "$DATE" "$LOCAL_JSON" "뉴스데이터-$DATE.json" >>"$LOG" 2>&1; then
+  log "JSON 계약 파일을 Drive API로 직접 받음"
+else
+  rm -f "$LOCAL_JSON"
+fi
+if [ -s "$LOCAL_JSON" ]; then
+  git pull --rebase --quiet 2>>"$LOG" || log "git pull 경고(무시하고 진행)"
+  if python3 tools/ingest_json.py "$LOCAL_JSON" "$DATE" >>"$LOG" 2>&1; then
+    INGESTED=1
+    log "✅ JSON 계약으로 수신 완료 (산문 파서 우회)"
+  else
+    log "⚠ JSON 수신 실패 — 산문 .txt 파서로 폴백"
+  fi
+fi
+
+if [ "$INGESTED" != "1" ] && [ ! -f "$TXT" ]; then
   # 폴백(2026-07-24 장애 재발 방지): Drive 앱이 죽어 동기화가 멈춰 있어도 클라우드
   # 루틴이 만든 파일을 API로 직접 내려받아 진행한다. Drive에도 없으면 루틴 미실행.
   if python3 tools/fetch_from_drive.py "$DATE" "$LOCAL_TXT" >>"$LOG" 2>&1; then
@@ -29,7 +52,7 @@ if [ ! -f "$TXT" ]; then
     log "아직 .txt 없음 (동기화 대기 또는 루틴 미실행): $TXT"
     exit 0
   fi
-else
+elif [ "$INGESTED" != "1" ]; then
   # Google Drive 파일을 직접 읽으면 백그라운드(launchd)에서 'Resource deadlock avoided'(EDEADLK)가
   # 날 수 있다 — 온라인 전용 파일을 즉석 materialize 하려다 충돌. 그래서 먼저 로컬로 복사한 뒤
   # 그 복사본을 파싱한다. 복사가 곧 강제 다운로드 역할을 하며, 실패 시 재시도.
@@ -44,7 +67,9 @@ fi
 # 원격과 동기화 (로컬이 뒤처져 push 거부되는 일 방지)
 git pull --rebase --quiet 2>>"$LOG" || log "git pull 경고(무시하고 진행)"
 
-python3 tools/parse_doc.py "$LOCAL_TXT" "$DATE" >>"$LOG" 2>&1 || { log "파싱 실패 — 중단"; exit 1; }
+if [ "$INGESTED" != "1" ]; then
+  python3 tools/parse_doc.py "$LOCAL_TXT" "$DATE" >>"$LOG" 2>&1 || { log "파싱 실패 — 중단"; exit 1; }
+fi
 python3 tools/render.py "data/$DATE.json" >>"$LOG" 2>&1 || { log "렌더 실패 — 중단"; exit 1; }
 
 git add -A

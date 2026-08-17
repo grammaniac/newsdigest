@@ -7,7 +7,9 @@
 이 폴백은 ~/hermes-sdk/google_api.py(토큰 자동 갱신)를 재사용해 동기화를 우회한다.
 시스템 파이썬(3.9, launchd의 PATH 기준)에서 돌아야 한다.
 
-사용: python3 tools/fetch_from_drive.py YYYY-MM-DD <출력경로>
+사용: python3 tools/fetch_from_drive.py YYYY-MM-DD <출력경로> [파일명]
+      파일명 생략 시 '뉴스요약-YYYY-MM-DD.txt'. JSON 계약 파일을 받을 땐
+      '뉴스데이터-YYYY-MM-DD.json' 처럼 명시한다.
 종료코드: 0=다운로드 성공, 1=Drive에도 없음(루틴 미실행) 또는 실패
 """
 import json
@@ -25,7 +27,7 @@ def main():
         print(__doc__, file=sys.stderr)
         return 1
     date, out_path = sys.argv[1], sys.argv[2]
-    name = "뉴스요약-%s.txt" % date
+    name = sys.argv[3] if len(sys.argv) > 3 else "뉴스요약-%s.txt" % date
     q = urllib.parse.quote(
         "name = '%s' and '%s' in parents and trashed=false" % (name, FOLDER_ID)
     )
