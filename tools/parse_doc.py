@@ -10,15 +10,34 @@ render.py 가 그 JSON 으로 페이지를 만든다.
 """
 import sys, json, re, os
 
+# 매체명 → 태그. 루틴이 날에 따라 영문/한글/약칭을 섞어 보내므로(2026-08-18: "뉴욕 타임스 (NYT)")
+# 별칭을 함께 둔다. 긴 키를 먼저 두어 부분일치 오판을 막는다("New York Review of Books"가
+# "New York Times"보다 먼저 걸리도록 하는 식은 아니지만, NYRB/NYT 약칭 충돌은 없음).
 TAGS = [
-    ("New York Times", "Headlines · World"),
-    ("Economist", "World in Brief"),
-    ("Wall Street Journal", "Business · World"),
     ("New York Review of Books", "Essays"),
+    ("뉴욕 리뷰 오브 북스", "Essays"),
+    ("뉴욕리뷰오브북스", "Essays"),
+    ("NYRB", "Essays"),
+    ("New York Times", "Headlines · World"),
+    ("뉴욕 타임스", "Headlines · World"),
+    ("뉴욕타임스", "Headlines · World"),
+    ("NYT", "Headlines · World"),
+    ("Economist", "World in Brief"),
+    ("이코노미스트", "World in Brief"),
+    ("Wall Street Journal", "Business · World"),
+    ("월스트리트 저널", "Business · World"),
+    ("월스트리트저널", "Business · World"),
+    ("WSJ", "Business · World"),
     ("Athletic", "Sports"),
+    ("애슬레틱", "Sports"),
     ("Washington Post", "Politics"),
+    ("워싱턴 포스트", "Politics"),
+    ("워싱턴포스트", "Politics"),
     ("Word Smarts", "표현·언어"),
+    ("워드 스마츠", "표현·언어"),
     ("All Healthy", "건강"),
+    ("올 헬씨", "건강"),
+    ("올헬씨", "건강"),
 ]
 
 

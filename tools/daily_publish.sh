@@ -20,16 +20,31 @@ LOCAL_TXT="$REPO/.today.txt"
 LOCAL_JSON="$REPO/.today.json"
 JSON="$SYNC/뉴스데이터-$DATE.json"
 
+# 파일 확보 전략 (2026-08-18 개정): Drive API를 '먼저' 쓴다.
+#
+# 이유 — 동기화 폴더의 파일은 온라인 전용 placeholder 일 수 있고, 그것을 launchd 백그라운드
+# 프로세스가 읽으려 하면 materialize 를 트리거하지 못해 EDEADLK("Resource deadlock avoided")로
+# 죽는다(2026-07-01에 진단, 오프라인 고정 설정으로 우회했으나 2026-08-18 재발). API 다운로드는
+# 파일시스템 placeholder를 건드리지 않고 네트워크로 받으므로 이 계열 장애 전체가 무력화된다.
+# 동기화 폴더 복사는 API가 실패했을 때의 폴백으로만 남긴다(네트워크 장애 등).
+fetch() {   # fetch <출력경로> <Drive파일명> <동기화폴더경로>
+  local out="$1" name="$2" synced="$3"
+  rm -f "$out"
+  if python3 tools/fetch_from_drive.py "$DATE" "$out" "$name" >>"$LOG" 2>&1; then
+    return 0
+  fi
+  if [ -f "$synced" ] && cp "$synced" "$out" 2>>"$LOG"; then
+    log "API 실패 → 동기화 폴더 복사로 확보: $name"
+    return 0
+  fi
+  rm -f "$out"
+  return 1
+}
+
 # 1순위: 루틴이 만든 JSON 계약 파일. 산문 형식이 계속 바뀌어(7/16~8/17) 파서를 매번
 # 고쳐야 했기에, 기계가 읽는 JSON을 주 경로로 삼는다. 실패하면 아래 .txt 경로로 폴백한다.
 INGESTED=0
-if [ -f "$JSON" ]; then
-  cp "$JSON" "$LOCAL_JSON" 2>>"$LOG" || true
-elif python3 tools/fetch_from_drive.py "$DATE" "$LOCAL_JSON" "뉴스데이터-$DATE.json" >>"$LOG" 2>&1; then
-  log "JSON 계약 파일을 Drive API로 직접 받음"
-else
-  rm -f "$LOCAL_JSON"
-fi
+fetch "$LOCAL_JSON" "뉴스데이터-$DATE.json" "$JSON" || true
 if [ -s "$LOCAL_JSON" ]; then
   git pull --rebase --quiet 2>>"$LOG" || log "git pull 경고(무시하고 진행)"
   if python3 tools/ingest_json.py "$LOCAL_JSON" "$DATE" >>"$LOG" 2>&1; then
@@ -40,28 +55,17 @@ if [ -s "$LOCAL_JSON" ]; then
   fi
 fi
 
-if [ "$INGESTED" != "1" ] && [ ! -f "$TXT" ]; then
-  # 폴백(2026-07-24 장애 재발 방지): Drive 앱이 죽어 동기화가 멈춰 있어도 클라우드
-  # 루틴이 만든 파일을 API로 직접 내려받아 진행한다. Drive에도 없으면 루틴 미실행.
-  if python3 tools/fetch_from_drive.py "$DATE" "$LOCAL_TXT" >>"$LOG" 2>&1; then
-    log "🩹 동기화 파일 없음 → Drive API 직접 다운로드로 우회 진행"
-    if ! pgrep -f "Google Drive.app/Contents/MacOS/Google Drive" >/dev/null 2>&1; then
-      open -a "Google Drive" 2>>"$LOG" && log "⚠ Google Drive 앱이 죽어 있어 재기동함 (동기화 복구)"
-    fi
-  else
-    log "아직 .txt 없음 (동기화 대기 또는 루틴 미실행): $TXT"
+if [ "$INGESTED" != "1" ]; then
+  # 2순위: 산문 .txt 파서 경로 (JSON이 없거나 검증에 실패한 날).
+  if ! fetch "$LOCAL_TXT" "뉴스요약-$DATE.txt" "$TXT"; then
+    log "아직 .txt 없음 (루틴 미실행): $TXT"
     exit 0
   fi
-elif [ "$INGESTED" != "1" ]; then
-  # Google Drive 파일을 직접 읽으면 백그라운드(launchd)에서 'Resource deadlock avoided'(EDEADLK)가
-  # 날 수 있다 — 온라인 전용 파일을 즉석 materialize 하려다 충돌. 그래서 먼저 로컬로 복사한 뒤
-  # 그 복사본을 파싱한다. 복사가 곧 강제 다운로드 역할을 하며, 실패 시 재시도.
-  copied=0
-  for try in 1 2 3 4 5; do
-    if cp "$TXT" "$LOCAL_TXT" 2>>"$LOG"; then copied=1; break; fi
-    log "복사 재시도 $try (Drive materialize 대기)…"; sleep 20
-  done
-  if [ "$copied" != "1" ]; then log "❌ Drive .txt 로컬 복사 실패 — 중단"; exit 1; fi
+  # Drive 앱 본체가 죽어 있으면 되살려 둔다(2026-07-24 장애). 파이프라인 자체는
+  # 이미 API로 받았으므로 여기에 의존하지 않는다.
+  if ! pgrep -f "Google Drive.app/Contents/MacOS/Google Drive" >/dev/null 2>&1; then
+    open -a "Google Drive" 2>>"$LOG" && log "⚠ Google Drive 앱이 죽어 있어 재기동함 (동기화 복구)"
+  fi
 fi
 
 # 원격과 동기화 (로컬이 뒤처져 push 거부되는 일 방지)
