@@ -30,7 +30,7 @@ def tag_for(name):
 
 
 def is_divider(ln):
-    s = re.sub(r"[—\-─━–]", "", ln).strip()
+    s = re.sub(r"[—\-─━–=]", "", ln).strip()
     return len(ln) >= 3 and s == ""
 
 
@@ -161,19 +161,65 @@ def _starts_with_outlet(s):
     return any(t.startswith(_strip_the(k).lower()) for k in _OUTLET_HINTS)
 
 
-def _is_heading(s, nxt):
-    """섹션/매체 제목 줄인지 판정. 구분선·불릿 유무에 의존하지 않는다."""
-    if any(s.startswith(h) for h in _SECTION_HEADERS):
-        return True
-    if _is_content(s):
-        return False
-    # 알려진 매체명으로 시작하고 문장으로 끝나지 않는 줄 = 매체 제목
-    if _starts_with_outlet(s) and not s.endswith((".", "다", "!", "?")):
-        return True
-    # 모르는 매체라도, 짧고 문장으로 끝나지 않으며 바로 다음 줄이 불릿이면 제목으로 본다
-    if len(s) <= 40 and not s.endswith((".", "다", "!", "?")) and nxt.startswith("•"):
-        return True
-    return False
+def _classify_heading(s, nxt, in_vocab):
+    """제목 줄이면 (종류, 제목) 을, 아니면 None 을 반환. 구분선·불릿 유무에 의존하지 않는다.
+    2026-08-17 형식부터 제목에 번호가 붙는다('1. 오늘의 핵심 뉴스', '2. 세계') — 번호를 뗀
+    나머지로도 판정한다. 단 번호 달린 줄은 어휘 항목('N. 단어 (품사) — 뜻')일 수 있으므로,
+    vocab 섹션 안이거나 '—' 를 포함하면 제목 후보에서 제외한다."""
+    stripped = None
+    m = re.match(r"^\d+[.)]\s+(.+)$", s)
+    if m:
+        stripped = m.group(1).strip()
+
+    for t in ([s] if stripped is None else [s, stripped]):
+        if t.startswith("오늘의 핵심"):
+            return ("hero", t)
+        if t.startswith("큰 그림") or t.startswith("[큰 그림"):
+            return ("big", t)
+        if t.startswith("오늘의 고급 어휘"):
+            return ("vocab", t)
+        if t.startswith("오늘의 단어"):
+            return ("wod", t)
+
+    for t, numbered in ([(s, False)] if stripped is None else [(s, False), (stripped, True)]):
+        if numbered and (in_vocab or " — " in t or " – " in t):
+            continue
+        if _is_content(t):
+            continue
+        # 알려진 매체명으로 시작하고 문장으로 끝나지 않는 줄 = 매체 제목
+        if _starts_with_outlet(t) and not t.endswith((".", "다", "!", "?")):
+            return ("outlet", t)
+        # 모르는 매체/주제라도, 짧고 문장으로 끝나지 않으며 바로 다음 줄이 불릿이면 제목으로 본다
+        if len(t) <= 40 and not t.endswith((".", "다", "!", "?")) and nxt.startswith("•"):
+            return ("outlet", t)
+    return None
+
+
+def parse_wod_lines(lines):
+    """'오늘의 단어' 문단형 섹션(2026-08-17 형식) → vocab 항목.
+    문단 구조: 표제어 줄 / '품사: …' / '뜻[N]: …' / (예문…) / '출처: …'(문단 끝)."""
+    out, cur = [], None
+    for ln in lines:
+        if cur is None:
+            if re.match(r"^(품사|뜻|예문|어원|출처)", ln):
+                continue
+            w = ln.split("(")[0].strip()
+            if w and len(w) <= 40:
+                cur = {"w": w, "pos": "", "def": "", "syns": [], "src": ""}
+            continue
+        if ln.startswith("품사"):
+            pm = re.search(r"품사\s*[:：]\s*([^|]+)", ln)
+            if pm:
+                cur["pos"] = pm.group(1).strip()
+        elif ln.startswith("뜻"):
+            d = re.sub(r"^뜻\s*\d*\s*[:：]\s*", "", ln).strip()
+            cur["def"] = (cur["def"] + "; " + d) if cur["def"] else d
+        elif ln.startswith("출처"):
+            cur["src"] = re.sub(r"^출처\s*[:：]\s*", "", ln).strip()
+            if cur["w"] and cur["def"]:
+                out.append(cur)
+            cur = None
+    return out
 
 
 def _pick(body):
@@ -195,16 +241,9 @@ def parse(text, date):
     cur = None
     for i, s in enumerate(lines):
         nxt = lines[i + 1] if i + 1 < len(lines) else ""
-        if _is_heading(s, nxt):
-            if s.startswith("오늘의 핵심"):
-                kind = "hero"
-            elif s.startswith("큰 그림") or s.startswith("[큰 그림"):
-                kind = "big"
-            elif s.startswith("오늘의 고급 어휘"):
-                kind = "vocab"
-            else:
-                kind = "outlet"
-            cur = [kind, s, []]
+        hit = _classify_heading(s, nxt, in_vocab=(cur is not None and cur[0] == "vocab"))
+        if hit is not None:
+            cur = [hit[0], hit[1], []]
             sections.append(cur)
         elif cur is not None:
             cur[2].append(s)
@@ -223,10 +262,21 @@ def parse(text, date):
                 big = joined(body)
         elif kind == "vocab":
             vocab.extend(parse_vocab_lines(_pick(body)))
+        elif kind == "wod":
+            vocab.extend(parse_wod_lines(body))
         else:
             stories = [parse_story(l) for l in _pick(body)]
             if stories:
                 outlets.append({"name": name, "tag": tag_for(name), "stories": stories})
+
+    # 같은 단어가 두 섹션에 겹쳐 오는 날이 있다('오늘의 단어' 문단 + '고급 어휘' 불릿, 2026-08-17).
+    # 뒤에 온, 동의어가 있는 쪽을 남긴다.
+    seen = {}
+    for v in vocab:
+        k = v["w"].strip().lower()
+        if k not in seen or (not seen[k]["syns"] and v["syns"]):
+            seen[k] = v
+    vocab = list(seen.values())
 
     if not big:
         big = hero
