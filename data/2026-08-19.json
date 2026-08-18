@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "NYT Today's Headlines",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "트럼프, 이란 핵 수렁에서 북한 방식 모색",
@@ -30,6 +31,7 @@
     },
     {
       "name": "NYT World Newsletter",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "케임브리지 최연소 흑인 교수 제이슨 아데이, 표절 폭로 후 사망",
@@ -67,6 +69,7 @@
     },
     {
       "name": "The Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "글로벌 채권 대폭락: 미국 30년물 5.3% 돌파",
@@ -92,6 +95,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "글로벌 채권 충격: 30년물 5.3% 돌파, 나스닥 1.3% 하락",
@@ -125,6 +129,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "LA 레이커스 구단 매각: 125억 달러",
@@ -150,6 +155,7 @@
     },
     {
       "name": "All Healthy (건강)",
+      "tag": "건강",
       "stories": [
         {
           "lead": "폭염이 생물학적 노화 가속: 폭염 1회당 약 6개월 노화",
@@ -177,100 +183,155 @@
   "vocab": [
     {
       "w": "quagmire",
-      "pos": "noun",
+      "pos": "명사",
       "def": "수렁; 빠져나오기 어려운 곤경",
-      "syns": ["morass", "mire", "predicament"],
+      "syns": [
+        "morass",
+        "mire",
+        "predicament"
+      ],
       "src": ""
     },
     {
       "w": "fabulist",
-      "pos": "noun",
+      "pos": "명사",
       "def": "허구를 지어내는 사람, 거짓 이야기꾼",
-      "syns": ["fabricator", "mythmaker", "fibber"],
+      "syns": [
+        "fabricator",
+        "mythmaker",
+        "fibber"
+      ],
       "src": ""
     },
     {
       "w": "rout",
-      "pos": "noun",
+      "pos": "명사",
       "def": "대패, 패주",
-      "syns": ["debacle", "thrashing", "defeat"],
+      "syns": [
+        "debacle",
+        "thrashing",
+        "defeat"
+      ],
       "src": ""
     },
     {
       "w": "disparaging",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "경멸하는, 헐뜯는",
-      "syns": ["derogatory", "denigrating", "dismissive"],
+      "syns": [
+        "derogatory",
+        "denigrating",
+        "dismissive"
+      ],
       "src": ""
     },
     {
       "w": "deluge",
-      "pos": "noun",
+      "pos": "명사",
       "def": "홍수, 쇄도",
-      "syns": ["flood", "torrent", "inundation"],
+      "syns": [
+        "flood",
+        "torrent",
+        "inundation"
+      ],
       "src": ""
     },
     {
       "w": "colossus",
-      "pos": "noun",
+      "pos": "명사",
       "def": "거대한 인물이나 세력, 거인",
-      "syns": ["titan", "behemoth", "giant"],
+      "syns": [
+        "titan",
+        "behemoth",
+        "giant"
+      ],
       "src": ""
     },
     {
       "w": "conundrum",
-      "pos": "noun",
+      "pos": "명사",
       "def": "난제, 풀기 어려운 수수께끼",
-      "syns": ["enigma", "puzzle", "dilemma"],
+      "syns": [
+        "enigma",
+        "puzzle",
+        "dilemma"
+      ],
       "src": ""
     },
     {
       "w": "culprit",
-      "pos": "noun",
+      "pos": "명사",
       "def": "원인 제공자, 장본인",
-      "syns": ["offender", "perpetrator", "cause"],
+      "syns": [
+        "offender",
+        "perpetrator",
+        "cause"
+      ],
       "src": ""
     },
     {
       "w": "sputtering",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "불규칙하게 힘을 잃어가는, 꺼져가는",
-      "syns": ["faltering", "stuttering", "flagging"],
+      "syns": [
+        "faltering",
+        "stuttering",
+        "flagging"
+      ],
       "src": ""
     },
     {
       "w": "chokepoint",
-      "pos": "noun",
+      "pos": "명사",
       "def": "병목 지점, 전략적 요충지",
-      "syns": ["bottleneck", "choke", "narrow passage"],
+      "syns": [
+        "bottleneck",
+        "choke",
+        "narrow passage"
+      ],
       "src": ""
     },
     {
       "w": "circumvention",
-      "pos": "noun",
+      "pos": "명사",
       "def": "규칙 우회, 회피",
-      "syns": ["evasion", "bypass", "avoidance"],
+      "syns": [
+        "evasion",
+        "bypass",
+        "avoidance"
+      ],
       "src": ""
     },
     {
       "w": "meritocracy",
-      "pos": "noun",
+      "pos": "명사",
       "def": "능력 위주 사회, 실력주의",
-      "syns": ["ability-based system", "talent hierarchy"],
+      "syns": [
+        "ability-based system",
+        "talent hierarchy"
+      ],
       "src": ""
     },
     {
       "w": "appropinquate",
-      "pos": "verb",
+      "pos": "동사",
       "def": "접근하다, 가까이 다가가다",
-      "syns": ["approach", "near", "draw close"],
+      "syns": [
+        "approach",
+        "near",
+        "draw close"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "eventuate",
-      "pos": "verb",
+      "pos": "동사",
       "def": "결과적으로 ~이 되다, 결국 일어나다",
-      "syns": ["result", "transpire", "culminate"],
+      "syns": [
+        "result",
+        "transpire",
+        "culminate"
+      ],
       "src": "Word Genius"
     }
   ]
