@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "모더나·머크 mRNA 흑색종 백신 임상 3상 성공 — 주가 두 배",
@@ -38,6 +39,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "AI 활용 학생, 숙제 성적 18% 향상 — 그러나 시험은 낮아져",
@@ -79,6 +81,7 @@
     },
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "트럼프 vs. ICC: 판사 포함 관리 13명 제재, 루비오 '벽돌 한 장씩 무너뜨리겠다'",
@@ -100,6 +103,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "EPL 금요일 개막 — 아스널 타이틀 방어, 9명 신임 감독 데뷔",
@@ -125,6 +129,7 @@
     },
     {
       "name": "NY Review of Books",
+      "tag": "News",
       "stories": [
         {
           "lead": "페어필드 포터 재조명 — 아웃사이더에서 정전으로",
@@ -142,6 +147,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "수학 모델 연구: 노화 요인 제거 시 인간 수명 146~194세 가능",
@@ -163,6 +169,7 @@
     },
     {
       "name": "Word Smarts",
+      "tag": "표현·언어",
       "stories": [
         {
           "lead": "이모지의 의미는 세대와 문화에 따라 다르다",
@@ -174,100 +181,169 @@
   "vocab": [
     {
       "w": "collywobbles",
-      "pos": "noun",
+      "pos": "명사",
       "def": "극심한 긴장감이나 불안으로 인한 복부 불쾌감 (구어체·유머)",
-      "syns": ["queasiness", "jitters", "anxiety", "nervousness"],
+      "syns": [
+        "queasiness",
+        "jitters",
+        "anxiety",
+        "nervousness"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "fabulation",
-      "pos": "noun",
+      "pos": "명사",
       "def": "허구를 사실처럼 꾸며내는 행위; 조작된 이야기",
-      "syns": ["fabrication", "invention", "confabulation", "fiction"],
+      "syns": [
+        "fabrication",
+        "invention",
+        "confabulation",
+        "fiction"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "misoneism",
-      "pos": "noun",
+      "pos": "명사",
       "def": "새로운 것이나 변화에 대한 혐오·두려움",
-      "syns": ["neophobia", "conservatism", "resistance to change"],
+      "syns": [
+        "neophobia",
+        "conservatism",
+        "resistance to change"
+      ],
       "src": ""
     },
     {
       "w": "surfeit",
-      "pos": "noun",
+      "pos": "명사",
       "def": "지나친 과잉; 넘치도록 많은 양",
-      "syns": ["excess", "glut", "overabundance", "plethora"],
+      "syns": [
+        "excess",
+        "glut",
+        "overabundance",
+        "plethora"
+      ],
       "src": ""
     },
     {
       "w": "largesse",
-      "pos": "noun",
+      "pos": "명사",
       "def": "아량 있는 기부; 풍족하게 베풀기",
-      "syns": ["generosity", "munificence", "bounty", "liberality"],
+      "syns": [
+        "generosity",
+        "munificence",
+        "bounty",
+        "liberality"
+      ],
       "src": ""
     },
     {
       "w": "arbiter",
-      "pos": "noun",
+      "pos": "명사",
       "def": "중재자; 최종 판정자",
-      "syns": ["judge", "mediator", "referee", "adjudicator"],
+      "syns": [
+        "judge",
+        "mediator",
+        "referee",
+        "adjudicator"
+      ],
       "src": ""
     },
     {
       "w": "sentient",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "감각이 있는; 의식이 있는",
-      "syns": ["conscious", "aware", "sapient", "perceptive"],
+      "syns": [
+        "conscious",
+        "aware",
+        "sapient",
+        "perceptive"
+      ],
       "src": ""
     },
     {
       "w": "redolent",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "무언가를 강하게 연상시키는; 향기가 풍기는",
-      "syns": ["evocative", "reminiscent", "suggestive", "imbued"],
+      "syns": [
+        "evocative",
+        "reminiscent",
+        "suggestive",
+        "imbued"
+      ],
       "src": ""
     },
     {
       "w": "abjection",
-      "pos": "noun",
+      "pos": "명사",
       "def": "극도의 비참함; 굴욕적이고 타락한 상태",
-      "syns": ["degradation", "wretchedness", "debasement", "squalor"],
+      "syns": [
+        "degradation",
+        "wretchedness",
+        "debasement",
+        "squalor"
+      ],
       "src": ""
     },
     {
       "w": "dogged",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "집요한; 끈질기게 포기하지 않는",
-      "syns": ["persistent", "tenacious", "stubborn", "relentless"],
+      "syns": [
+        "persistent",
+        "tenacious",
+        "stubborn",
+        "relentless"
+      ],
       "src": ""
     },
     {
       "w": "skiver",
-      "pos": "noun",
+      "pos": "명사",
       "def": "일을 기피하는 게으름뱅이; 꾀병쟁이",
-      "syns": ["shirker", "slacker", "idler", "malingerer"],
+      "syns": [
+        "shirker",
+        "slacker",
+        "idler",
+        "malingerer"
+      ],
       "src": ""
     },
     {
       "w": "latency",
-      "pos": "noun",
+      "pos": "명사",
       "def": "잠복기; 반응이 나타나기까지의 지연 시간",
-      "syns": ["delay", "dormancy", "lag", "interval"],
+      "syns": [
+        "delay",
+        "dormancy",
+        "lag",
+        "interval"
+      ],
       "src": ""
     },
     {
       "w": "zeitgeist",
-      "pos": "noun",
+      "pos": "명사",
       "def": "시대정신; 특정 시대를 지배하는 사상·분위기",
-      "syns": ["spirit of the age", "ethos", "temper", "climate"],
+      "syns": [
+        "spirit of the age",
+        "ethos",
+        "temper",
+        "climate"
+      ],
       "src": ""
     },
     {
       "w": "suffused",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "빛·색·감정 등이 온통 가득 퍼진",
-      "syns": ["permeated", "saturated", "infused", "imbued"],
+      "syns": [
+        "permeated",
+        "saturated",
+        "infused",
+        "imbued"
+      ],
       "src": ""
     }
   ]
