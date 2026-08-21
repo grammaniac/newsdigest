@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "트럼프, 이란에 '경제 전쟁' 선언…실제 군사 충돌은 원치 않아",
@@ -34,6 +35,7 @@
     },
     {
       "name": "The Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "패니매 고위 임원 수십 명 해임…모기지 시장 불안 고조",
@@ -59,6 +61,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "이란, 미국 제재 위협에 '치명적 대응' 경고…중국은 거부 입장",
@@ -112,6 +115,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "알카라스, 손목 부상 후 US 오픈으로 복귀…디펜딩 챔피언 주목",
@@ -141,6 +145,7 @@
     },
     {
       "name": "All Healthy (건강)",
+      "tag": "건강",
       "stories": [
         {
           "lead": "대마초 상용자, 코르티솔 기저 수치 높아…스트레스 악순환 우려",
@@ -164,86 +169,131 @@
   "vocab": [
     {
       "w": "rupestrian",
-      "pos": "adj",
+      "pos": "형용사",
       "def": "바위로 이루어진; 바위에 새긴",
-      "syns": ["rocky", "lithic", "inscribed"],
+      "syns": [
+        "rocky",
+        "lithic",
+        "inscribed"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "hyponym",
-      "pos": "noun",
+      "pos": "명사",
       "def": "상위 개념보다 좁은 의미를 가진 단어. 예: spoon은 cutlery의 하위어",
-      "syns": ["subordinate term", "specific term"],
+      "syns": [
+        "subordinate term",
+        "specific term"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "expansionist",
-      "pos": "adj",
+      "pos": "형용사",
       "def": "영토나 영향력을 확장하려는 경향의",
-      "syns": ["imperialist", "aggressive", "acquisitive"],
+      "syns": [
+        "imperialist",
+        "aggressive",
+        "acquisitive"
+      ],
       "src": ""
     },
     {
       "w": "intifada",
-      "pos": "noun",
+      "pos": "명사",
       "def": "팔레스타인의 봉기·저항 운동; 아랍어로 '떨쳐 일어남'",
-      "syns": ["uprising", "revolt", "insurrection"],
+      "syns": [
+        "uprising",
+        "revolt",
+        "insurrection"
+      ],
       "src": ""
     },
     {
       "w": "ratified",
-      "pos": "verb",
+      "pos": "동사",
       "def": "공식적으로 비준·승인된",
-      "syns": ["approved", "confirmed", "endorsed"],
+      "syns": [
+        "approved",
+        "confirmed",
+        "endorsed"
+      ],
       "src": ""
     },
     {
       "w": "dissipated",
       "pos": "verb/adj",
       "def": "피로나 에너지가 흩어져 사라진",
-      "syns": ["dispersed", "dissolved", "vanished"],
+      "syns": [
+        "dispersed",
+        "dissolved",
+        "vanished"
+      ],
       "src": ""
     },
     {
       "w": "susceptible",
-      "pos": "adj",
+      "pos": "형용사",
       "def": "영향을 받기 쉬운; 취약한",
-      "syns": ["vulnerable", "prone", "sensitive"],
+      "syns": [
+        "vulnerable",
+        "prone",
+        "sensitive"
+      ],
       "src": ""
     },
     {
       "w": "perennially",
-      "pos": "adv",
+      "pos": "부사",
       "def": "해마다; 지속적으로; 언제나",
-      "syns": ["perpetually", "continually", "enduringly"],
+      "syns": [
+        "perpetually",
+        "continually",
+        "enduringly"
+      ],
       "src": ""
     },
     {
       "w": "forays",
-      "pos": "noun",
+      "pos": "명사",
       "def": "새로운 분야에 대한 첫 시도; 침투",
-      "syns": ["ventures", "incursions", "sorties"],
+      "syns": [
+        "ventures",
+        "incursions",
+        "sorties"
+      ],
       "src": ""
     },
     {
       "w": "pleonasm",
-      "pos": "noun",
+      "pos": "명사",
       "def": "필요 이상의 단어를 사용하는 것; 중복 표현",
-      "syns": ["redundancy", "tautology", "verbosity"],
+      "syns": [
+        "redundancy",
+        "tautology",
+        "verbosity"
+      ],
       "src": ""
     },
     {
       "w": "schuss",
-      "pos": "noun",
+      "pos": "명사",
       "def": "스키 활강에서 직선으로 빠르게 내려오는 것",
-      "syns": ["downhill run", "straight descent"],
+      "syns": [
+        "downhill run",
+        "straight descent"
+      ],
       "src": ""
     },
     {
       "w": "cruciverbalist",
-      "pos": "noun",
+      "pos": "명사",
       "def": "십자말풀이 애호가 또는 제작자",
-      "syns": ["crossword enthusiast", "puzzler"],
+      "syns": [
+        "crossword enthusiast",
+        "puzzler"
+      ],
       "src": ""
     }
   ]
