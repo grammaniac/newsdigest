@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "미-캐나다 무역전쟁 격화, 협상 전면 결렬",
@@ -74,6 +75,7 @@
     },
     {
       "name": "The Economist Today",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "코로나19 스캔들과 미국 팬데믹 대응 실패 반성 부재",
@@ -99,6 +101,7 @@
     },
     {
       "name": "The Economist This Weekend",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "GLP-1 비만치료제가 여성 소득 격차 해소 가능성 시사",
@@ -124,6 +127,7 @@
     },
     {
       "name": "NY Review of Books",
+      "tag": "News",
       "stories": [
         {
           "lead": "작가 제프리 오브라이언 인터뷰 — 문화, 오페라, 영화, 문학",
@@ -137,6 +141,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "EPL 새 시즌 개막 — 아스널 2연패 도전, 과르디올라 퇴임 변수",
@@ -162,6 +167,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "아침 식사 시간과 수명 — 정오 이후 첫 끼면 사망 위험 29% 상승",
@@ -183,6 +189,7 @@
     },
     {
       "name": "Word Smarts",
+      "tag": "표현·언어",
       "stories": [
         {
           "lead": "이모지의 숨겨진 이중 의미 7가지",
@@ -206,86 +213,146 @@
   "vocab": [
     {
       "w": "harbinger",
-      "pos": "noun",
+      "pos": "명사",
       "def": "전조, 선구자; 앞으로 일어날 일을 예고하는 사람이나 사물",
-      "syns": ["omen", "portent", "precursor", "forerunner"],
+      "syns": [
+        "omen",
+        "portent",
+        "precursor",
+        "forerunner"
+      ],
       "src": ""
     },
     {
       "w": "precocious",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "조숙한, 정상보다 이른 발달을 보이는",
-      "syns": ["advanced", "gifted", "prodigious", "forward"],
+      "syns": [
+        "advanced",
+        "gifted",
+        "prodigious",
+        "forward"
+      ],
       "src": ""
     },
     {
       "w": "juxtaposition",
-      "pos": "noun",
+      "pos": "명사",
       "def": "병치, 두 가지를 대조적으로 나란히 놓음",
-      "syns": ["collocation", "apposition", "contrast", "adjacency"],
+      "syns": [
+        "collocation",
+        "apposition",
+        "contrast",
+        "adjacency"
+      ],
       "src": ""
     },
     {
       "w": "milieu",
-      "pos": "noun",
+      "pos": "명사",
       "def": "사회적 환경, 사람이 살거나 활동하는 배경",
-      "syns": ["environment", "setting", "ambiance", "context"],
+      "syns": [
+        "environment",
+        "setting",
+        "ambiance",
+        "context"
+      ],
       "src": ""
     },
     {
       "w": "dissipation",
-      "pos": "noun",
+      "pos": "명사",
       "def": "분산, 소멸; (구식) 방탕한 생활",
-      "syns": ["dispersal", "dissolution", "diffusion", "dissemination"],
+      "syns": [
+        "dispersal",
+        "dissolution",
+        "diffusion",
+        "dissemination"
+      ],
       "src": ""
     },
     {
       "w": "uncanny",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "기이한, 자연의 범위를 넘어선 듯한 불가사의한",
-      "syns": ["eerie", "preternatural", "bizarre", "otherworldly"],
+      "syns": [
+        "eerie",
+        "preternatural",
+        "bizarre",
+        "otherworldly"
+      ],
       "src": ""
     },
     {
       "w": "dubious",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "의심스러운, 확실하지 않은, 미심쩍은",
-      "syns": ["questionable", "suspect", "equivocal", "specious"],
+      "syns": [
+        "questionable",
+        "suspect",
+        "equivocal",
+        "specious"
+      ],
       "src": ""
     },
     {
       "w": "lacklustre",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "활기 없는, 생기 없는, 흥미를 끌지 못하는",
-      "syns": ["dull", "uninspired", "vapid", "pedestrian"],
+      "syns": [
+        "dull",
+        "uninspired",
+        "vapid",
+        "pedestrian"
+      ],
       "src": ""
     },
     {
       "w": "myriad",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "무수한, 셀 수 없이 많은",
-      "syns": ["innumerable", "manifold", "multitudinous", "countless"],
+      "syns": [
+        "innumerable",
+        "manifold",
+        "multitudinous",
+        "countless"
+      ],
       "src": ""
     },
     {
       "w": "flamboyant",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "화려한, 과시적인, 눈에 띄게 장식적인",
-      "syns": ["ostentatious", "showy", "extravagant", "florid"],
+      "syns": [
+        "ostentatious",
+        "showy",
+        "extravagant",
+        "florid"
+      ],
       "src": ""
     },
     {
       "w": "fabulist",
-      "pos": "noun",
+      "pos": "명사",
       "def": "1. 우화 작가; 2. (비유) 거짓말쟁이, 허구를 꾸미는 사람",
-      "syns": ["storyteller", "fabricator", "mythmaker", "liar"],
+      "syns": [
+        "storyteller",
+        "fabricator",
+        "mythmaker",
+        "liar"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "aswarm",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "움직이는 존재들이나 사물들로 가득 찬, 들끓는",
-      "syns": ["teeming", "swarming", "replete", "thronging"],
+      "syns": [
+        "teeming",
+        "swarming",
+        "replete",
+        "thronging"
+      ],
       "src": "Word Genius"
     }
   ]
