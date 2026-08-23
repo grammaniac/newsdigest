@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "파키스탄 육군참모총장 이란 방문, 미국 월요일 새 이란 제재 예고",
@@ -70,6 +71,7 @@
     },
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "글로벌 밀 위기: 이란 전쟁, 흑해 공격, 이상기후 3중 악재",
@@ -99,6 +101,7 @@
     },
     {
       "name": "The Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "미국-캐나다 협상 막판 결렬, 50% 관세 발효",
@@ -128,6 +131,7 @@
     },
     {
       "name": "The New York Review of Books",
+      "tag": "Essays",
       "stories": [
         {
           "lead": "티나 지루아르의 퍼포먼스 아트: 공동체적 삶의 형식 모델링",
@@ -153,6 +157,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "크로-암스트롱, WAR 8.5로 NL MVP 경쟁 선두",
@@ -186,6 +191,7 @@
     },
     {
       "name": "Word Smarts",
+      "tag": "표현·언어",
       "stories": [
         {
           "lead": "외모 묘사 희귀 어휘 10선",
@@ -211,6 +217,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "단백질 풍부한 점심 8가지 (1회분 25g 이상)",
@@ -252,84 +259,130 @@
       "w": "ostentatious",
       "pos": "형용사",
       "def": "과시적인, 허세 부리는",
-      "syns": ["flamboyant", "showy", "pretentious"],
+      "syns": [
+        "flamboyant",
+        "showy",
+        "pretentious"
+      ],
       "src": ""
     },
     {
       "w": "profligate",
       "pos": "형용사/명사",
       "def": "방탕한; 낭비하는",
-      "syns": ["extravagant", "dissolute", "wasteful"],
+      "syns": [
+        "extravagant",
+        "dissolute",
+        "wasteful"
+      ],
       "src": ""
     },
     {
       "w": "ominous",
       "pos": "형용사",
       "def": "불길한, 흉조의",
-      "syns": ["foreboding", "threatening", "portentous"],
+      "syns": [
+        "foreboding",
+        "threatening",
+        "portentous"
+      ],
       "src": ""
     },
     {
       "w": "embattled",
       "pos": "형용사",
       "def": "공격받는, 포위된, 고군분투하는",
-      "syns": ["besieged", "beleaguered", "imperiled"],
+      "syns": [
+        "besieged",
+        "beleaguered",
+        "imperiled"
+      ],
       "src": ""
     },
     {
       "w": "intifada",
       "pos": "명사",
       "def": "인티파다 (팔레스타인 민중 봉기)",
-      "syns": ["uprising", "insurrection", "revolt"],
+      "syns": [
+        "uprising",
+        "insurrection",
+        "revolt"
+      ],
       "src": ""
     },
     {
       "w": "thespian",
       "pos": "형용사/명사",
       "def": "연극의; 배우",
-      "syns": ["theatrical", "dramatic", "actor"],
+      "syns": [
+        "theatrical",
+        "dramatic",
+        "actor"
+      ],
       "src": ""
     },
     {
       "w": "intrinsic",
       "pos": "형용사",
       "def": "본질적인, 내재적인",
-      "syns": ["inherent", "innate", "fundamental"],
+      "syns": [
+        "inherent",
+        "innate",
+        "fundamental"
+      ],
       "src": ""
     },
     {
       "w": "cerebrovascular",
       "pos": "형용사",
       "def": "뇌혈관의",
-      "syns": ["neurological", "vascular"],
+      "syns": [
+        "neurological",
+        "vascular"
+      ],
       "src": ""
     },
     {
       "w": "authoritarian",
       "pos": "형용사/명사",
       "def": "권위주의적인; 독재자",
-      "syns": ["autocratic", "despotic", "totalitarian"],
+      "syns": [
+        "autocratic",
+        "despotic",
+        "totalitarian"
+      ],
       "src": ""
     },
     {
       "w": "modifiable",
       "pos": "형용사",
       "def": "수정 가능한, 조절 가능한",
-      "syns": ["adjustable", "changeable", "alterable"],
+      "syns": [
+        "adjustable",
+        "changeable",
+        "alterable"
+      ],
       "src": ""
     },
     {
       "w": "indite",
       "pos": "동사",
       "def": "저술하다, 글로 표현하다",
-      "syns": ["compose", "pen", "inscribe"],
+      "syns": [
+        "compose",
+        "pen",
+        "inscribe"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "thither",
       "pos": "부사",
       "def": "그곳으로, 저쪽으로",
-      "syns": ["there", "yonder"],
+      "syns": [
+        "there",
+        "yonder"
+      ],
       "src": "Word Genius"
     }
   ]
