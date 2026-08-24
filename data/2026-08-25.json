@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "월스트리트저널 (WSJ)",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "대법원, 우편투표 규정 소송에서 주 정부 권한 지지",
@@ -34,6 +35,7 @@
     },
     {
       "name": "이코노미스트 (The Economist)",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "이란 제재 '경제 D-데이' — 실제 화력보다 과장됐다는 분석",
@@ -71,6 +73,7 @@
     },
     {
       "name": "뉴욕타임스 국제판 (NYT World)",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "'경제적 추방 작전' 전면 분석 — 이란, 강경 대응 택할 가능성",
@@ -108,6 +111,7 @@
     },
     {
       "name": "뉴욕타임스 헤드라인 (NYT Headlines)",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "미국 스타트업, 이란전 대응용 저비용 요격 미사일 개발",
@@ -121,6 +125,7 @@
     },
     {
       "name": "디 애슬레틱 (The Athletic)",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "대퀀 라이트, NFL 출신 최초 대학 미식축구(LSU) 복귀",
@@ -158,6 +163,7 @@
     },
     {
       "name": "뉴욕 서평 (New York Review of Books)",
+      "tag": "Essays",
       "stories": [
         {
           "lead": "다니엘 멘델손 '짝사랑' 세미나 시리즈 안내",
@@ -167,6 +173,7 @@
     },
     {
       "name": "Word Smarts (표현·언어)",
+      "tag": "표현·언어",
       "stories": [
         {
           "lead": "\"good\"의 50가지 대체어",
@@ -192,6 +199,7 @@
     },
     {
       "name": "All Healthy (건강)",
+      "tag": "건강",
       "stories": [
         {
           "lead": "럭셔리 러닝 트렌드 부상 — 연간 약 150만 원 지출",
@@ -221,6 +229,7 @@
     },
     {
       "name": "Word Daily (오늘의 단어)",
+      "tag": "News",
       "stories": [
         {
           "lead": "Corybantic — 열광적이고 광란에 가까운 (형용사)",
@@ -230,6 +239,7 @@
     },
     {
       "name": "Word Genius (오늘의 단어)",
+      "tag": "News",
       "stories": [
         {
           "lead": "Extrospection — 외부 사물을 관찰하는 행위 (명사)",
@@ -241,86 +251,134 @@
   "vocab": [
     {
       "w": "bombast",
-      "pos": "noun",
+      "pos": "명사",
       "def": "과장된 허풍, 공허한 미사여구",
-      "syns": ["bluster", "grandiloquence", "pomposity"],
+      "syns": [
+        "bluster",
+        "grandiloquence",
+        "pomposity"
+      ],
       "src": ""
     },
     {
       "w": "vindication",
-      "pos": "noun",
+      "pos": "명사",
       "def": "정당성 입증, 무죄 확인",
-      "syns": ["exoneration", "justification", "absolution"],
+      "syns": [
+        "exoneration",
+        "justification",
+        "absolution"
+      ],
       "src": ""
     },
     {
       "w": "cathartic",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "정화하는, 감정을 해소하는",
-      "syns": ["purgative", "cleansing", "therapeutic"],
+      "syns": [
+        "purgative",
+        "cleansing",
+        "therapeutic"
+      ],
       "src": ""
     },
     {
       "w": "preeminent",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "탁월한, 가장 두드러진",
-      "syns": ["paramount", "foremost", "distinguished"],
+      "syns": [
+        "paramount",
+        "foremost",
+        "distinguished"
+      ],
       "src": ""
     },
     {
       "w": "furloughed",
       "pos": "verb (past tense)",
       "def": "일시해고된, 무급 휴직 처리된",
-      "syns": ["laid off", "suspended", "idled"],
+      "syns": [
+        "laid off",
+        "suspended",
+        "idled"
+      ],
       "src": ""
     },
     {
       "w": "pervasive",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "만연한, 널리 퍼진",
-      "syns": ["ubiquitous", "rampant", "prevalent"],
+      "syns": [
+        "ubiquitous",
+        "rampant",
+        "prevalent"
+      ],
       "src": ""
     },
     {
       "w": "liminal",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "경계적인, 전환기적인",
-      "syns": ["transitional", "threshold", "intermediary"],
+      "syns": [
+        "transitional",
+        "threshold",
+        "intermediary"
+      ],
       "src": ""
     },
     {
       "w": "hitherto",
-      "pos": "adverb",
+      "pos": "부사",
       "def": "지금까지, 이전에는",
-      "syns": ["previously", "heretofore", "formerly"],
+      "syns": [
+        "previously",
+        "heretofore",
+        "formerly"
+      ],
       "src": ""
     },
     {
       "w": "wrenching",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "가슴이 찢기는, 고통스러운",
-      "syns": ["agonizing", "harrowing", "gut-wrenching"],
+      "syns": [
+        "agonizing",
+        "harrowing",
+        "gut-wrenching"
+      ],
       "src": ""
     },
     {
       "w": "procure",
-      "pos": "verb",
+      "pos": "동사",
       "def": "획득하다, 조달하다",
-      "syns": ["acquire", "obtain", "secure"],
+      "syns": [
+        "acquire",
+        "obtain",
+        "secure"
+      ],
       "src": ""
     },
     {
       "w": "corybantic",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "열광적인, 광란에 가까운 (키벨레 사제 코리반테스에서 유래)",
-      "syns": ["frenzied", "frantic", "bacchanalian"],
+      "syns": [
+        "frenzied",
+        "frantic",
+        "bacchanalian"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "extrospection",
-      "pos": "noun",
+      "pos": "명사",
       "def": "외부 사물을 관찰하는 행위, 내성(introspection)의 반의어",
-      "syns": ["observation", "outward examination", "outward perception"],
+      "syns": [
+        "observation",
+        "outward examination",
+        "outward perception"
+      ],
       "src": "Word Genius"
     }
   ]
