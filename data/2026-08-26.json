@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "캐나다, 미국산 700개 품목에 보복 관세 9월 8일 발동",
@@ -46,6 +47,7 @@
     },
     {
       "name": "The Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "앤스로픽 IPO 임박 — 총시장 추정 30조 달러 상회",
@@ -67,6 +69,7 @@
     },
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "미-캐나다 협상 결렬 내막 — 프랑스어 스트리밍 법 등 복수 쟁점",
@@ -92,6 +95,7 @@
     },
     {
       "name": "NY Review of Books",
+      "tag": "News",
       "stories": [
         {
           "lead": "10대 범죄 공황의 귀환 — 미국, 청소년 성인 기준 다시 낮춰",
@@ -105,6 +109,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "과일 항산화 물질이 폐를 대기오염으로부터 보호",
@@ -132,107 +137,166 @@
   "vocab": [
     {
       "w": "retaliatory",
-      "pos": "adj",
+      "pos": "형용사",
       "def": "보복적인, 앙갚음의",
-      "syns": ["punitive", "vindictive", "reciprocal"],
+      "syns": [
+        "punitive",
+        "vindictive",
+        "reciprocal"
+      ],
       "src": ""
     },
     {
       "w": "galvanize",
-      "pos": "v",
+      "pos": "동사",
       "def": "자극하여 행동하게 하다, 활성화시키다",
-      "syns": ["energize", "stimulate", "mobilize"],
+      "syns": [
+        "energize",
+        "stimulate",
+        "mobilize"
+      ],
       "src": ""
     },
     {
       "w": "defuse",
-      "pos": "v",
+      "pos": "동사",
       "def": "위험·긴장을 완화시키다, 진정시키다",
-      "syns": ["alleviate", "mitigate", "neutralize"],
+      "syns": [
+        "alleviate",
+        "mitigate",
+        "neutralize"
+      ],
       "src": ""
     },
     {
       "w": "formidable",
-      "pos": "adj",
+      "pos": "형용사",
       "def": "강력한, 만만치 않은, 위협적인",
-      "syns": ["daunting", "imposing", "fearsome"],
+      "syns": [
+        "daunting",
+        "imposing",
+        "fearsome"
+      ],
       "src": ""
     },
     {
       "w": "exacerbate",
-      "pos": "v",
+      "pos": "동사",
       "def": "악화시키다, 심화시키다",
-      "syns": ["aggravate", "worsen", "intensify"],
+      "syns": [
+        "aggravate",
+        "worsen",
+        "intensify"
+      ],
       "src": ""
     },
     {
       "w": "erratic",
-      "pos": "adj",
+      "pos": "형용사",
       "def": "불규칙한, 예측 불가능한, 일관성 없는",
-      "syns": ["unpredictable", "inconsistent", "capricious"],
+      "syns": [
+        "unpredictable",
+        "inconsistent",
+        "capricious"
+      ],
       "src": ""
     },
     {
       "w": "pervasive",
-      "pos": "adj",
+      "pos": "형용사",
       "def": "만연한, 널리 퍼진, 광범위한",
-      "syns": ["ubiquitous", "prevalent", "widespread"],
+      "syns": [
+        "ubiquitous",
+        "prevalent",
+        "widespread"
+      ],
       "src": ""
     },
     {
       "w": "miscreant",
-      "pos": "n",
+      "pos": "명사",
       "def": "악당, 범죄자, 비행자",
-      "syns": ["villain", "criminal", "wrongdoer"],
+      "syns": [
+        "villain",
+        "criminal",
+        "wrongdoer"
+      ],
       "src": ""
     },
     {
       "w": "discretionary",
-      "pos": "adj",
+      "pos": "형용사",
       "def": "재량적인, 자유 재량에 맡겨진",
-      "syns": ["optional", "elective", "subjective"],
+      "syns": [
+        "optional",
+        "elective",
+        "subjective"
+      ],
       "src": ""
     },
     {
       "w": "proportionate",
-      "pos": "adj",
+      "pos": "형용사",
       "def": "비례하는, 균형 잡힌, 상응하는",
-      "syns": ["commensurate", "balanced", "equitable"],
+      "syns": [
+        "commensurate",
+        "balanced",
+        "equitable"
+      ],
       "src": ""
     },
     {
       "w": "gestalt",
-      "pos": "n",
+      "pos": "명사",
       "def": "게슈탈트; 부분의 합을 넘어서는 전체적 형태와 지각",
-      "syns": ["whole", "configuration", "totality"],
+      "syns": [
+        "whole",
+        "configuration",
+        "totality"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "chronometry",
-      "pos": "n",
+      "pos": "명사",
       "def": "시간 측정학; 정밀한 시간 측정의 과학",
-      "syns": ["timekeeping", "horology"],
+      "syns": [
+        "timekeeping",
+        "horology"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "caprice",
-      "pos": "n",
+      "pos": "명사",
       "def": "변덕, 충동적인 행동이나 결정",
-      "syns": ["whim", "impulse", "vagary"],
+      "syns": [
+        "whim",
+        "impulse",
+        "vagary"
+      ],
       "src": ""
     },
     {
       "w": "benign",
-      "pos": "adj",
+      "pos": "형용사",
       "def": "해롭지 않은, 온화한, 친절한",
-      "syns": ["harmless", "gentle", "innocuous"],
+      "syns": [
+        "harmless",
+        "gentle",
+        "innocuous"
+      ],
       "src": ""
     },
     {
       "w": "festering",
-      "pos": "adj",
+      "pos": "형용사",
       "def": "곪는, 점점 악화되는, 분노가 쌓여가는",
-      "syns": ["worsening", "smoldering", "rankling"],
+      "syns": [
+        "worsening",
+        "smoldering",
+        "rankling"
+      ],
       "src": ""
     }
   ]
