@@ -1,0 +1,428 @@
+{
+  "date": "2026-08-27",
+  "heroSummary": "엔비디아 2분기 매출 960억 달러로 15분기 연속 시장 예상치 초과. 메타, 소셜 미디어 중독 소송 170억 달러 합의. 컨트리 음악의 전설 돌리 파튼 80세 별세. 네팔 홍수 사망자 160명 이상. 오픈AI 허깅페이스 해킹 인정. 미국, 중국 해커 NASA·연방준비제도·법무부 침해 공식 발표.",
+  "bigPicture": "AI 패권 전쟁이 심화되는 가운데 엔비디아가 압도적 실적으로 독주하고 있다. 중국은 AI를 전략적으로 수용하는 반면 서방은 규제 강화를 논의 중이다. 메타의 170억 달러 합의는 빅테크 책임 시대의 서막을 알리며, 네팔 홍수와 기후 재난은 아시아 전역에서 인명 피해를 낳고 있다.",
+  "outlets": [
+    {
+      "name": "New York Times",
+      "tag": "Headlines · World",
+      "stories": [
+        {
+          "lead": "돌리 파튼 별세",
+          "body": "수백만 명에게 감동을 준 노래를 남긴 슈퍼스타, 향년 80세로 타계"
+        },
+        {
+          "lead": "국내외에서 트럼프에 대한 복종이 점점 저항으로 바뀌고 있음",
+          "body": ""
+        },
+        {
+          "lead": "헤그세스 국방장관, 육군 지도부 대규모 숙청 단행",
+          "body": "비판적 장교들 방출"
+        },
+        {
+          "lead": "중국, NASA·연방준비제도·법무부를 겨냥한 사이버 공격 혐의로 기소",
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "Washington Post",
+      "tag": "Politics",
+      "stories": [
+        {
+          "lead": "트럼프 행정부, 대규모 추방 시스템 본격 가동",
+          "body": "이민자 단속 전례 없는 규모로 확대"
+        },
+        {
+          "lead": "투표 봉투 관련 행정명령 서명",
+          "body": "선거 절차 변경 시도 논란"
+        },
+        {
+          "lead": "헤그세스, 이념에 맞지 않는 군 지도부 교체 지속",
+          "body": ""
+        },
+        {
+          "lead": "공화당 내부에서도 트럼프 정책 일부에 이견 표출",
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "The Economist",
+      "tag": "World in Brief",
+      "stories": [
+        {
+          "lead": "엔비디아, AI 붐의 최대 수혜자로 독주",
+          "body": "경쟁자 부재 속 독점적 지위 강화"
+        },
+        {
+          "lead": "중국의 AI 전략",
+          "body": "규제 없는 수용 vs 서방의 신중한 접근"
+        },
+        {
+          "lead": "글로벌 공급망 재편",
+          "body": "미중 갈등 속 기업들의 생존 전략"
+        }
+      ]
+    },
+    {
+      "name": "The Guardian",
+      "tag": "News",
+      "stories": [
+        {
+          "lead": "네팔 홍수",
+          "body": "빙하 붕괴로 촉발된 대규모 홍수, 사망자 160명 이상 — 인도 순례자 수십 명 실종"
+        },
+        {
+          "lead": "메타 합의",
+          "body": "소셜 미디어가 청소년에게 미치는 해악, 법적 책임 인정"
+        },
+        {
+          "lead": "기후 위기 가속화",
+          "body": "히말라야 빙하 손실로 아시아 지역 재난 위험 증가"
+        }
+      ]
+    },
+    {
+      "name": "BBC",
+      "tag": "News",
+      "stories": [
+        {
+          "lead": "돌리 파튼",
+          "body": "미국이 사랑한 컨트리 아이콘의 삶과 유산"
+        },
+        {
+          "lead": "네팔 홍수 피해",
+          "body": "몬순 폭우와 빙하 붕괴의 복합 재해"
+        },
+        {
+          "lead": "트럼프 행정부의 이민 정책, 국제 사회와 갈등 고조",
+          "body": ""
+        },
+        {
+          "lead": "오픈AI, 허깅페이스 해킹 사실 인정",
+          "body": "AI 보안 우려 부각"
+        }
+      ]
+    },
+    {
+      "name": "Reuters",
+      "tag": "News",
+      "stories": [
+        {
+          "lead": "엔비디아 2분기 실적",
+          "body": "매출 960억 달러, 전년 대비 122% 성장 — 시장 예상 대폭 초과"
+        },
+        {
+          "lead": "메타, 소셜 미디어 중독 집단 소송 170억 달러 합의 발표",
+          "body": ""
+        },
+        {
+          "lead": "네팔 홍수 사망자 집계 계속 증가",
+          "body": "구조 작업 난항"
+        },
+        {
+          "lead": "오픈AI, 허깅페이스 플랫폼 보안 침해 공식 인정",
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "Associated Press",
+      "tag": "News",
+      "stories": [
+        {
+          "lead": "돌리 파튼 80세 별세",
+          "body": "전 세계 팬들의 애도 물결"
+        },
+        {
+          "lead": "헤그세스 육군 숙청",
+          "body": "트럼프 행정부, 군 지도부 이념적 재편 가속"
+        },
+        {
+          "lead": "미국, 중국 해커들이 NASA·연방준비제도·법무부 시스템 침해했다고 공식 발표",
+          "body": ""
+        },
+        {
+          "lead": "트럼프 투표 봉투 행정명령",
+          "body": "법적 도전 예고"
+        }
+      ]
+    },
+    {
+      "name": "NPR",
+      "tag": "News",
+      "stories": [
+        {
+          "lead": "돌리 파튼",
+          "body": "음악을 넘어 자선·교육에 헌신한 삶"
+        },
+        {
+          "lead": "메타 합의의 의미",
+          "body": "빅테크 책임 시대의 서막"
+        },
+        {
+          "lead": "트럼프 이민 단속, 혼합 신분 가정에 미치는 영향",
+          "body": ""
+        },
+        {
+          "lead": "헤그세스의 군 개혁",
+          "body": "지지자와 비판론자의 엇갈린 시선"
+        }
+      ]
+    },
+    {
+      "name": "Financial Times",
+      "tag": "News",
+      "stories": [
+        {
+          "lead": "엔비디아 실적 충격",
+          "body": "데이터센터 매출 870억 달러 — AI 인프라 투자 수요 식지 않아"
+        },
+        {
+          "lead": "메타 합의, 빅테크 규제 새 이정표",
+          "body": "유럽 규제 강화 논의에도 영향"
+        },
+        {
+          "lead": "미중 기술 디커플링 가속",
+          "body": "AI 반도체 수출 통제 효과 제한적"
+        },
+        {
+          "lead": "글로벌 금융 시장, 엔비디아 실적 호조에 기술주 강세",
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "Bloomberg",
+      "tag": "News",
+      "stories": [
+        {
+          "lead": "엔비디아 시가총액, 실적 발표 후 다시 4조 달러 돌파 전망",
+          "body": ""
+        },
+        {
+          "lead": "메타 170억 달러 합의",
+          "body": "주주 반응 엇갈려 — 비용 부담 vs 불확실성 해소"
+        },
+        {
+          "lead": "연준, AI 붐 속 인플레이션 재점화 가능성 주시",
+          "body": ""
+        },
+        {
+          "lead": "헤지펀드, 엔비디아 콜옵션 대거 매입",
+          "body": "추가 상승 베팅"
+        }
+      ]
+    },
+    {
+      "name": "Word Daily",
+      "tag": "News",
+      "stories": [
+        {
+          "lead": "오늘의 단어",
+          "body": "flibbertigibbet — 경박하고 수다스러운 사람"
+        }
+      ]
+    },
+    {
+      "name": "Word Genius",
+      "tag": "News",
+      "stories": [
+        {
+          "lead": "오늘의 단어",
+          "body": "stemwinder — 청중을 사로잡는 열변, 감동적인 연설"
+        }
+      ]
+    },
+    {
+      "name": "Word Smarts",
+      "tag": "표현·언어",
+      "stories": [
+        {
+          "lead": "필체 분석(Graphology)",
+          "body": "글씨체로 성격을 파악하는 학문"
+        },
+        {
+          "lead": "조부모 언어",
+          "body": "여러 언어에서 조부모를 뜻하는 단어의 공통 어원"
+        },
+        {
+          "lead": "빅토리아 시대 속어",
+          "body": "brick, mutton-headed, gammon 등 19세기 영국 구어 표현"
+        },
+        {
+          "lead": "문법 레슨",
+          "body": "fewer(셀 수 있는 명사)와 less(셀 수 없는 명사)의 올바른 구분"
+        },
+        {
+          "lead": "'throw in the towel' 어원",
+          "body": "권투에서 패배 인정 시 수건을 던지던 관습에서 유래"
+        }
+      ]
+    },
+    {
+      "name": "All Healthy",
+      "tag": "건강",
+      "stories": [
+        {
+          "lead": "카페인과 CYP1A2 유전자",
+          "body": "유전자 변이에 따라 운동 전 카페인 섭취 효과 달라짐"
+        },
+        {
+          "lead": "멀미 예방법",
+          "body": "시선 고정, 창가 앞자리, 생강 섭취, 귀 뒤 지압"
+        },
+        {
+          "lead": "데이비드 싱클레어 노화 연구",
+          "body": "후성유전학적 노화 이론과 생활습관으로 노화 시계 되돌리기"
+        }
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "w": "flibbertigibbet",
+      "pos": "명사",
+      "def": "경박하고 수다스러운 사람; 생각 없이 잡담하고 집중하지 못하는 사람",
+      "syns": [
+        "chatterbox",
+        "scatterbrain",
+        "airhead"
+      ],
+      "src": "Word Daily"
+    },
+    {
+      "w": "stemwinder",
+      "pos": "명사",
+      "def": "청중을 사로잡는 열변; 강렬하고 감동적인 연설",
+      "syns": [
+        "barnburner",
+        "harangue",
+        "oration"
+      ],
+      "src": "Word Genius"
+    },
+    {
+      "w": "ubiquity",
+      "pos": "명사",
+      "def": "어디에나 존재함, 편재",
+      "syns": [
+        "omnipresence",
+        "pervasiveness",
+        "universality"
+      ],
+      "src": "news"
+    },
+    {
+      "w": "contentious",
+      "pos": "형용사",
+      "def": "논란이 많은, 분쟁을 일으키는",
+      "syns": [
+        "controversial",
+        "disputatious",
+        "polemical"
+      ],
+      "src": "news"
+    },
+    {
+      "w": "rudderless",
+      "pos": "형용사",
+      "def": "방향을 잃은, 지도력이 없는",
+      "syns": [
+        "adrift",
+        "leaderless",
+        "directionless"
+      ],
+      "src": "news"
+    },
+    {
+      "w": "curtail",
+      "pos": "동사",
+      "def": "크게 축소하다, 제한하다",
+      "syns": [
+        "truncate",
+        "abridge",
+        "circumscribe"
+      ],
+      "src": "news"
+    },
+    {
+      "w": "allay",
+      "pos": "동사",
+      "def": "완화하다, 진정시키다",
+      "syns": [
+        "assuage",
+        "mitigate",
+        "mollify"
+      ],
+      "src": "news"
+    },
+    {
+      "w": "nullify",
+      "pos": "동사",
+      "def": "무효화하다",
+      "syns": [
+        "abrogate",
+        "invalidate",
+        "vitiate"
+      ],
+      "src": "news"
+    },
+    {
+      "w": "reckoning",
+      "pos": "명사",
+      "def": "청산, 결산의 순간",
+      "syns": [
+        "retribution",
+        "comeuppance",
+        "adjudication"
+      ],
+      "src": "news"
+    },
+    {
+      "w": "formidable",
+      "pos": "형용사",
+      "def": "만만치 않은, 강력한",
+      "syns": [
+        "redoubtable",
+        "daunting",
+        "indomitable"
+      ],
+      "src": "news"
+    },
+    {
+      "w": "nativist",
+      "pos": "형용사",
+      "def": "자국민 우선주의의",
+      "syns": [
+        "isolationist",
+        "chauvinist",
+        "exclusionary"
+      ],
+      "src": "news"
+    },
+    {
+      "w": "epigenetics",
+      "pos": "명사",
+      "def": "후성유전학",
+      "syns": [
+        "epigenomics",
+        "gene-expression regulation",
+        "heritable modification"
+      ],
+      "src": "All Healthy"
+    },
+    {
+      "w": "transfigure",
+      "pos": "동사",
+      "def": "변형시키다, 탈바꿈시키다",
+      "syns": [
+        "metamorphose",
+        "transmute",
+        "transform"
+      ],
+      "src": "news"
+    }
+  ]
+}
