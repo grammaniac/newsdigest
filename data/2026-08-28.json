@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "네팔 빙하 붕괴 홍수, 400명 사망·1,400명 실종",
@@ -42,6 +43,7 @@
     },
     {
       "name": "The Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "트럼프 가문 암호화폐 은행, 아부다비 왕실 '스파이 셰이크' 지분 49% 보유",
@@ -71,6 +73,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "히말라야 빙하 붕괴 메커니즘과 네팔 피해",
@@ -100,6 +103,7 @@
     },
     {
       "name": "The New York Review of Books",
+      "tag": "Essays",
       "stories": [
         {
           "lead": "다이앤 윌리엄스의 단편집, '꿈의 섬광' 같은 산문으로 평가",
@@ -121,6 +125,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "CFP 플레이오프 예측: 노트르담·텍사스 테크 상위권",
@@ -146,6 +151,7 @@
     },
     {
       "name": "Word Daily",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: MATRONYMIC",
@@ -155,6 +161,7 @@
     },
     {
       "name": "Word Genius",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: AMBROSIAL",
@@ -164,6 +171,7 @@
     },
     {
       "name": "Word Smarts",
+      "tag": "표현·언어",
       "stories": [
         {
           "lead": "일상 약어 해독: IQ, P.S. 등의 완전한 표현",
@@ -173,6 +181,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "직장 내 둠스크롤링, 반추 증가시키고 몰입도 저하",
@@ -196,100 +205,155 @@
   "vocab": [
     {
       "w": "ubiquitous",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "어디에나 있는, 아주 흔한",
-      "syns": ["pervasive", "omnipresent", "prevalent"],
+      "syns": [
+        "pervasive",
+        "omnipresent",
+        "prevalent"
+      ],
       "src": ""
     },
     {
       "w": "proclivity",
-      "pos": "noun",
+      "pos": "명사",
       "def": "경향, 성향",
-      "syns": ["propensity", "predilection", "inclination"],
+      "syns": [
+        "propensity",
+        "predilection",
+        "inclination"
+      ],
       "src": ""
     },
     {
       "w": "precarious",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "불안정한, 위태로운",
-      "syns": ["unstable", "tenuous", "perilous"],
+      "syns": [
+        "unstable",
+        "tenuous",
+        "perilous"
+      ],
       "src": ""
     },
     {
       "w": "rumination",
-      "pos": "noun",
+      "pos": "명사",
       "def": "반추, 집착적 사고",
-      "syns": ["brooding", "deliberation", "contemplation"],
+      "syns": [
+        "brooding",
+        "deliberation",
+        "contemplation"
+      ],
       "src": ""
     },
     {
       "w": "neuroticism",
-      "pos": "noun",
+      "pos": "명사",
       "def": "신경증적 성향",
-      "syns": ["anxiety-proneness", "emotional instability", "hypersensitivity"],
+      "syns": [
+        "anxiety-proneness",
+        "emotional instability",
+        "hypersensitivity"
+      ],
       "src": ""
     },
     {
       "w": "unbowed",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "굴하지 않는, 꺾이지 않은",
-      "syns": ["unbroken", "defiant", "indomitable"],
+      "syns": [
+        "unbroken",
+        "defiant",
+        "indomitable"
+      ],
       "src": ""
     },
     {
       "w": "dynamism",
-      "pos": "noun",
+      "pos": "명사",
       "def": "역동성, 활력",
-      "syns": ["vigor", "vitality", "drive"],
+      "syns": [
+        "vigor",
+        "vitality",
+        "drive"
+      ],
       "src": ""
     },
     {
       "w": "asymmetric",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "비대칭의",
-      "syns": ["unequal", "imbalanced", "disproportionate"],
+      "syns": [
+        "unequal",
+        "imbalanced",
+        "disproportionate"
+      ],
       "src": ""
     },
     {
       "w": "dilatory",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "지체하는, 꾸물거리는",
-      "syns": ["tardy", "procrastinating", "dawdling"],
+      "syns": [
+        "tardy",
+        "procrastinating",
+        "dawdling"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "arcane",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "난해한, 신비스러운",
-      "syns": ["esoteric", "obscure", "cryptic"],
+      "syns": [
+        "esoteric",
+        "obscure",
+        "cryptic"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "solidarity",
-      "pos": "noun",
+      "pos": "명사",
       "def": "연대, 결속",
-      "syns": ["unity", "cohesion", "fellowship"],
+      "syns": [
+        "unity",
+        "cohesion",
+        "fellowship"
+      ],
       "src": ""
     },
     {
       "w": "diaphragmatic",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "횡격막의",
-      "syns": ["abdominal", "ventral", "thoracic"],
+      "syns": [
+        "abdominal",
+        "ventral",
+        "thoracic"
+      ],
       "src": ""
     },
     {
       "w": "matronymic",
       "pos": "noun/adjective",
       "def": "어머니 이름에서 유래한 이름",
-      "syns": ["metronymic", "maternal-lineage name"],
+      "syns": [
+        "metronymic",
+        "maternal-lineage name"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "ambrosial",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "신성하게 맛있는, 천상의",
-      "syns": ["divine", "delectable", "heavenly"],
+      "syns": [
+        "divine",
+        "delectable",
+        "heavenly"
+      ],
       "src": "Word Genius"
     }
   ]
