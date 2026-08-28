@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "WSJ",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "연준 워시 이사 잭슨홀 발언: 금리 인상 가능성 급등",
@@ -46,6 +47,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "워시 연준 이사: 인플레이션 지속 시 추가 조치 필요",
@@ -107,6 +109,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "대학 미식축구 위크 0 개막: 벨리칙의 UNC 첫 출격",
@@ -160,6 +163,7 @@
     },
     {
       "name": "NYT",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "트럼프 워싱턴, 국가부채 폭증 사실상 방치",
@@ -193,6 +197,7 @@
     },
     {
       "name": "Word Daily",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: SALMAGUNDI (살마군디) | 출처: Word Daily",
@@ -202,6 +207,7 @@
     },
     {
       "name": "Word Genius",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: ANNEAL (어닐) | 출처: Word Genius",
@@ -211,6 +217,7 @@
     },
     {
       "name": "Word Smarts",
+      "tag": "표현·언어",
       "stories": [
         {
           "lead": "세대별 문자 문화와 언어의 역사",
@@ -220,6 +227,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "함께 운동하는 커플이 부부 관계도 더 좋다",
@@ -243,100 +251,156 @@
   "vocab": [
     {
       "w": "egregious",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "지극히 나쁜, 심각한; outstandingly bad or shocking",
-      "syns": ["flagrant", "glaring", "heinous"],
+      "syns": [
+        "flagrant",
+        "glaring",
+        "heinous"
+      ],
       "src": "The Economist"
     },
     {
       "w": "calamitous",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "재난을 초래하는, 파국적인; causing great damage or distress",
-      "syns": ["catastrophic", "disastrous", "ruinous"],
+      "syns": [
+        "catastrophic",
+        "disastrous",
+        "ruinous"
+      ],
       "src": "The Economist"
     },
     {
       "w": "hapless",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "운이 없는, 불운한; unfortunate and deserving of pity",
-      "syns": ["unfortunate", "luckless", "ill-fated"],
+      "syns": [
+        "unfortunate",
+        "luckless",
+        "ill-fated"
+      ],
       "src": "The Economist"
     },
     {
       "w": "plucky",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "용감한, 배짱 있는; having determined courage in the face of difficulties",
-      "syns": ["courageous", "tenacious", "spirited"],
+      "syns": [
+        "courageous",
+        "tenacious",
+        "spirited"
+      ],
       "src": "The Economist"
     },
     {
       "w": "pantheon",
-      "pos": "noun",
+      "pos": "명사",
       "def": "위대한 인물들의 집합체, 만신전; a group of the most famous, important, or respected people in a field",
-      "syns": ["hall of fame", "elite", "firmament"],
+      "syns": [
+        "hall of fame",
+        "elite",
+        "firmament"
+      ],
       "src": "The Economist"
     },
     {
       "w": "languish",
-      "pos": "verb",
+      "pos": "동사",
       "def": "불리한 상황에 갇혀 서서히 쇠락하다; to be trapped in an unfavorable situation and grow weak",
-      "syns": ["wither", "stagnate", "deteriorate"],
+      "syns": [
+        "wither",
+        "stagnate",
+        "deteriorate"
+      ],
       "src": "The Economist"
     },
     {
       "w": "loath",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "꺼리는, 내키지 않는; reluctant or unwilling",
-      "syns": ["reluctant", "disinclined", "averse"],
+      "syns": [
+        "reluctant",
+        "disinclined",
+        "averse"
+      ],
       "src": "The Economist"
     },
     {
       "w": "wily",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "교활하게 이득을 취하는, 능수능란한; skilled at gaining advantage through cunning",
-      "syns": ["cunning", "crafty", "shrewd"],
+      "syns": [
+        "cunning",
+        "crafty",
+        "shrewd"
+      ],
       "src": "The Economist"
     },
     {
       "w": "dystopian",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "반이상향적인, 암울한 미래를 묘사하는; relating to an imagined state that is extremely bad or oppressive",
-      "syns": ["bleak", "apocalyptic", "nightmarish"],
+      "syns": [
+        "bleak",
+        "apocalyptic",
+        "nightmarish"
+      ],
       "src": "NYT"
     },
     {
       "w": "presage",
-      "pos": "verb",
+      "pos": "동사",
       "def": "전조가 되다, 예고하다; to be a sign or warning that something will happen",
-      "syns": ["portend", "foreshadow", "augur"],
+      "syns": [
+        "portend",
+        "foreshadow",
+        "augur"
+      ],
       "src": "NYT"
     },
     {
       "w": "neuroplasticity",
-      "pos": "noun",
+      "pos": "명사",
       "def": "신경 가소성; 뇌가 새로운 신경 연결을 형성해 스스로를 재조직하는 능력; the brain's ability to reorganize itself by forming new neural connections",
-      "syns": ["brain plasticity", "neural adaptation", "cognitive flexibility"],
+      "syns": [
+        "brain plasticity",
+        "neural adaptation",
+        "cognitive flexibility"
+      ],
       "src": "All Healthy"
     },
     {
       "w": "rumination",
-      "pos": "noun",
+      "pos": "명사",
       "def": "반추; 괴로운 생각을 반복적으로 되새기는 행위; obsessive thinking about distressing topics",
-      "syns": ["brooding", "dwelling", "obsessing"],
+      "syns": [
+        "brooding",
+        "dwelling",
+        "obsessing"
+      ],
       "src": "All Healthy"
     },
     {
       "w": "salmagundi",
-      "pos": "noun",
+      "pos": "명사",
       "def": "잡다한 혼합물, 각양각색의 컬렉션; 또는 다진 고기·멸치·달걀 등을 섞은 요리; a general mixture or miscellaneous collection; also a dish of mixed meats and other ingredients",
-      "syns": ["medley", "miscellany", "hodgepodge"],
+      "syns": [
+        "medley",
+        "miscellany",
+        "hodgepodge"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "anneal",
-      "pos": "verb",
+      "pos": "동사",
       "def": "금속이나 유리를 가열 후 서서히 냉각시켜 내부 응력 제거 및 가공성 향상; to heat metal or glass and allow it to cool slowly to remove internal stresses",
-      "syns": ["temper", "harden", "toughen"],
+      "syns": [
+        "temper",
+        "harden",
+        "toughen"
+      ],
       "src": "Word Genius"
     }
   ]
