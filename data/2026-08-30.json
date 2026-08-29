@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "트럼프, 베네수엘라 석유 대규모 지분 통제 협정 발표",
@@ -18,6 +19,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "해리 왕자와 메건의 영국 귀환, 군주제 역할 재조명",
@@ -55,6 +57,7 @@
     },
     {
       "name": "The New York Review of Books",
+      "tag": "Essays",
       "stories": [
         {
           "lead": "이란 미디어 연구자 나히드 시암두스트 인터뷰",
@@ -76,6 +79,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "미국 여자 배구, 새로운 흥행 스포츠로 급부상",
@@ -111,100 +115,169 @@
   "vocab": [
     {
       "w": "grandiloquent",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "과장되고 거창한; 허풍스럽게 화려한 언어를 사용하는",
-      "syns": ["bombastic", "pompous", "inflated", "rhetorical"],
+      "syns": [
+        "bombastic",
+        "pompous",
+        "inflated",
+        "rhetorical"
+      ],
       "src": ""
     },
     {
       "w": "restive",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "불안한, 초조한; 통제나 권위에 저항하는",
-      "syns": ["restless", "uneasy", "fidgety", "recalcitrant"],
+      "syns": [
+        "restless",
+        "uneasy",
+        "fidgety",
+        "recalcitrant"
+      ],
       "src": ""
     },
     {
       "w": "belligerent",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "호전적인, 전투적인; 싸우려 드는",
-      "syns": ["aggressive", "combative", "pugnacious", "warlike"],
+      "syns": [
+        "aggressive",
+        "combative",
+        "pugnacious",
+        "warlike"
+      ],
       "src": ""
     },
     {
       "w": "haphazard",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "무계획적인, 임의적인; 체계 없이 되는 대로인",
-      "syns": ["random", "unsystematic", "disorganized", "chaotic"],
+      "syns": [
+        "random",
+        "unsystematic",
+        "disorganized",
+        "chaotic"
+      ],
       "src": ""
     },
     {
       "w": "subversive",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "전복적인; 기존 체제나 권위를 위협하거나 약화시키려는",
-      "syns": ["seditious", "disruptive", "insurgent", "revolutionary"],
+      "syns": [
+        "seditious",
+        "disruptive",
+        "insurgent",
+        "revolutionary"
+      ],
       "src": ""
     },
     {
       "w": "appease",
-      "pos": "verb",
+      "pos": "동사",
       "def": "달래다, 회유하다; 요구를 들어줘 분노나 불만을 무마하다",
-      "syns": ["placate", "mollify", "conciliate", "pacify"],
+      "syns": [
+        "placate",
+        "mollify",
+        "conciliate",
+        "pacify"
+      ],
       "src": ""
     },
     {
       "w": "smattering",
-      "pos": "noun",
+      "pos": "명사",
       "def": "소수, 극소량; 어떤 주제에 대한 피상적이고 불완전한 지식",
-      "syns": ["handful", "sprinkling", "modicum", "scattering"],
+      "syns": [
+        "handful",
+        "sprinkling",
+        "modicum",
+        "scattering"
+      ],
       "src": ""
     },
     {
       "w": "anachronistic",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "시대착오적인; 현 시대에 맞지 않게 과거 시대에 속하는",
-      "syns": ["outdated", "archaic", "obsolete", "antediluvian"],
+      "syns": [
+        "outdated",
+        "archaic",
+        "obsolete",
+        "antediluvian"
+      ],
       "src": ""
     },
     {
       "w": "syncretism",
-      "pos": "noun",
+      "pos": "명사",
       "def": "절충주의; 서로 다른 사상·문화·종교 체계를 혼합하거나 통합하는 것",
-      "syns": ["eclecticism", "fusion", "amalgamation", "blending"],
+      "syns": [
+        "eclecticism",
+        "fusion",
+        "amalgamation",
+        "blending"
+      ],
       "src": ""
     },
     {
       "w": "transdermal",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "경피(經皮)의; 피부를 통해 흡수되거나 투여되는",
-      "syns": ["percutaneous", "topical", "cutaneous", "subcutaneous"],
+      "syns": [
+        "percutaneous",
+        "topical",
+        "cutaneous",
+        "subcutaneous"
+      ],
       "src": ""
     },
     {
       "w": "disinformation",
-      "pos": "noun",
+      "pos": "명사",
       "def": "의도적 허위 정보, 역정보; 특정 목적을 위해 고의로 유포하는 거짓 정보",
-      "syns": ["misinformation", "propaganda", "fabrication", "deception"],
+      "syns": [
+        "misinformation",
+        "propaganda",
+        "fabrication",
+        "deception"
+      ],
       "src": ""
     },
     {
       "w": "expatriate",
-      "pos": "noun",
+      "pos": "명사",
       "def": "국외 거주자; 자국을 떠나 타국에 거주하는 사람",
-      "syns": ["emigrant", "expat", "exile", "émigré"],
+      "syns": [
+        "emigrant",
+        "expat",
+        "exile",
+        "émigré"
+      ],
       "src": ""
     },
     {
       "w": "arrière-pensée",
-      "pos": "noun",
+      "pos": "명사",
       "def": "숨겨진 생각이나 의도; 저의(底意), 속셈",
-      "syns": ["ulterior motive", "hidden agenda", "concealed intention"],
+      "syns": [
+        "ulterior motive",
+        "hidden agenda",
+        "concealed intention"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "vulpine",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "여우에 관련된; 여우처럼 교활하고 영리한",
-      "syns": ["foxy", "cunning", "crafty", "sly"],
+      "syns": [
+        "foxy",
+        "cunning",
+        "crafty",
+        "sly"
+      ],
       "src": "Word Genius"
     }
   ]
