@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "미국, 이란 라락섬 로켓발사대 공격",
@@ -42,6 +43,7 @@
     },
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "히말라야 빙하 붕괴 심층 보도",
@@ -63,6 +65,7 @@
     },
     {
       "name": "The Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "트럼프의 베네수엘라 석유 협상 내막",
@@ -88,6 +91,7 @@
     },
     {
       "name": "The New York Review of Books",
+      "tag": "Essays",
       "stories": [
         {
           "lead": "인도 청년 봉기",
@@ -109,6 +113,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "UNC 15-10 TCU (아일랜드 개막전)",
@@ -142,6 +147,7 @@
     },
     {
       "name": "Word Smarts",
+      "tag": "표현·언어",
       "stories": [
         {
           "lead": "영어에서 가장 많이 잘못 발음되는 단어 15개",
@@ -159,6 +165,7 @@
     },
     {
       "name": "Word Daily",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: frabjous",
@@ -168,6 +175,7 @@
     },
     {
       "name": "Word Genius",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: beldam",
@@ -177,6 +185,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "보이스맥싱(Voicemaxxing)",
@@ -200,86 +209,139 @@
   "vocab": [
     {
       "w": "indignation",
-      "pos": "noun",
+      "pos": "명사",
       "def": "분개, 의분 — 부당하다고 느낄 때 생기는 강한 분노",
-      "syns": ["umbrage", "ire", "outrage", "wrath"],
+      "syns": [
+        "umbrage",
+        "ire",
+        "outrage",
+        "wrath"
+      ],
       "src": "The Economist"
     },
     {
       "w": "irate",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "격분한, 몹시 화난 — 매우 화가 난 상태",
-      "syns": ["incensed", "wrathful", "livid", "furious"],
+      "syns": [
+        "incensed",
+        "wrathful",
+        "livid",
+        "furious"
+      ],
       "src": "The Economist"
     },
     {
       "w": "harrowing",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "마음을 쥐어짜는, 참혹한 — 극도로 괴롭거나 충격적인",
-      "syns": ["agonizing", "distressing", "traumatic"],
+      "syns": [
+        "agonizing",
+        "distressing",
+        "traumatic"
+      ],
       "src": "The New York Times"
     },
     {
       "w": "wistful",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "아쉬워하는, 애틋한 — 무언가를 그리워하거나 아쉬워하는 감정",
-      "syns": ["nostalgic", "pensive", "rueful", "longing"],
+      "syns": [
+        "nostalgic",
+        "pensive",
+        "rueful",
+        "longing"
+      ],
       "src": "The New York Review of Books"
     },
     {
       "w": "ouster",
-      "pos": "noun",
+      "pos": "명사",
       "def": "축출, 강제 퇴진 — 권력이나 지위에서 강제로 쫓겨남",
-      "syns": ["expulsion", "ejection", "deposition", "removal"],
+      "syns": [
+        "expulsion",
+        "ejection",
+        "deposition",
+        "removal"
+      ],
       "src": "The Wall Street Journal"
     },
     {
       "w": "barnstorming",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "눈부신 성과의, 화려한 — 인상적이고 뛰어난 성과를 내는",
-      "syns": ["dazzling", "spectacular", "stellar"],
+      "syns": [
+        "dazzling",
+        "spectacular",
+        "stellar"
+      ],
       "src": "The Economist"
     },
     {
       "w": "insolvency",
-      "pos": "noun",
+      "pos": "명사",
       "def": "지급불능, 파산 — 부채를 갚을 수 없는 재정 상태",
-      "syns": ["bankruptcy", "default", "financial ruin"],
+      "syns": [
+        "bankruptcy",
+        "default",
+        "financial ruin"
+      ],
       "src": "The Wall Street Journal"
     },
     {
       "w": "clandestine",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "비밀의, 은밀한 — 비밀리에 이루어지는, 특히 허가 없이",
-      "syns": ["covert", "surreptitious", "furtive", "undercover"],
+      "syns": [
+        "covert",
+        "surreptitious",
+        "furtive",
+        "undercover"
+      ],
       "src": "The New York Times"
     },
     {
       "w": "ensnarled",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "복잡하게 얽힌 — 문제나 갈등 속에 깊이 얽혀든",
-      "syns": ["entangled", "enmeshed", "embroiled"],
+      "syns": [
+        "entangled",
+        "enmeshed",
+        "embroiled"
+      ],
       "src": "The Wall Street Journal"
     },
     {
       "w": "epigenetic",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "후성유전학적인 — DNA 서열 변화 없이 유전자 발현을 조절하는 메커니즘과 관련된",
-      "syns": ["transgenerational", "non-genetic"],
+      "syns": [
+        "transgenerational",
+        "non-genetic"
+      ],
       "src": "All Healthy"
     },
     {
       "w": "frabjous",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "즐거운, 환희에 찬 — 기쁨으로 가득 찬 (루이스 캐럴이 만든 신조어)",
-      "syns": ["joyous", "elated", "jubilant", "exuberant"],
+      "syns": [
+        "joyous",
+        "elated",
+        "jubilant",
+        "exuberant"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "beldam",
-      "pos": "noun",
+      "pos": "명사",
       "def": "노파, 할멈 — 나이 든 여성 (특히 못생기거나 무서운)",
-      "syns": ["crone", "hag", "matriarch"],
+      "syns": [
+        "crone",
+        "hag",
+        "matriarch"
+      ],
       "src": "Word Genius"
     }
   ]
