@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "이란 전쟁 Q&A",
@@ -38,6 +39,7 @@
     },
     {
       "name": "The Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "연방대법원, 트럼프 백악관 연회장 공사 허용",
@@ -67,6 +69,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "푸틴, 새 도발 계획 중",
@@ -116,6 +119,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "조코비치, US오픈 1회전 충격 탈락",
@@ -141,6 +145,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "계단 오르기의 심혈관 건강 효과",
@@ -164,93 +169,158 @@
   "vocab": [
     {
       "w": "nubilous",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "흐릿한, 안개 낀; 비유적으로 불분명한",
-      "syns": ["cloudy", "misty", "nebulous", "murky"],
+      "syns": [
+        "cloudy",
+        "misty",
+        "nebulous",
+        "murky"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "lissome",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "날씬하고 유연하며 우아한",
-      "syns": ["lithe", "supple", "willowy", "nimble"],
+      "syns": [
+        "lithe",
+        "supple",
+        "willowy",
+        "nimble"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "purveyor",
-      "pos": "noun",
+      "pos": "명사",
       "def": "(음식·서비스 등의) 공급자, 제공자",
-      "syns": ["supplier", "vendor", "provider", "dispenser"],
+      "syns": [
+        "supplier",
+        "vendor",
+        "provider",
+        "dispenser"
+      ],
       "src": ""
     },
     {
       "w": "aloof",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "초연한, 거리를 두는",
-      "syns": ["detached", "standoffish", "distant", "reserved"],
+      "syns": [
+        "detached",
+        "standoffish",
+        "distant",
+        "reserved"
+      ],
       "src": ""
     },
     {
       "w": "consortium",
-      "pos": "noun",
+      "pos": "명사",
       "def": "공동 기구, 컨소시엄",
-      "syns": ["alliance", "coalition", "syndicate", "federation"],
+      "syns": [
+        "alliance",
+        "coalition",
+        "syndicate",
+        "federation"
+      ],
       "src": ""
     },
     {
       "w": "elusive",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "파악하기 어려운, 달성하기 어려운",
-      "syns": ["evasive", "intangible", "fugitive", "ephemeral"],
+      "syns": [
+        "evasive",
+        "intangible",
+        "fugitive",
+        "ephemeral"
+      ],
       "src": ""
     },
     {
       "w": "harrowing",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "극도로 고통스럽고 충격적인",
-      "syns": ["agonizing", "distressing", "traumatic", "wrenching"],
+      "syns": [
+        "agonizing",
+        "distressing",
+        "traumatic",
+        "wrenching"
+      ],
       "src": ""
     },
     {
       "w": "tenacious",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "끈질긴, 집요한",
-      "syns": ["persistent", "dogged", "steadfast", "indefatigable"],
+      "syns": [
+        "persistent",
+        "dogged",
+        "steadfast",
+        "indefatigable"
+      ],
       "src": ""
     },
     {
       "w": "incorrigible",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "교정 불가능한, 고질적인",
-      "syns": ["irredeemable", "inveterate", "recalcitrant", "intractable"],
+      "syns": [
+        "irredeemable",
+        "inveterate",
+        "recalcitrant",
+        "intractable"
+      ],
       "src": ""
     },
     {
       "w": "subsist",
-      "pos": "verb",
+      "pos": "동사",
       "def": "근근이 살아가다, 최소한으로 생존하다",
-      "syns": ["survive", "eke out", "endure", "persist"],
+      "syns": [
+        "survive",
+        "eke out",
+        "endure",
+        "persist"
+      ],
       "src": ""
     },
     {
       "w": "rectify",
-      "pos": "verb",
+      "pos": "동사",
       "def": "바로잡다, 수정하다",
-      "syns": ["correct", "redress", "remedy", "amend"],
+      "syns": [
+        "correct",
+        "redress",
+        "remedy",
+        "amend"
+      ],
       "src": ""
     },
     {
       "w": "revel",
-      "pos": "verb",
+      "pos": "동사",
       "def": "즐기다, 탐닉하다",
-      "syns": ["delight in", "relish", "luxuriate in", "bask in"],
+      "syns": [
+        "delight in",
+        "relish",
+        "luxuriate in",
+        "bask in"
+      ],
       "src": ""
     },
     {
       "w": "harbour",
-      "pos": "verb",
+      "pos": "동사",
       "def": "(희망·감정을) 품다, 간직하다",
-      "syns": ["cherish", "nurture", "foster", "entertain"],
+      "syns": [
+        "cherish",
+        "nurture",
+        "foster",
+        "entertain"
+      ],
       "src": ""
     }
   ]
