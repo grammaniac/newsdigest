@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "미국, 이란 목표물 새 타격 감행",
@@ -30,6 +31,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "미국, 이란 두 번째 군사 타격 — 트럼프 추가 보복 경고",
@@ -79,6 +81,7 @@
     },
     {
       "name": "New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "미 육군 장관, 헤그세스 국방장관과 갈등 끝에 사임",
@@ -116,6 +119,7 @@
     },
     {
       "name": "New York Review of Books",
+      "tag": "Essays",
       "stories": [
         {
           "lead": "이스라엘 서안 정착촌 폭력 — 데이비드 슐만 에세이",
@@ -125,6 +129,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "20분 유산소 운동이 뇌파 향상 — 카페인보다 효과적",
@@ -154,6 +159,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "WNBA — 골든스테이트 발키리스, 2년차에 우승 후보로 부상",
@@ -177,107 +183,176 @@
   "vocab": [
     {
       "w": "syzygy",
-      "pos": "noun",
+      "pos": "명사",
       "def": "천문학적 합 또는 대립(특히 달과 태양의 관계); 연결되거나 대응되는 한 쌍",
-      "syns": ["alignment", "conjunction", "opposition"],
+      "syns": [
+        "alignment",
+        "conjunction",
+        "opposition"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "epithalamium",
-      "pos": "noun",
+      "pos": "명사",
       "def": "결혼을 축하하는 노래 또는 시",
-      "syns": ["wedding song", "nuptial poem", "bridal ode"],
+      "syns": [
+        "wedding song",
+        "nuptial poem",
+        "bridal ode"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "cavil",
-      "pos": "verb",
+      "pos": "동사",
       "def": "사소한 트집을 잡다; 쓸데없이 반박하다",
-      "syns": ["quibble", "nitpick", "carp", "gripe"],
+      "syns": [
+        "quibble",
+        "nitpick",
+        "carp",
+        "gripe"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "puerperal",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "출산 직후 기간과 관련된",
-      "syns": ["postpartum", "postnatal", "childbed"],
+      "syns": [
+        "postpartum",
+        "postnatal",
+        "childbed"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "doyenne",
-      "pos": "noun",
+      "pos": "명사",
       "def": "특정 분야에서 가장 경험 많은 여성; 여성 최고참",
-      "syns": ["matriarch", "senior figure", "leading woman"],
+      "syns": [
+        "matriarch",
+        "senior figure",
+        "leading woman"
+      ],
       "src": ""
     },
     {
       "w": "malleable",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "유연한; 쉽게 영향을 받거나 바뀔 수 있는",
-      "syns": ["pliable", "flexible", "adaptable", "ductile"],
+      "syns": [
+        "pliable",
+        "flexible",
+        "adaptable",
+        "ductile"
+      ],
       "src": ""
     },
     {
       "w": "nefarious",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "극악한; 사악한",
-      "syns": ["wicked", "villainous", "iniquitous", "heinous"],
+      "syns": [
+        "wicked",
+        "villainous",
+        "iniquitous",
+        "heinous"
+      ],
       "src": ""
     },
     {
       "w": "pogrom",
-      "pos": "noun",
+      "pos": "명사",
       "def": "특정 집단에 대한 조직적 학살 또는 박해",
-      "syns": ["massacre", "persecution", "ethnic cleansing"],
+      "syns": [
+        "massacre",
+        "persecution",
+        "ethnic cleansing"
+      ],
       "src": ""
     },
     {
       "w": "hawkish",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "매파적인; 강경한 (특히 군사·경제 정책 관련)",
-      "syns": ["bellicose", "aggressive", "militant", "hard-line"],
+      "syns": [
+        "bellicose",
+        "aggressive",
+        "militant",
+        "hard-line"
+      ],
       "src": ""
     },
     {
       "w": "raillery",
-      "pos": "noun",
+      "pos": "명사",
       "def": "선의의 놀림; 유쾌한 농담",
-      "syns": ["banter", "teasing", "ribbing", "persiflage"],
+      "syns": [
+        "banter",
+        "teasing",
+        "ribbing",
+        "persiflage"
+      ],
       "src": ""
     },
     {
       "w": "maunder",
-      "pos": "verb",
+      "pos": "동사",
       "def": "횡설수설하다; 두서없이 말하거나 돌아다니다",
-      "syns": ["ramble", "babble", "wander", "meander"],
+      "syns": [
+        "ramble",
+        "babble",
+        "wander",
+        "meander"
+      ],
       "src": ""
     },
     {
       "w": "enigma",
-      "pos": "noun",
+      "pos": "명사",
       "def": "수수께끼 같은 인물 또는 사물",
-      "syns": ["mystery", "puzzle", "riddle", "conundrum"],
+      "syns": [
+        "mystery",
+        "puzzle",
+        "riddle",
+        "conundrum"
+      ],
       "src": ""
     },
     {
       "w": "altruism",
-      "pos": "noun",
+      "pos": "명사",
       "def": "이타주의; 타인을 위해 자신의 이익을 포기하는 태도",
-      "syns": ["selflessness", "philanthropy", "benevolence"],
+      "syns": [
+        "selflessness",
+        "philanthropy",
+        "benevolence"
+      ],
       "src": ""
     },
     {
       "w": "jettison",
-      "pos": "verb",
+      "pos": "동사",
       "def": "버리다; 포기하다; 짐을 내버리다",
-      "syns": ["discard", "abandon", "dump", "shed"],
+      "syns": [
+        "discard",
+        "abandon",
+        "dump",
+        "shed"
+      ],
       "src": ""
     },
     {
       "w": "locus",
-      "pos": "noun",
+      "pos": "명사",
       "def": "소재; 위치; 중심점 (locus of control: 통제의 소재)",
-      "syns": ["center", "site", "position", "locale"],
+      "syns": [
+        "center",
+        "site",
+        "position",
+        "locale"
+      ],
       "src": ""
     }
   ]
