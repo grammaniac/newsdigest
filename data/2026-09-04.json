@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "연준 이사 월러 발언에 뉴욕 증시 급등",
@@ -26,6 +27,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "엔비디아, 허깅페이스 130억 달러에 인수",
@@ -55,6 +57,7 @@
     },
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "트럼프-이란 전쟁 6개월 교착, 친숙한 압박 전략으로 복귀",
@@ -92,6 +95,7 @@
     },
     {
       "name": "New York Review of Books",
+      "tag": "Essays",
       "stories": [
         {
           "lead": "다트머스의 굴복, 명문대의 비겁함을 논하다",
@@ -109,6 +113,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "어린 시절 설탕 섭취, 성인 암·노화에 지속적 영향",
@@ -130,6 +135,7 @@
     },
     {
       "name": "Word Daily",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: cully",
@@ -139,6 +145,7 @@
     },
     {
       "name": "Word Genius",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: phrontistery",
@@ -148,6 +155,7 @@
     },
     {
       "name": "Word Smarts",
+      "tag": "표현·언어",
       "stories": [
         {
           "lead": "관용어 Under the weather와 Flash in the pan의 어원",
@@ -161,18 +169,148 @@
     }
   ],
   "vocab": [
-    {"w": "sanguine", "pos": "형용사", "def": "낙관적인, 자신감 넘치는", "syns": ["optimistic", "buoyant", "hopeful"], "src": ""},
-    {"w": "craven", "pos": "형용사", "def": "겁쟁이 같은, 비겁한", "syns": ["cowardly", "pusillanimous", "spineless"], "src": ""},
-    {"w": "ardent", "pos": "형용사", "def": "열렬한, 열정적인", "syns": ["fervent", "zealous", "passionate"], "src": ""},
-    {"w": "intractable", "pos": "형용사", "def": "다루기 어려운, 완고한", "syns": ["stubborn", "obstinate", "recalcitrant"], "src": ""},
-    {"w": "devolution", "pos": "명사", "def": "권한 이양, 분권화", "syns": ["decentralization", "delegation", "transfer"], "src": ""},
-    {"w": "penmanship", "pos": "명사", "def": "필법, 글씨 쓰기", "syns": ["calligraphy", "handwriting", "script"], "src": ""},
-    {"w": "embolden", "pos": "동사", "def": "용기를 북돋우다", "syns": ["encourage", "fortify", "hearten"], "src": ""},
-    {"w": "secessionist", "pos": "명사/형용사", "def": "분리독립론자", "syns": ["separatist", "breakaway", "schismatic"], "src": ""},
-    {"w": "connoisseurship", "pos": "명사", "def": "감정 능력, 전문가적 안목", "syns": ["expertise", "discernment", "refinement"], "src": ""},
-    {"w": "galvanize", "pos": "동사", "def": "자극하다, 충격을 주어 행동하게 만들다", "syns": ["stimulate", "energize", "mobilize"], "src": ""},
-    {"w": "stridently", "pos": "부사", "def": "거세게, 목소리 높여", "syns": ["vociferously", "vehemently", "clamorously"], "src": ""},
-    {"w": "phrontistery", "pos": "명사", "def": "사색하는 장소", "syns": ["study", "sanctum", "retreat"], "src": "Word Genius"},
-    {"w": "cully", "pos": "동사/명사", "def": "속이다, 사기 치다; 쉽게 속는 사람", "syns": ["dupe", "deceive", "hoodwink"], "src": "Word Daily"}
+    {
+      "w": "sanguine",
+      "pos": "형용사",
+      "def": "낙관적인, 자신감 넘치는",
+      "syns": [
+        "optimistic",
+        "buoyant",
+        "hopeful"
+      ],
+      "src": ""
+    },
+    {
+      "w": "craven",
+      "pos": "형용사",
+      "def": "겁쟁이 같은, 비겁한",
+      "syns": [
+        "cowardly",
+        "pusillanimous",
+        "spineless"
+      ],
+      "src": ""
+    },
+    {
+      "w": "ardent",
+      "pos": "형용사",
+      "def": "열렬한, 열정적인",
+      "syns": [
+        "fervent",
+        "zealous",
+        "passionate"
+      ],
+      "src": ""
+    },
+    {
+      "w": "intractable",
+      "pos": "형용사",
+      "def": "다루기 어려운, 완고한",
+      "syns": [
+        "stubborn",
+        "obstinate",
+        "recalcitrant"
+      ],
+      "src": ""
+    },
+    {
+      "w": "devolution",
+      "pos": "명사",
+      "def": "권한 이양, 분권화",
+      "syns": [
+        "decentralization",
+        "delegation",
+        "transfer"
+      ],
+      "src": ""
+    },
+    {
+      "w": "penmanship",
+      "pos": "명사",
+      "def": "필법, 글씨 쓰기",
+      "syns": [
+        "calligraphy",
+        "handwriting",
+        "script"
+      ],
+      "src": ""
+    },
+    {
+      "w": "embolden",
+      "pos": "동사",
+      "def": "용기를 북돋우다",
+      "syns": [
+        "encourage",
+        "fortify",
+        "hearten"
+      ],
+      "src": ""
+    },
+    {
+      "w": "secessionist",
+      "pos": "명사/형용사",
+      "def": "분리독립론자",
+      "syns": [
+        "separatist",
+        "breakaway",
+        "schismatic"
+      ],
+      "src": ""
+    },
+    {
+      "w": "connoisseurship",
+      "pos": "명사",
+      "def": "감정 능력, 전문가적 안목",
+      "syns": [
+        "expertise",
+        "discernment",
+        "refinement"
+      ],
+      "src": ""
+    },
+    {
+      "w": "galvanize",
+      "pos": "동사",
+      "def": "자극하다, 충격을 주어 행동하게 만들다",
+      "syns": [
+        "stimulate",
+        "energize",
+        "mobilize"
+      ],
+      "src": ""
+    },
+    {
+      "w": "stridently",
+      "pos": "부사",
+      "def": "거세게, 목소리 높여",
+      "syns": [
+        "vociferously",
+        "vehemently",
+        "clamorously"
+      ],
+      "src": ""
+    },
+    {
+      "w": "phrontistery",
+      "pos": "명사",
+      "def": "사색하는 장소",
+      "syns": [
+        "study",
+        "sanctum",
+        "retreat"
+      ],
+      "src": "Word Genius"
+    },
+    {
+      "w": "cully",
+      "pos": "동사/명사",
+      "def": "속이다, 사기 치다; 쉽게 속는 사람",
+      "syns": [
+        "dupe",
+        "deceive",
+        "hoodwink"
+      ],
+      "src": "Word Daily"
+    }
   ]
 }
