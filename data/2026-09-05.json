@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "OpenAI AI 에이전트들, Hugging Face 인프라 침입",
@@ -58,6 +59,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "미국 8월 고용 16만 2천 명, 연준 9월 금리 인상 유력",
@@ -111,6 +113,7 @@
     },
     {
       "name": "The Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "민주당, WSJ 보도 후 펫터만 의원 공개 질타",
@@ -140,6 +143,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "UMass, Rutgers 원정 37대21 대파 최대 이변",
@@ -173,6 +177,7 @@
     },
     {
       "name": "Word Smarts",
+      "tag": "표현·언어",
       "stories": [
         {
           "lead": "Z세대 슬랭 사전 등재",
@@ -198,6 +203,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "Shingrix 백신, 심혈관 위험 9% 감소",
@@ -223,91 +229,143 @@
       "w": "fugleman",
       "pos": "명사",
       "def": "집단의 선두 지휘자; 정치 조직가",
-      "syns": ["ringleader", "marshal", "vanguard"],
+      "syns": [
+        "ringleader",
+        "marshal",
+        "vanguard"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "autoptic",
       "pos": "형용사",
       "def": "직접 목격한; 자신의 눈으로 본",
-      "syns": ["firsthand", "eyewitness", "observed"],
+      "syns": [
+        "firsthand",
+        "eyewitness",
+        "observed"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "harrowing",
       "pos": "형용사",
       "def": "몹시 고통스러운, 괴로운",
-      "syns": ["agonizing", "distressing", "traumatic"],
+      "syns": [
+        "agonizing",
+        "distressing",
+        "traumatic"
+      ],
       "src": ""
     },
     {
       "w": "obsequious",
       "pos": "형용사",
       "def": "비굴하게 아첨하는",
-      "syns": ["sycophantic", "fawning", "servile"],
+      "syns": [
+        "sycophantic",
+        "fawning",
+        "servile"
+      ],
       "src": ""
     },
     {
       "w": "blatherskite",
       "pos": "명사",
       "def": "헛소리; 허튼소리를 늘어놓는 사람",
-      "syns": ["prattle", "drivel", "balderdash"],
+      "syns": [
+        "prattle",
+        "drivel",
+        "balderdash"
+      ],
       "src": ""
     },
     {
       "w": "nepotism",
       "pos": "명사",
       "def": "족벌주의, 연고주의",
-      "syns": ["cronyism", "favoritism", "patronage"],
+      "syns": [
+        "cronyism",
+        "favoritism",
+        "patronage"
+      ],
       "src": ""
     },
     {
       "w": "vapidity",
       "pos": "명사",
       "def": "공허함, 무미건조함",
-      "syns": ["inanity", "banality", "insipidity"],
+      "syns": [
+        "inanity",
+        "banality",
+        "insipidity"
+      ],
       "src": ""
     },
     {
       "w": "crepitate",
       "pos": "동사",
       "def": "바스락거리다; 딱딱 소리를 내다",
-      "syns": ["crackle", "rustle", "snap"],
+      "syns": [
+        "crackle",
+        "rustle",
+        "snap"
+      ],
       "src": ""
     },
     {
       "w": "razzmatazz",
       "pos": "명사",
       "def": "화려하지만 실속 없는 과시",
-      "syns": ["showmanship", "pageantry", "glitz"],
+      "syns": [
+        "showmanship",
+        "pageantry",
+        "glitz"
+      ],
       "src": ""
     },
     {
       "w": "cumbersome",
       "pos": "형용사",
       "def": "다루기 불편한, 번거로운",
-      "syns": ["unwieldy", "burdensome", "ponderous"],
+      "syns": [
+        "unwieldy",
+        "burdensome",
+        "ponderous"
+      ],
       "src": ""
     },
     {
       "w": "deft",
       "pos": "형용사",
       "def": "능숙한, 솜씨 있는",
-      "syns": ["adroit", "adept", "nimble"],
+      "syns": [
+        "adroit",
+        "adept",
+        "nimble"
+      ],
       "src": ""
     },
     {
       "w": "embargo",
       "pos": "명사",
       "def": "수출입 금지령, 통상 금지",
-      "syns": ["prohibition", "blockade", "moratorium"],
+      "syns": [
+        "prohibition",
+        "blockade",
+        "moratorium"
+      ],
       "src": ""
     },
     {
       "w": "substantive",
       "pos": "형용사",
       "def": "실질적인, 내용 있는",
-      "syns": ["meaningful", "consequential", "weighty"],
+      "syns": [
+        "meaningful",
+        "consequential",
+        "weighty"
+      ],
       "src": ""
     }
   ]
