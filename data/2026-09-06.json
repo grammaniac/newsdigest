@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "NYT Today's Headlines",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "펜타곤 기밀유출 추적: 합동참모부 약 50명 거짓말탐지기 검사",
@@ -42,6 +43,7 @@
     },
     {
       "name": "NYT Editor Picks",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "유튜버 그렉 치즘, 딸들과의 바이럴 영상으로 성공 후 경찰 방문으로 경력 마감",
@@ -71,6 +73,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "워크(Woke)의 변화: 정체성에서 계급으로",
@@ -100,6 +103,7 @@
     },
     {
       "name": "NY Review of Books",
+      "tag": "News",
       "stories": [
         {
           "lead": "'앵커-아웃': 보트 위에 사는 캘리포니아 노숙자들",
@@ -125,6 +129,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "WNBA 커미셔너 캐시 엥겔버트 연말 은퇴",
@@ -154,6 +159,7 @@
     },
     {
       "name": "Word Daily",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: portentous (형용사)",
@@ -163,6 +169,7 @@
     },
     {
       "name": "Word Genius",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: nimiety (명사, ni-MAHY-i-tee)",
@@ -172,6 +179,7 @@
     },
     {
       "name": "Word Smarts",
+      "tag": "표현·언어",
       "stories": [
         {
           "lead": "영국과 미국의 다른 관용어 6가지",
@@ -181,6 +189,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "호르몬 대체 요법(HRT), 치매 위험 10% 낮춰",
@@ -204,107 +213,167 @@
   "vocab": [
     {
       "w": "portentous",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "불길한, 징조를 나타내는; 경이로운; 거드름피우는",
-      "syns": ["ominous", "foreboding", "prodigious"],
+      "syns": [
+        "ominous",
+        "foreboding",
+        "prodigious"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "nimiety",
-      "pos": "noun",
+      "pos": "명사",
       "def": "과잉 상태; 필요 이상으로 많음",
-      "syns": ["excess", "surfeit", "superabundance"],
+      "syns": [
+        "excess",
+        "surfeit",
+        "superabundance"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "polygraph",
-      "pos": "noun",
+      "pos": "명사",
       "def": "거짓말탐지기 검사; 생리적 반응을 측정하여 거짓말 여부를 판단하는 장치",
-      "syns": ["lie detector", "deception test", "veracity test"],
+      "syns": [
+        "lie detector",
+        "deception test",
+        "veracity test"
+      ],
       "src": ""
     },
     {
       "w": "mistrial",
-      "pos": "noun",
+      "pos": "명사",
       "def": "심리 무효; 배심원 의견 불일치 또는 절차상 오류로 인한 재판 무효화",
-      "syns": ["hung trial", "null verdict", "aborted trial"],
+      "syns": [
+        "hung trial",
+        "null verdict",
+        "aborted trial"
+      ],
       "src": ""
     },
     {
       "w": "inscrutable",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "불가해한; 표정이나 의도를 헤아리기 어려운",
-      "syns": ["mysterious", "enigmatic", "unfathomable"],
+      "syns": [
+        "mysterious",
+        "enigmatic",
+        "unfathomable"
+      ],
       "src": ""
     },
     {
       "w": "bourgeois",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "부르주아적인; 중산층의 가치관과 생활방식에 집착하는",
-      "syns": ["middle-class", "conventional", "materialistic"],
+      "syns": [
+        "middle-class",
+        "conventional",
+        "materialistic"
+      ],
       "src": ""
     },
     {
       "w": "countenance",
-      "pos": "verb",
+      "pos": "동사",
       "def": "묵인하다; 동의하거나 허용하다",
-      "syns": ["tolerate", "sanction", "condone"],
+      "syns": [
+        "tolerate",
+        "sanction",
+        "condone"
+      ],
       "src": ""
     },
     {
       "w": "conundrum",
-      "pos": "noun",
+      "pos": "명사",
       "def": "수수께끼; 풀기 어려운 복잡한 문제",
-      "syns": ["puzzle", "enigma", "quandary"],
+      "syns": [
+        "puzzle",
+        "enigma",
+        "quandary"
+      ],
       "src": ""
     },
     {
       "w": "enclave",
-      "pos": "noun",
+      "pos": "명사",
       "def": "고립된 지역; 주변과 다른 특성을 가진 소수집단 거주지",
-      "syns": ["territory", "pocket", "bastion"],
+      "syns": [
+        "territory",
+        "pocket",
+        "bastion"
+      ],
       "src": ""
     },
     {
       "w": "nonagenarian",
-      "pos": "noun",
+      "pos": "명사",
       "def": "90대 노인; 90세에서 99세 사이의 사람",
-      "syns": ["elder", "senior", "aged person"],
+      "syns": [
+        "elder",
+        "senior",
+        "aged person"
+      ],
       "src": ""
     },
     {
       "w": "cruciverbalist",
-      "pos": "noun",
+      "pos": "명사",
       "def": "십자말풀이 애호가; 크로스워드 퍼즐을 즐기는 사람",
-      "syns": ["crossword enthusiast", "puzzle solver", "wordsmith"],
+      "syns": [
+        "crossword enthusiast",
+        "puzzle solver",
+        "wordsmith"
+      ],
       "src": ""
     },
     {
       "w": "fabulism",
-      "pos": "noun",
+      "pos": "명사",
       "def": "우화적 이야기 기법; 현실에 환상적 요소가 섞인 서사 방식",
-      "syns": ["magical realism", "fantasy narrative", "mythopoeia"],
+      "syns": [
+        "magical realism",
+        "fantasy narrative",
+        "mythopoeia"
+      ],
       "src": ""
     },
     {
       "w": "rabble-rousing",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "대중 선동적인; 군중의 감정을 자극하여 행동을 유도하는",
-      "syns": ["inflammatory", "incendiary", "demagogic"],
+      "syns": [
+        "inflammatory",
+        "incendiary",
+        "demagogic"
+      ],
       "src": ""
     },
     {
       "w": "watershed",
-      "pos": "noun",
+      "pos": "명사",
       "def": "전환점; 역사적으로 중요한 변화가 일어나는 분수령",
-      "syns": ["turning point", "milestone", "landmark"],
+      "syns": [
+        "turning point",
+        "milestone",
+        "landmark"
+      ],
       "src": ""
     },
     {
       "w": "disparage",
-      "pos": "verb",
+      "pos": "동사",
       "def": "깎아내리다; 폄하하다; 가치를 낮추어 말하다",
-      "syns": ["denigrate", "belittle", "demean"],
+      "syns": [
+        "denigrate",
+        "belittle",
+        "demean"
+      ],
       "src": ""
     }
   ]
