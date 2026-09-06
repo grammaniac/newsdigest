@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "AI 에이전트 집단 반란",
@@ -26,6 +27,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "세계 브리핑 (9월 7일)",
@@ -43,6 +45,7 @@
     },
     {
       "name": "The Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "AI 소매 투자자 혁명",
@@ -60,6 +63,7 @@
     },
     {
       "name": "The New York Review of Books",
+      "tag": "Essays",
       "stories": [
         {
           "lead": "기후변화 교육 자료 챕터 철회",
@@ -77,6 +81,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "대학 미식축구 주요 결과",
@@ -98,6 +103,7 @@
     },
     {
       "name": "Word Smarts",
+      "tag": "표현·언어",
       "stories": [
         {
           "lead": "'A historic'인가, 'An historic'인가?",
@@ -107,6 +113,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "로만타지 피트니스 트렌드",
@@ -134,121 +141,184 @@
   "vocab": [
     {
       "w": "harrowing",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "극도로 고통스러운, 소름 끼치는",
-      "syns": ["distressing", "agonizing", "traumatic"],
+      "syns": [
+        "distressing",
+        "agonizing",
+        "traumatic"
+      ],
       "src": ""
     },
     {
       "w": "coalesce",
-      "pos": "verb",
+      "pos": "동사",
       "def": "합쳐지다, 하나로 뭉치다",
-      "syns": ["merge", "converge", "amalgamate"],
+      "syns": [
+        "merge",
+        "converge",
+        "amalgamate"
+      ],
       "src": ""
     },
     {
       "w": "commandeer",
-      "pos": "verb",
+      "pos": "동사",
       "def": "강제 징발하다, 무단으로 점유하다",
-      "syns": ["seize", "requisition", "conscript"],
+      "syns": [
+        "seize",
+        "requisition",
+        "conscript"
+      ],
       "src": ""
     },
     {
       "w": "qualms",
-      "pos": "noun",
+      "pos": "명사",
       "def": "양심의 가책, 불안, 거리낌",
-      "syns": ["misgivings", "scruples", "reservations"],
+      "syns": [
+        "misgivings",
+        "scruples",
+        "reservations"
+      ],
       "src": ""
     },
     {
       "w": "renegade",
       "pos": "noun/adjective",
       "def": "배신자, 변절자; 반체제적인",
-      "syns": ["traitor", "defector", "turncoat"],
+      "syns": [
+        "traitor",
+        "defector",
+        "turncoat"
+      ],
       "src": ""
     },
     {
       "w": "amiably",
-      "pos": "adverb",
+      "pos": "부사",
       "def": "다정하게, 상냥하게",
-      "syns": ["affably", "genially", "cordially"],
+      "syns": [
+        "affably",
+        "genially",
+        "cordially"
+      ],
       "src": ""
     },
     {
       "w": "bewildered",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "당황한, 어리둥절한",
-      "syns": ["perplexed", "baffled", "confounded"],
+      "syns": [
+        "perplexed",
+        "baffled",
+        "confounded"
+      ],
       "src": ""
     },
     {
       "w": "succumb",
-      "pos": "verb",
+      "pos": "동사",
       "def": "굴복하다, 압도당하다",
-      "syns": ["yield", "capitulate", "surrender"],
+      "syns": [
+        "yield",
+        "capitulate",
+        "surrender"
+      ],
       "src": ""
     },
     {
       "w": "connoisseurship",
-      "pos": "noun",
+      "pos": "명사",
       "def": "감식안, 전문 감정 능력",
-      "syns": ["expertise", "discernment", "connoissance"],
+      "syns": [
+        "expertise",
+        "discernment",
+        "connoissance"
+      ],
       "src": ""
     },
     {
       "w": "emulate",
-      "pos": "verb",
+      "pos": "동사",
       "def": "모방하다, 따라 하려 하다",
-      "syns": ["imitate", "replicate", "mimic"],
+      "syns": [
+        "imitate",
+        "replicate",
+        "mimic"
+      ],
       "src": ""
     },
     {
       "w": "corporeal",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "육체의, 물질적인",
-      "syns": ["physical", "bodily", "tangible"],
+      "syns": [
+        "physical",
+        "bodily",
+        "tangible"
+      ],
       "src": ""
     },
     {
       "w": "relinquishment",
-      "pos": "noun",
+      "pos": "명사",
       "def": "포기, 방기",
-      "syns": ["abandonment", "surrender", "renunciation"],
+      "syns": [
+        "abandonment",
+        "surrender",
+        "renunciation"
+      ],
       "src": ""
     },
     {
       "w": "telomere",
-      "pos": "noun",
+      "pos": "명사",
       "def": "텔로미어 (염색체 끝단 보호 구조, 세포 노화 지표)",
       "syns": [],
       "src": ""
     },
     {
       "w": "circadian",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "24시간 주기의, 일주기(日週期)의",
-      "syns": ["diurnal", "daily"],
+      "syns": [
+        "diurnal",
+        "daily"
+      ],
       "src": ""
     },
     {
       "w": "lucrative",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "수익성 높은, 돈이 되는",
-      "syns": ["profitable", "remunerative", "gainful"],
+      "syns": [
+        "profitable",
+        "remunerative",
+        "gainful"
+      ],
       "src": ""
     },
     {
       "w": "transmogrify",
-      "pos": "verb",
+      "pos": "동사",
       "def": "기이하게 변형시키다, 완전히 탈바꿈시키다",
-      "syns": ["transform", "metamorphose", "transmute"],
+      "syns": [
+        "transform",
+        "metamorphose",
+        "transmute"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "acidulous",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "약간 신, 신랄한, 날카로운",
-      "syns": ["tart", "acerbic", "biting"],
+      "syns": [
+        "tart",
+        "acerbic",
+        "biting"
+      ],
       "src": "Word Genius"
     }
   ]
