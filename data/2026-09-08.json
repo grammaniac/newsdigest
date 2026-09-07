@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "독일 작센-안할트: AfD 44% 득표, 과반에 3석 부족",
@@ -70,6 +71,7 @@
     },
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "독일 AfD 약진: 나치 면역 믿음 흔들린다",
@@ -99,6 +101,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "NFL 신규 지표 QBI 공개: 버로 1위, 스태퍼드·퍼디 공동 2위",
@@ -124,6 +127,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "마사지 후 마사지 독감 왜 생기나",
@@ -145,6 +149,7 @@
     },
     {
       "name": "Word Daily",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: Torschlusspanik",
@@ -154,6 +159,7 @@
     },
     {
       "name": "Word Genius",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: Expiscate",
@@ -167,84 +173,132 @@
       "w": "quaff",
       "pos": "동사",
       "def": "벌컥벌컥 마시다, 통쾌하게 들이켜다",
-      "syns": ["gulp", "guzzle", "imbibe"],
+      "syns": [
+        "gulp",
+        "guzzle",
+        "imbibe"
+      ],
       "src": ""
     },
     {
       "w": "beleaguered",
       "pos": "형용사",
       "def": "포위된, 사면초가에 빠진",
-      "syns": ["besieged", "embattled", "hard-pressed"],
+      "syns": [
+        "besieged",
+        "embattled",
+        "hard-pressed"
+      ],
       "src": ""
     },
     {
       "w": "unyielding",
       "pos": "형용사",
       "def": "굴하지 않는, 완고한, 양보 없는",
-      "syns": ["intransigent", "inflexible", "steadfast"],
+      "syns": [
+        "intransigent",
+        "inflexible",
+        "steadfast"
+      ],
       "src": ""
     },
     {
       "w": "tenuous",
       "pos": "형용사",
       "def": "약한, 불안정한, 희미한",
-      "syns": ["precarious", "fragile", "insubstantial"],
+      "syns": [
+        "precarious",
+        "fragile",
+        "insubstantial"
+      ],
       "src": ""
     },
     {
       "w": "in absentia",
       "pos": "부사구",
       "def": "당사자 부재 중에",
-      "syns": ["in one's absence", "by default", "unrepresented"],
+      "syns": [
+        "in one's absence",
+        "by default",
+        "unrepresented"
+      ],
       "src": ""
     },
     {
       "w": "curtail",
       "pos": "동사",
       "def": "줄이다, 제한하다, 단축하다",
-      "syns": ["reduce", "restrict", "truncate"],
+      "syns": [
+        "reduce",
+        "restrict",
+        "truncate"
+      ],
       "src": ""
     },
     {
       "w": "immunized",
       "pos": "형용사",
       "def": "면역된, 보호된",
-      "syns": ["protected", "inoculated", "shielded"],
+      "syns": [
+        "protected",
+        "inoculated",
+        "shielded"
+      ],
       "src": ""
     },
     {
       "w": "mechanistic",
       "pos": "형용사",
       "def": "기계론적인, 메커니즘에 관한",
-      "syns": ["systematic", "deterministic", "procedural"],
+      "syns": [
+        "systematic",
+        "deterministic",
+        "procedural"
+      ],
       "src": ""
     },
     {
       "w": "backsliding",
       "pos": "명사",
       "def": "후퇴, 퇴보, 타락",
-      "syns": ["regression", "deterioration", "relapse"],
+      "syns": [
+        "regression",
+        "deterioration",
+        "relapse"
+      ],
       "src": ""
     },
     {
       "w": "daunting",
       "pos": "형용사",
       "def": "위압적인, 힘겨운, 기를 꺾는",
-      "syns": ["formidable", "intimidating", "overwhelming"],
+      "syns": [
+        "formidable",
+        "intimidating",
+        "overwhelming"
+      ],
       "src": ""
     },
     {
       "w": "torschlusspanik",
       "pos": "명사",
       "def": "기회를 놓칠까 봐 느끼는 초조함",
-      "syns": ["urgency", "anxiety", "time-pressure"],
+      "syns": [
+        "urgency",
+        "anxiety",
+        "time-pressure"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "expiscate",
       "pos": "동사",
       "def": "기술이나 탐구로 알아내다",
-      "syns": ["investigate", "ferret out", "unearth"],
+      "syns": [
+        "investigate",
+        "ferret out",
+        "unearth"
+      ],
       "src": "Word Genius"
     }
   ]
