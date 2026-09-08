@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Morning Brief · 2026-09-09 — 뉴스 & GRE 어휘</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Newsreader:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f4f1ea; --bg-soft: #faf8f3; --ink: #1a1714; --ink-soft: #4a443c;
+    --line: #ddd6c8; --paper: #fffdf8; --accent: #9a2b2b; --accent-2: #b8863b;
+    --shadow: 30,25,20; --hero-grad-1: #2a2622; --hero-grad-2: #4a3b2a; --card-back: #1f1c18;
+  }
+  html[data-theme="dark"] {
+    --bg: #121010; --bg-soft: #1a1715; --ink: #ece6db; --ink-soft: #a89f90;
+    --line: #322d27; --paper: #1c1916; --accent: #e0716f; --accent-2: #d9ac5e;
+    --shadow: 0,0,0; --hero-grad-1: #0d0b0a; --hero-grad-2: #2a201a; --card-back: #0d0b0a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: "Noto Sans KR", system-ui, sans-serif; line-height: 1.7;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    transition: background .5s ease, color .5s ease;
+  }
+  .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1 !important; transform: none !important; } }
+  #progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%; z-index: 100;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width .1s linear; }
+  .topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 90;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 13px clamp(16px, 5vw, 60px); backdrop-filter: blur(12px);
+    background: color-mix(in srgb, var(--bg) 70%, transparent);
+    border-bottom: 1px solid transparent; transition: border-color .4s, background .4s; }
+  .topbar.scrolled { border-bottom-color: var(--line); }
+  .brand { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.05rem; letter-spacing: .5px; }
+  .brand b { color: var(--accent); }
+  .theme-toggle { background: none; border: 1px solid var(--line); color: var(--ink);
+    width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 1rem;
+    display: grid; place-items: center; transition: transform .4s, border-color .25s; }
+  .theme-toggle:hover { transform: rotate(20deg); border-color: var(--accent); }
+  .hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center;
+    padding: 110px clamp(20px, 6vw, 80px) 70px; position: relative; overflow: hidden;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 10%, color-mix(in srgb, var(--accent-2) 22%, transparent), transparent 60%),
+      linear-gradient(160deg, var(--hero-grad-1), var(--hero-grad-2));
+    color: #f4ede0; }
+  .hero::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E"); }
+  .hero-kicker { font-family: "Fraunces", serif; letter-spacing: 4px; text-transform: uppercase; font-size: .8rem; color: var(--accent-2); margin-bottom: 22px; }
+  .hero-date { display: inline-flex; align-items: center; gap: 10px; font-size: .9rem; color: #cbbfa9; margin-bottom: 18px; }
+  .hero-date .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 12px var(--accent-2); animation: pulse 2s infinite; }
+  .hero h1 { font-family: "Noto Serif KR", serif; font-weight: 900; font-size: clamp(2.4rem, 6.5vw, 5rem); line-height: 1.08; letter-spacing: -1px; max-width: 18ch; }
+  .hero h1 .accent { color: var(--accent-2); font-style: italic; font-family: "Fraunces", serif; }
+  .hero-summary { margin-top: 30px; max-width: 62ch; font-size: clamp(1rem, 1.6vw, 1.15rem); line-height: 1.9; color: #ded3c0; font-weight: 300; border-left: 2px solid var(--accent-2); padding-left: 22px; }
+  .hero-stats { margin-top: 44px; display: flex; flex-wrap: wrap; gap: clamp(24px, 5vw, 56px); }
+  .stat .num { font-family: "Fraunces", serif; font-size: 2.4rem; font-weight: 600; color: #fff; line-height: 1; }
+  .stat .lbl { font-size: .78rem; letter-spacing: 1px; text-transform: uppercase; color: #b3a888; margin-top: 6px; }
+  .scroll-cue { position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%); color: #b3a888; font-size: .72rem; letter-spacing: 2px; text-transform: uppercase; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .scroll-cue .line { width: 1px; height: 34px; background: linear-gradient(var(--accent-2), transparent); animation: cue 1.8s infinite; }
+  main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px, 5vw, 40px); }
+  .section { padding: 70px 0 10px; }
+  .section-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 36px; flex-wrap: wrap; }
+  .section-head h2 { font-family: "Noto Serif KR", serif; font-weight: 900; font-size: clamp(1.6rem, 3.5vw, 2.4rem); letter-spacing: -.5px; }
+  .section-head .en { font-family: "Fraunces", serif; font-style: italic; color: var(--accent); font-size: clamp(1rem, 2vw, 1.3rem); }
+  .section-head .rule { flex: 1; height: 1px; background: var(--line); min-width: 40px; }
+  .big-picture { font-size: clamp(1.05rem, 2vw, 1.3rem); line-height: 1.95; max-width: 68ch; color: var(--ink-soft); font-family: "Noto Serif KR", serif; }
+  .outlets { display: grid; gap: 26px; }
+  .outlet { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: clamp(22px, 4vw, 36px); position: relative; overflow: hidden; box-shadow: 0 1px 2px rgba(var(--shadow),.04); transition: box-shadow .35s, transform .25s, border-color .35s, background .5s; }
+  .outlet:hover { box-shadow: 0 18px 50px -22px rgba(var(--shadow),.32); transform: translateY(-3px); border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+  .outlet::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(var(--accent), var(--accent-2)); opacity: .85; }
+  .outlet-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+  .outlet-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.32rem; letter-spacing: .2px; }
+  .outlet-tag { font-size: .68rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); padding: 5px 12px; border-radius: 20px; white-space: nowrap; }
+  .stories { list-style: none; display: grid; gap: 15px; }
+  .story { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; }
+  .story .mark { font-family: "Fraunces", serif; font-weight: 600; color: var(--accent-2); font-size: .95rem; line-height: 1.9; }
+  .story p { font-size: .98rem; color: var(--ink-soft); line-height: 1.75; }
+  .story p b { color: var(--ink); font-weight: 700; }
+  .vocab-intro { color: var(--ink-soft); margin-bottom: 26px; max-width: 60ch; font-weight: 300; }
+  .vocab-intro b { color: var(--accent); font-weight: 500; }
+  .vocab-tools { display: flex; gap: 12px; margin-bottom: 28px; flex-wrap: wrap; }
+  .vbtn { font-family: "Noto Sans KR"; font-size: .82rem; font-weight: 500; cursor: pointer; background: var(--paper); border: 1px solid var(--line); color: var(--ink); padding: 9px 18px; border-radius: 30px; transition: all .25s; }
+  .vbtn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+  .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; perspective: 1600px; }
+  .card { position: relative; height: 250px; cursor: pointer; }
+  .card-inner { position: absolute; inset: 0; transition: transform .7s cubic-bezier(.4,.2,.2,1); transform-style: preserve-3d; }
+  .card:hover .card-inner, .card:focus .card-inner, .card.flipped .card-inner { transform: rotateY(180deg); }
+  .face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; border: 1px solid var(--line); overflow: hidden; }
+  .face-front { background: var(--paper); }
+  .face-front::after { content: ""; position: absolute; right: -30px; bottom: -30px; width: 120px; height: 120px; background: radial-gradient(circle, color-mix(in srgb, var(--accent-2) 18%, transparent), transparent 70%); border-radius: 50%; }
+  .pos { align-self: flex-start; font-size: .66rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); padding: 4px 11px; border-radius: 20px; margin-bottom: auto; }
+  .word { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.8rem; letter-spacing: -.5px; word-break: break-word; }
+  .word-sub { color: var(--ink-soft); font-size: .82rem; margin-top: 8px; font-weight: 300; }
+  .flip-hint { position: absolute; top: 18px; right: 18px; font-size: .7rem; color: var(--ink-soft); opacity: .55; }
+  .face-back { background: var(--card-back); color: #ece6db; transform: rotateY(180deg); border-color: transparent; justify-content: center; }
+  .face-back .def { font-family: "Noto Serif KR", serif; font-weight: 600; font-size: 1.2rem; line-height: 1.5; margin-bottom: 16px; color: #fff; }
+  .face-back .syn-label { font-size: .66rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent-2); margin-bottom: 8px; }
+  .face-back .syns { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+  .face-back .syns span { font-family: "Newsreader", serif; font-style: italic; font-size: .9rem; background: rgba(255,255,255,.08); padding: 3px 10px; border-radius: 12px; color: #e6d9c4; }
+  .face-back .src { font-size: .73rem; color: #9a9082; line-height: 1.5; border-top: 1px solid rgba(255,255,255,.1); padding-top: 12px; font-style: italic; }
+  footer { margin-top: 80px; padding: 56px clamp(16px,5vw,40px); border-top: 1px solid var(--line); text-align: center; color: var(--ink-soft); }
+  footer .f-brand { font-family: "Fraunces", serif; font-size: 1.3rem; color: var(--ink); margin-bottom: 10px; }
+  footer .f-brand b { color: var(--accent); }
+  footer .f-meta { font-size: .82rem; line-height: 1.8; }
+  @keyframes pulse { 0%,100%{ transform: scale(1); opacity: 1; } 50%{ transform: scale(1.5); opacity: .5; } }
+  @keyframes cue { 0%{ transform: scaleY(0); transform-origin: top; } 50%{ transform: scaleY(1); transform-origin: top; } 51%{ transform-origin: bottom; } 100%{ transform: scaleY(0); transform-origin: bottom; } }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; } }
+  @media (max-width: 520px) { .card { height: auto; min-height: 250px; } }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header class="topbar" id="topbar">
+  <div class="brand"><b>Morning</b> Brief</div>
+  <button class="theme-toggle" id="themeToggle" aria-label="테마 전환" title="다크/라이트 전환">◐</button>
+</header>
+
+<section class="hero">
+  <div class="hero-kicker">Daily News &amp; Vocabulary Digest</div>
+  <div class="hero-date"><span class="dot"></span><span>2026년 9월 9일 · 한국 시각 기준</span></div>
+  <h1>오늘 아침의 <span class="accent">세계</span>, 그리고 오늘의 <span class="accent">언어</span>.</h1>
+  <p class="hero-summary">미국이 이란 유조선 3척을 타격하며 중동 긴장이 고조되고 브렌트유가 배럴당 99달러를 돌파했다. 캐나다는 미국산 상품에 최대 50% 보복 관세를 부과하며 무역 전쟁이 심화되고 있다. 서안지구에서는 팔레스타인인을 향한 이스라엘 정착민 폭력이 '민족 청소' 수준에 이르렀다는 전직 장성들의 경고가 나왔다. 오픈AI는 미해결 수학 난제 나비에-스토크스 방정식을 AI로 풀었다고 주장해 학계의 논란을 낳았다.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="num" data-target="10">10</div><div class="lbl">News Outlets</div></div>
+    <div class="stat"><div class="num" data-target="44">44</div><div class="lbl">Stories</div></div>
+    <div class="stat"><div class="num" data-target="12">12</div><div class="lbl">GRE Words</div></div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<main>
+  <section class="section">
+    <div class="section-head"><h2>오늘의 핵심</h2><span class="en">The Big Picture</span><span class="rule"></span></div>
+    <p class="big-picture reveal">에너지 가격 급등과 미-이란 군사 충돌, 미-캐나다 무역 전쟁, 서안지구 정착민 폭력의 '민족 청소' 수준 악화, 전 세계 학력 저하(PISA), AI의 수학 난제 해결 주장이 오늘의 큰 그림을 이룬다.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>매체별 브리핑</h2><span class="en">By Outlet</span><span class="rule"></span></div>
+    <div class="outlets">
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">The Wall Street Journal</div><div class="outlet-tag">Business · World</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>미국, 이란 유조선 3척 타격 — 중동 긴장 고조.</b> 미 해군 함정에 대한 이란의 미사일 공격 대응으로 미국이 이란 유조선 3척을 타격했다. 중국·러시아가 이란을 지원하고 있다는 의혹도 제기됐다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>브렌트유 배럴당 99달러 돌파 — 여름 저점 대비 35% 급등.</b> 에너지 가격 급등으로 주식시장 하락과 인플레이션 재점화 우려가 커지고 있다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>IRS, 연방법 위반해 납세자 정보 ICE에 공유 — 법원이 차단.</b> 항소법원이 IRS의 ICE 추가 정보 공유를 막았다. 트럼프 행정부는 별도로 대법원에 연방 이민 데이터베이스의 중간선거 유권자 검증 활용 승인을 요청했다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>메타, AI 에이전트 '뮤즈' 출시 — 쇼핑·이메일·예약 가능.</b> 무료·월 20달러·100달러 세 가지 요금제로 제공된다. AI 연구자들은 소셜미디어 게시물 단서를 조합해 익명 계정을 특정할 수 있다는 사실도 발견했다.</p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">The Economist World in Brief</div><div class="outlet-tag">World in Brief</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>오픈AI, 나비에-스토크스 방정식 해결 주장 — 공로 분쟁으로 논란.</b> 앤트로픽 연구자와 협력한 NYU 수학자와의 공로 분쟁이 불거지며 진위 논란이 이어지고 있다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>미군, 이란 하르크섬 인근 타격 — 후티, 사우디 4개 도시 공격.</b> 이란 혁명수비대(IRGC)가 보복을 위협했다. 후티 반군의 사우디 공격으로 73명이 부상했다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>이스라엘, 영국 영사관 폐쇄·의원 12명 입국 금지.</b> 영국의 이스라엘 정착촌 무역 제재에 대한 보복이다. 캐나다·프랑스는 유사 조치 검토 중이나 미국은 동참하지 않겠다고 밝혔다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>캐나다, 미국산 상품 최대 50% 보복 관세 부과.</b> 약 200억 달러 규모의 미국산 상품이 대상이다. 8월 말 무역 협상 결렬에 따른 조치다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>아이슬란드, 트럼프의 AI 생성 지도 공유에 항의해 미 대사 초치.</b> 북미가 미국 국기로 뒤덮인 AI 생성 이미지를 트럼프가 공유한 데 대한 외교적 항의다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>르누아르 박물관에서 그림 두 점 절도 — 경찰 추격 중 정원에 버려져.</b> 프랑스 남부 르누아르 박물관에서 발생한 절도 사건이다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>노르웨이 하랄 5세 서거, 하콘 8세 즉위 — 논란 속 새 시대.</b> 엡스타인 이메일 연루 의혹과 의붓아들 강간 유죄 판결 등으로 즉위 초부터 논란이 뒤따르고 있다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>애플, 첫 폴더블 아이폰 출시 예상 — 2,000달러 이상.</b> 신임 CEO 존 터너스 체제 첫 주요 제품으로, 폴더블 시장 진입을 알리는 신호탄이 될 전망이다.</p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">The Economist Today</div><div class="outlet-tag">World in Brief</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>PISA 결과 충격 — 15세가 10년 전 14세 수준.</b> 전 세계적인 학력 저하가 심각한 수준임을 보여주는 결과다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>중국 완성차 업체, 관세 피해 해외 공장 건설 — 유럽 집중 타깃.</b> 글로벌 공급망 재편의 일환으로 중국 자동차 메이커들이 유럽에 생산 거점을 마련하고 있다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>이란 전쟁으로 해상 위협 — '새로운 실크로드' 육상 무역로 부활.</b> 해상 운송 위기로 중앙아시아 육상 루트의 전략적 가치가 재조명되고 있다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>이코노미스트 사설: 세계 지도자들이 핵전쟁의 공포를 잃어가고 있다.</b> 핵 억지력의 약화와 강대국 간 군사 충돌 위험 증가에 대한 경고다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>중국 언론·표현 자유 전례 없는 억압 수준.</b> 중국 내 공론장이 깊은 침묵 속에 있다는 분석이다.</p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">NYT: The World</div><div class="outlet-tag">Headlines · World</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>서안지구 정착민 폭력, '민족 청소' 수준 — 전직 이스라엘 장성들 경고.</b> 군인들이 정착민들과 합세하고 있으며, 네타냐후 정부는 사실상 방조하고 있다는 분석이다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>캐나다 카니 총리, 미국 무역 요구 강력 비판 — '종속 관계 강요'.</b> 미국산 상품에 15·25·50% 관세를 부과했다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>사우디, 후티 반군 공격에 강력 보복 예고.</b> 후티 반군의 사우디 도시 공격에 대한 대응으로 군사 보복을 천명했다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>러시아, 키이우 드론·미사일 공격 재개 — 3명 사망.</b> 미국 특사 방문을 위한 짧은 공격 중단 이후 재개된 것이다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>호주, 소셜미디어 알고리즘 선택 해제 법안 추진.</b> TikTok·인스타그램·페이스북 등의 알고리즘을 사용자가 선택적으로 끌 수 있도록 하는 법안이다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>독일 극우 주(州)선거 승리 — 메르츠 총리 입지 흔들.</b> 독일 내 극우 세력의 부상이 연방 정치에도 영향을 미치고 있다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>헝가리, 러시아 외교관 10명 추방 — 역사적 대전환.</b> 오랜 친러 기조를 뒤집는 헝가리의 이례적인 외교 조치다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>미국 학생 PISA 점수 25년 만에 최저치 근접.</b> 미국 교육 수준의 장기적 하락 추세가 국제 비교를 통해 다시 확인됐다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>케냐 대필 작가들, AI에 일자리 빼앗겨.</b> 해외 학생들의 논문 대필로 생계를 유지하던 케냐인들이 AI 확산으로 직업을 잃고 있다.</p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">NYT: Editor's Picks</div><div class="outlet-tag">Headlines · World</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>코언, 트럼프의 '증언 번복' 주장 반박 — '번복한 적 없다'.</b> 트럼프가 마이클 코언이 증언을 번복했다고 주장했으나 코언은 이를 부인했다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>트럼프, 뉴멕시코를 '뉴아메리카'로 개명 언급 — 반발 거세.</b> 뉴멕시코 주 개명 제안이 현지 주민과 정치권의 강한 반발을 불러일으켰다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>폭스뉴스 마리아 바르티로모의 몰락.</b> 폭스뉴스의 간판 앵커였던 바르티로모가 방송에서 물러나는 과정이 보도됐다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>뉴햄프셔 민주당 '우리가 지고 있다' — 위기감 고조.</b> 민주당의 핵심 경합 주인 뉴햄프셔에서 당 내부의 위기감이 높아지고 있다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>트럼프 관리들, 직장인 보육 지원금 전업 부모에 전환 계획 마련.</b> 일하는 부모를 위한 보육 예산을 전업 부모에게 돌리려는 계획이 드러나 논란이 예상된다.</p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">The Athletic</div><div class="outlet-tag">Sports</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>SMU, 개막전에서 플로리다 스테이트 27-24 격파 — 90분 정전 소동.</b> 탤러해시에서 90분간 정전이 발생했으나 경기는 재개되어 SMU가 승리했다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>DK 메트칼프, '남극 빙하 아래 비밀 문명' 음모론 공개 지지.</b> 피츠버그 스틸러스 와이드리버 DK 메트칼프가 인터뷰에서 음모론적 신념을 솔직하게 밝혀 화제가 됐다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>벵갈스 잭 테일러 감독 극심한 압박 — 버로우는 MVP 후보 선두.</b> 팀 성과에 대한 기대와 압박이 크지만 버로우의 활약이 팀의 버팀목 역할을 하고 있다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>정친웬, US오픈에서 스비아텍 격파 — 두 경기 연속 5-0 뒤집기.</b> 한 세트에서 5-0으로 뒤지다 역전하는 드라마틱한 경기를 두 경기 연속 재연했다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>챔피언스리그 오늘 개막 · US오픈 8강전 진행 중.</b> 유럽 최고 권위의 클럽 축구 대회가 새 시즌을 시작했다.</p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">New York Review of Books</div><div class="outlet-tag">Essays</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>카라카스의 여진 — 베네수엘라 대지진, 수천 명 사망.</b> 6월 말 카라카스 인근 대지진으로 수천 명이 숨졌다. 정부는 구조보다 치안에 집중해 시민들이 맨손으로 잔해를 헤쳐야 했다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>마두로 이후 베네수엘라, 혼돈 재개 — '전보다 더 나빴던 시절보다 더 나쁘다'.</b> 트럼프 행정부의 마두로 포획 이후 잠시 안정되는 듯했으나 잔류 정부와 치솟는 민생고로 다시 혼돈에 빠졌다.</p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">All Healthy</div><div class="outlet-tag">건강</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>적당한 칼로리 제한, 만성 염증 단백질 C3 낮춘다 — 네이처 에이징 발표.</b> 11~14% 칼로리 감량이 만성 염증과 연관된 면역 단백질 C3 수치를 낮춘다. 향후 다이어트 없이도 이 효과를 모방하는 약물 개발이 기대된다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>욕실 루파, 세균 온상 — 정기 세척·교체 필요.</b> 습기와 다공성 구조로 세균이 번식하기 쉬운 욕실 루파는 정기적인 관리가 필수다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>코크란 분석: 니코틴 전자담배, 패치·껌보다 금연 효과 높아.</b> 80개 임상시험(약 3만 명 흡연자) 분석 결과, 니코틴 전자담배가 100명 당 4명 추가 금연에 성공했다. 다만 유해물질 노출 위험은 여전하다.</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>림프 운동 유행 — 전반적 운동 효과는 확실, 림프 특이 효과는 불분명.</b> 트램펄린·림프 워킹 등이 인기를 끌고 있지만, 림프계에 대한 특별한 효과는 과학적으로 아직 불분명하다.</p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">Word Genius</div><div class="outlet-tag">News</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>오늘의 단어: Resipiscence — 잘못을 인정하고 개선하려는 회개.</b> 명사. 16세기 중세 프랑스어 유래. '잘못을 인정하고 앞으로 더 잘하겠다는 다짐이 결합된 회개'를 뜻한다.</p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">Word Daily</div><div class="outlet-tag">News</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>오늘의 단어: Shadchen — 유대식 결혼 중매인.</b> 명사. 19세기 후반 이디시어 유래. '유대식 결혼 중매인 또는 중매쟁이'를 뜻한다.</p></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>오늘의 고급 어휘</h2><span class="en">GRE &amp; Academic</span><span class="rule"></span></div>
+    <p class="vocab-intro">오늘 브리핑의 주제에서 뽑은 <b>GRE·논문 수준</b> 어휘입니다. 카드에 마우스를 올리거나 클릭하면 뜻·동의어·맥락이 나타납니다. 동의어는 그대로 GRE 동의어 연습에 쓰실 수 있습니다.</p>
+    <div class="vocab-tools">
+      <button class="vbtn" id="flipAll">전체 뒤집기</button>
+      <button class="vbtn" id="resetAll">처음으로</button>
+      <button class="vbtn" id="shuffle">섞기 🔀</button>
+    </div>
+    <div class="vocab-grid" id="vocabGrid">
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos">명사</span><span class="flip-hint">hover ⟳</span><div class="word">impunity</div><div class="word-sub">처벌이나 불이익 없이 행동할 수 있는 상태, 책임 면제</div></div>
+          <div class="face face-back"><div class="def">처벌이나 불이익 없이 행동할 수 있는 상태, 책임 면제</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>exemption</span><span>immunity</span><span>unaccountability</span><span>indemnity</span></div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos">형용사</span><span class="flip-hint">hover ⟳</span><div class="word">complicit</div><div class="word-sub">타인의 잘못이나 범죄에 공모·연루된</div></div>
+          <div class="face face-back"><div class="def">타인의 잘못이나 범죄에 공모·연루된</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>implicated</span><span>colluding</span><span>accessory</span><span>involved</span></div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos">명사</span><span class="flip-hint">hover ⟳</span><div class="word">nadir</div><div class="word-sub">최저점, 가장 침울하거나 불운한 시기</div></div>
+          <div class="face face-back"><div class="def">최저점, 가장 침울하거나 불운한 시기</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>low point</span><span>bottom</span><span>trough</span><span>abyss</span></div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos">형용사</span><span class="flip-hint">hover ⟳</span><div class="word">egalitarian</div><div class="word-sub">모든 사람이 평등한 권리와 기회를 가져야 한다는 평등주의적</div></div>
+          <div class="face face-back"><div class="def">모든 사람이 평등한 권리와 기회를 가져야 한다는 평등주의적</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>democratic</span><span>equitable</span><span>classless</span><span>leveling</span></div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos">형용사</span><span class="flip-hint">hover ⟳</span><div class="word">formidable</div><div class="word-sub">강력하고 인상적이어서 상대하기 어려운, 만만치 않은</div></div>
+          <div class="face face-back"><div class="def">강력하고 인상적이어서 상대하기 어려운, 만만치 않은</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>daunting</span><span>redoubtable</span><span>imposing</span><span>fearsome</span></div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos">형용사</span><span class="flip-hint">hover ⟳</span><div class="word">dissipated</div><div class="word-sub">흩어져 사라진, 소멸한</div></div>
+          <div class="face face-back"><div class="def">흩어져 사라진, 소멸한</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>dispersed</span><span>evaporated</span><span>vanished</span><span>dissolved</span></div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos">형용사</span><span class="flip-hint">hover ⟳</span><div class="word">semicolonial</div><div class="word-sub">공식적 식민지는 아니지만 실질적으로 외세에 종속된 반식민지적</div></div>
+          <div class="face face-back"><div class="def">공식적 식민지는 아니지만 실질적으로 외세에 종속된 반식민지적</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>dependent</span><span>subjugated</span><span>dominated</span><span>neo-colonial</span></div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos">형용사</span><span class="flip-hint">hover ⟳</span><div class="word">terse</div><div class="word-sub">간결하고 직접적이며 때로는 퉁명스러운</div></div>
+          <div class="face face-back"><div class="def">간결하고 직접적이며 때로는 퉁명스러운</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>curt</span><span>laconic</span><span>brusque</span><span>succinct</span></div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos">형용사</span><span class="flip-hint">hover ⟳</span><div class="word">unvarnished</div><div class="word-sub">꾸밈없고 솔직한, 있는 그대로의</div></div>
+          <div class="face face-back"><div class="def">꾸밈없고 솔직한, 있는 그대로의</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>blunt</span><span>candid</span><span>stark</span><span>unadulterated</span></div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos">명사</span><span class="flip-hint">hover ⟳</span><div class="word">imperialism</div><div class="word-sub">한 국가가 다른 국가를 지배·착취하는 제국주의</div></div>
+          <div class="face face-back"><div class="def">한 국가가 다른 국가를 지배·착취하는 제국주의</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>colonialism</span><span>hegemony</span><span>expansionism</span><span>domination</span></div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos">명사</span><span class="flip-hint">hover ⟳</span><div class="word">resipiscence</div><div class="word-sub">잘못을 인정하고 개선하려는 회개</div></div>
+          <div class="face face-back"><div class="def">잘못을 인정하고 개선하려는 회개</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>contrition</span><span>penitence</span><span>remorse</span><span>repentance</span></div><div class="src">Word Genius</div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos">명사</span><span class="flip-hint">hover ⟳</span><div class="word">shadchen</div><div class="word-sub">유대식 결혼 중매인</div></div>
+          <div class="face face-back"><div class="def">유대식 결혼 중매인</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"><span>matchmaker</span><span>marriage broker</span><span>go-between</span><span>intermediary</span></div><div class="src">Word Daily</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="f-brand"><b>Morning</b> Brief</div>
+  <div class="f-meta">
+    뉴스 &amp; GRE 어휘 다이제스트 · 2026년 9월 9일<br />
+    출처: The Wall Street Journal · The Economist World in Brief · The Economist Today · NYT: The World · NYT: Editor's Picks · The Athletic · New York Review of Books · All Healthy · Word Genius · Word Daily<br />
+    GRE Verbal 송종옥
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  root.classList.add("js");
+  var reveals = [].slice.call(document.querySelectorAll(".reveal"));
+  function showAll() { reveals.forEach(function (el) { el.classList.add("in"); }); }
+  if (!("IntersectionObserver" in window)) {
+    showAll();
+  } else {
+    try {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      reveals.forEach(function (el) { io.observe(el); });
+    } catch (err) { showAll(); }
+  }
+  setTimeout(showAll, 1500);
+  try {
+    var saved = localStorage.getItem("mb-theme");
+    if (saved) root.setAttribute("data-theme", saved);
+  } catch (e) {}
+  var tgl = document.getElementById("themeToggle");
+  if (tgl) tgl.addEventListener("click", function () {
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("mb-theme", next); } catch (e) {}
+  });
+  var progress = document.getElementById("progress");
+  var topbar = document.getElementById("topbar");
+  window.addEventListener("scroll", function () {
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var sc = max > 0 ? h.scrollTop / max : 0;
+    if (progress) progress.style.width = (sc * 100) + "%";
+    if (topbar) topbar.classList.toggle("scrolled", h.scrollTop > 40);
+  }, { passive: true });
+  try {
+    var nums = [].slice.call(document.querySelectorAll(".stat .num[data-target]"));
+    nums.forEach(function (el) {
+      var target = parseInt(el.getAttribute("data-target"), 10) || 0;
+      var n = 0, step = Math.max(1, Math.round(target / 30));
+      el.textContent = "0";
+      var t = setInterval(function () {
+        n += step;
+        if (n >= target) { n = target; clearInterval(t); }
+        el.textContent = String(n);
+      }, 28);
+    });
+  } catch (e) {}
+  var cards = [].slice.call(document.querySelectorAll(".card"));
+  cards.forEach(function (c) {
+    c.addEventListener("click", function () { c.classList.toggle("flipped"); });
+  });
+  var flipAll = document.getElementById("flipAll");
+  var resetAll = document.getElementById("resetAll");
+  var shuffle = document.getElementById("shuffle");
+  if (flipAll) flipAll.addEventListener("click", function () { cards.forEach(function (c) { c.classList.add("flipped"); }); });
+  if (resetAll) resetAll.addEventListener("click", function () { cards.forEach(function (c) { c.classList.remove("flipped"); }); });
+  if (shuffle) shuffle.addEventListener("click", function () {
+    var grid = document.getElementById("vocabGrid");
+    if (!grid) return;
+    var items = [].slice.call(grid.children);
+    for (var i = items.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      grid.insertBefore(items[j], items[i].nextSibling);
+      items = [].slice.call(grid.children);
+    }
+  });
+})();
+</script>
+</body>
+</html>

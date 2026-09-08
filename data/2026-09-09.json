@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "미국, 이란 유조선 3척 타격 — 중동 긴장 고조",
@@ -26,6 +27,7 @@
     },
     {
       "name": "The Economist World in Brief",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "오픈AI, 나비에-스토크스 방정식 해결 주장 — 공로 분쟁으로 논란",
@@ -63,6 +65,7 @@
     },
     {
       "name": "The Economist Today",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "PISA 결과 충격 — 15세가 10년 전 14세 수준",
@@ -88,6 +91,7 @@
     },
     {
       "name": "NYT: The World",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "서안지구 정착민 폭력, '민족 청소' 수준 — 전직 이스라엘 장성들 경고",
@@ -129,6 +133,7 @@
     },
     {
       "name": "NYT: Editor's Picks",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "코언, 트럼프의 '증언 번복' 주장 반박 — '번복한 적 없다'",
@@ -154,6 +159,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "SMU, 개막전에서 플로리다 스테이트 27-24 격파 — 90분 정전 소동",
@@ -179,6 +185,7 @@
     },
     {
       "name": "New York Review of Books",
+      "tag": "Essays",
       "stories": [
         {
           "lead": "카라카스의 여진 — 베네수엘라 대지진, 수천 명 사망",
@@ -192,6 +199,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "적당한 칼로리 제한, 만성 염증 단백질 C3 낮춘다 — 네이처 에이징 발표",
@@ -213,6 +221,7 @@
     },
     {
       "name": "Word Genius",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: Resipiscence — 잘못을 인정하고 개선하려는 회개",
@@ -222,6 +231,7 @@
     },
     {
       "name": "Word Daily",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: Shadchen — 유대식 결혼 중매인",
@@ -233,86 +243,146 @@
   "vocab": [
     {
       "w": "impunity",
-      "pos": "noun",
+      "pos": "명사",
       "def": "처벌이나 불이익 없이 행동할 수 있는 상태, 책임 면제",
-      "syns": ["exemption", "immunity", "unaccountability", "indemnity"],
+      "syns": [
+        "exemption",
+        "immunity",
+        "unaccountability",
+        "indemnity"
+      ],
       "src": ""
     },
     {
       "w": "complicit",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "타인의 잘못이나 범죄에 공모·연루된",
-      "syns": ["implicated", "colluding", "accessory", "involved"],
+      "syns": [
+        "implicated",
+        "colluding",
+        "accessory",
+        "involved"
+      ],
       "src": ""
     },
     {
       "w": "nadir",
-      "pos": "noun",
+      "pos": "명사",
       "def": "최저점, 가장 침울하거나 불운한 시기",
-      "syns": ["low point", "bottom", "trough", "abyss"],
+      "syns": [
+        "low point",
+        "bottom",
+        "trough",
+        "abyss"
+      ],
       "src": ""
     },
     {
       "w": "egalitarian",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "모든 사람이 평등한 권리와 기회를 가져야 한다는 평등주의적",
-      "syns": ["democratic", "equitable", "classless", "leveling"],
+      "syns": [
+        "democratic",
+        "equitable",
+        "classless",
+        "leveling"
+      ],
       "src": ""
     },
     {
       "w": "formidable",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "강력하고 인상적이어서 상대하기 어려운, 만만치 않은",
-      "syns": ["daunting", "redoubtable", "imposing", "fearsome"],
+      "syns": [
+        "daunting",
+        "redoubtable",
+        "imposing",
+        "fearsome"
+      ],
       "src": ""
     },
     {
       "w": "dissipated",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "흩어져 사라진, 소멸한",
-      "syns": ["dispersed", "evaporated", "vanished", "dissolved"],
+      "syns": [
+        "dispersed",
+        "evaporated",
+        "vanished",
+        "dissolved"
+      ],
       "src": ""
     },
     {
       "w": "semicolonial",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "공식적 식민지는 아니지만 실질적으로 외세에 종속된 반식민지적",
-      "syns": ["dependent", "subjugated", "dominated", "neo-colonial"],
+      "syns": [
+        "dependent",
+        "subjugated",
+        "dominated",
+        "neo-colonial"
+      ],
       "src": ""
     },
     {
       "w": "terse",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "간결하고 직접적이며 때로는 퉁명스러운",
-      "syns": ["curt", "laconic", "brusque", "succinct"],
+      "syns": [
+        "curt",
+        "laconic",
+        "brusque",
+        "succinct"
+      ],
       "src": ""
     },
     {
       "w": "unvarnished",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "꾸밈없고 솔직한, 있는 그대로의",
-      "syns": ["blunt", "candid", "stark", "unadulterated"],
+      "syns": [
+        "blunt",
+        "candid",
+        "stark",
+        "unadulterated"
+      ],
       "src": ""
     },
     {
       "w": "imperialism",
-      "pos": "noun",
+      "pos": "명사",
       "def": "한 국가가 다른 국가를 지배·착취하는 제국주의",
-      "syns": ["colonialism", "hegemony", "expansionism", "domination"],
+      "syns": [
+        "colonialism",
+        "hegemony",
+        "expansionism",
+        "domination"
+      ],
       "src": ""
     },
     {
       "w": "resipiscence",
-      "pos": "noun",
+      "pos": "명사",
       "def": "잘못을 인정하고 개선하려는 회개",
-      "syns": ["contrition", "penitence", "remorse", "repentance"],
+      "syns": [
+        "contrition",
+        "penitence",
+        "remorse",
+        "repentance"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "shadchen",
-      "pos": "noun",
+      "pos": "명사",
       "def": "유대식 결혼 중매인",
-      "syns": ["matchmaker", "marriage broker", "go-between", "intermediary"],
+      "syns": [
+        "matchmaker",
+        "marriage broker",
+        "go-between",
+        "intermediary"
+      ],
       "src": "Word Daily"
     }
   ]
