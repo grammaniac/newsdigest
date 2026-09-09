@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "AI 교실 침공: 빅테크 vs. 공교육 사명",
@@ -30,6 +31,7 @@
     },
     {
       "name": "The Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "공화당 중간선거 전당대회, 달라스서 이틀간 개최",
@@ -75,6 +77,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "OpenAI, 나비에-스토크스 방정식 풀었다는 보고",
@@ -136,6 +139,7 @@
     },
     {
       "name": "The New York Review of Books",
+      "tag": "Essays",
       "stories": [
         {
           "lead": "반유대주의의 정치화: 마조워 리뷰",
@@ -161,6 +165,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "US 오픈: 셸턴, 알카라스 5세트 끝에 격파",
@@ -182,6 +187,7 @@
     },
     {
       "name": "Word Smarts",
+      "tag": "표현·언어",
       "stories": [
         {
           "lead": "거의 모든 사람이 잘못 쓰는 10가지 표현",
@@ -195,6 +201,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "스트레스 회복에 뇌는 1시간이 필요하다",
@@ -218,100 +225,166 @@
   "vocab": [
     {
       "w": "profligacy",
-      "pos": "noun",
+      "pos": "명사",
       "def": "낭비, 방탕; 재정적 무절제",
-      "syns": ["extravagance", "dissipation", "prodigality"],
+      "syns": [
+        "extravagance",
+        "dissipation",
+        "prodigality"
+      ],
       "src": ""
     },
     {
       "w": "galvanise",
-      "pos": "verb",
+      "pos": "동사",
       "def": "자극하다, 활성화하다; 행동에 나서게 촉발하다",
-      "syns": ["energize", "stimulate", "rouse", "spur"],
+      "syns": [
+        "energize",
+        "stimulate",
+        "rouse",
+        "spur"
+      ],
       "src": ""
     },
     {
       "w": "antithetical",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "정반대의, 대립되는",
-      "syns": ["contrary", "contradictory", "opposing", "incompatible"],
+      "syns": [
+        "contrary",
+        "contradictory",
+        "opposing",
+        "incompatible"
+      ],
       "src": ""
     },
     {
       "w": "quash",
-      "pos": "verb",
+      "pos": "동사",
       "def": "진압하다, 억누르다; 법적으로 무효화하다",
-      "syns": ["suppress", "squelch", "crush", "nullify"],
+      "syns": [
+        "suppress",
+        "squelch",
+        "crush",
+        "nullify"
+      ],
       "src": ""
     },
     {
       "w": "blistering",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "맹렬한, 극심한; 폭발적인",
-      "syns": ["scorching", "fierce", "searing", "withering"],
+      "syns": [
+        "scorching",
+        "fierce",
+        "searing",
+        "withering"
+      ],
       "src": ""
     },
     {
       "w": "alchemical",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "연금술적인, 놀라운 변환을 이루는",
-      "syns": ["transformative", "transmutative", "magical"],
+      "syns": [
+        "transformative",
+        "transmutative",
+        "magical"
+      ],
       "src": ""
     },
     {
       "w": "pious",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "경건한 척하는, 독실한; 위선적 뉘앙스 포함 가능",
-      "syns": ["sanctimonious", "devout", "reverent", "hypocritical"],
+      "syns": [
+        "sanctimonious",
+        "devout",
+        "reverent",
+        "hypocritical"
+      ],
       "src": ""
     },
     {
       "w": "pervasive",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "만연한, 널리 퍼진",
-      "syns": ["ubiquitous", "prevalent", "omnipresent", "rampant"],
+      "syns": [
+        "ubiquitous",
+        "prevalent",
+        "omnipresent",
+        "rampant"
+      ],
       "src": ""
     },
     {
       "w": "salience",
-      "pos": "noun",
+      "pos": "명사",
       "def": "현저성, 두드러짐; 뇌의 주의 자원 배분과 관련",
-      "syns": ["prominence", "conspicuousness", "relevance", "centrality"],
+      "syns": [
+        "prominence",
+        "conspicuousness",
+        "relevance",
+        "centrality"
+      ],
       "src": ""
     },
     {
       "w": "introspection",
-      "pos": "noun",
+      "pos": "명사",
       "def": "내성, 자기성찰",
-      "syns": ["self-examination", "contemplation", "rumination", "reflection"],
+      "syns": [
+        "self-examination",
+        "contemplation",
+        "rumination",
+        "reflection"
+      ],
       "src": ""
     },
     {
       "w": "nepotism",
-      "pos": "noun",
+      "pos": "명사",
       "def": "족벌주의, 연고주의",
-      "syns": ["favoritism", "cronyism", "patronage", "partiality"],
+      "syns": [
+        "favoritism",
+        "cronyism",
+        "patronage",
+        "partiality"
+      ],
       "src": ""
     },
     {
       "w": "elucidate",
-      "pos": "verb",
+      "pos": "동사",
       "def": "명확히 밝히다, 해명하다",
-      "syns": ["clarify", "illuminate", "explicate", "expound"],
+      "syns": [
+        "clarify",
+        "illuminate",
+        "explicate",
+        "expound"
+      ],
       "src": ""
     },
     {
       "w": "eleemosynary",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "자선의, 자선에 의존하는",
-      "syns": ["charitable", "philanthropic", "benevolent"],
+      "syns": [
+        "charitable",
+        "philanthropic",
+        "benevolent"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "lacertilian",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "도마뱀류의, 도마뱀에 관한",
-      "syns": ["reptilian", "saurian", "lizard-related"],
+      "syns": [
+        "reptilian",
+        "saurian",
+        "lizard-related"
+      ],
       "src": "Word Genius"
     }
   ]
