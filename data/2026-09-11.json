@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "월스트리트저널",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "트럼프, 공화당 중간선거 전당대회서 '성인 1인당 5,000달러 수표' 공약",
@@ -30,6 +31,7 @@
     },
     {
       "name": "이코노미스트 — 금주의 세계",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "후티 반군, 예멘 서부 모카 항구 장악 — 브렌트유 100달러 돌파",
@@ -79,6 +81,7 @@
     },
     {
       "name": "이코노미스트 — 오늘의 이슈",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "트럼프, 공화당 중간선거 전당대회를 자신의 집회로 전환",
@@ -100,6 +103,7 @@
     },
     {
       "name": "이코노미스트 — 이번 주",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "커버스토리: '유럽의 이슬람에 관한 진실과 거짓' — 무슬림 6%, 대다수 동화",
@@ -125,6 +129,7 @@
     },
     {
       "name": "뉴욕타임스",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "바이외 태피스트리, 영국박물관 특별 전시 — 프랑스에서 처음으로 국외 반출",
@@ -150,6 +155,7 @@
     },
     {
       "name": "뉴욕리뷰오브북스",
+      "tag": "Essays",
       "stories": [
         {
           "lead": "돌리 파튼 타계 추모 — '미국이 배출한 가장 친절한 천재'",
@@ -163,6 +169,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "NFL 1주 차: 시혹스 13, 패트리어츠 10 — 드레이크 메이 인터셉션 실수",
@@ -192,6 +199,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "관절염 환자도 달리기 안전 — 고관절 치환 수술 확률 36~48% 낮아",
@@ -213,6 +221,7 @@
     },
     {
       "name": "Word Smarts",
+      "tag": "표현·언어",
       "stories": [
         {
           "lead": "Z세대 신조어 해부 — 'cringe' 등 어휘의 의미 변천",
@@ -234,98 +243,153 @@
       "w": "cultivar",
       "pos": "명사",
       "def": "재배 육종 품종; 인위적 선발·교배로 만들어진 농업·원예 식물 변종",
-      "syns": ["variety", "strain", "hybrid"],
+      "syns": [
+        "variety",
+        "strain",
+        "hybrid"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "septuagenarian",
       "pos": "명사",
       "def": "70대(70~79세)에 해당하는 사람",
-      "syns": ["senior", "elder", "septuagenary"],
+      "syns": [
+        "senior",
+        "elder",
+        "septuagenary"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "encomium",
       "pos": "명사",
       "def": "공식적 찬사 연설 또는 글; 특정 인물을 극찬하는 형식적 표현",
-      "syns": ["panegyric", "eulogy", "tribute"],
+      "syns": [
+        "panegyric",
+        "eulogy",
+        "tribute"
+      ],
       "src": ""
     },
     {
       "w": "hawkish",
       "pos": "형용사",
       "def": "금리 인상 또는 강경 정책을 선호하는; 통화·외교 분야에서 공격적 입장을 취하는",
-      "syns": ["aggressive", "bellicose", "militant"],
+      "syns": [
+        "aggressive",
+        "bellicose",
+        "militant"
+      ],
       "src": ""
     },
     {
       "w": "inextricable",
       "pos": "형용사",
       "def": "분리하거나 풀어낼 수 없는; 서로 너무 얽혀 떼어낼 수 없는",
-      "syns": ["inseparable", "entangled", "intertwined"],
+      "syns": [
+        "inseparable",
+        "entangled",
+        "intertwined"
+      ],
       "src": ""
     },
     {
       "w": "retrofuturism",
       "pos": "명사",
       "def": "과거가 상상했던 미래 미학을 재현하는 문화 현상; 복고적 미래주의",
-      "syns": ["nostalgia-futurism", "retro-modernism"],
+      "syns": [
+        "nostalgia-futurism",
+        "retro-modernism"
+      ],
       "src": ""
     },
     {
       "w": "rabble-rouser",
       "pos": "명사",
       "def": "대중의 분노·선동 감정을 자극하는 사람",
-      "syns": ["demagogue", "agitator", "provocateur"],
+      "syns": [
+        "demagogue",
+        "agitator",
+        "provocateur"
+      ],
       "src": ""
     },
     {
       "w": "indoctrination",
       "pos": "명사",
       "def": "특정 이념이나 신념을 비판 없이 주입하는 행위; 세뇌",
-      "syns": ["brainwashing", "proselytization", "propaganda"],
+      "syns": [
+        "brainwashing",
+        "proselytization",
+        "propaganda"
+      ],
       "src": ""
     },
     {
       "w": "burgeoning",
       "pos": "형용사",
       "def": "급속히 성장하거나 번성하는",
-      "syns": ["flourishing", "thriving", "proliferating"],
+      "syns": [
+        "flourishing",
+        "thriving",
+        "proliferating"
+      ],
       "src": ""
     },
     {
       "w": "scuttlebutt",
       "pos": "명사",
       "def": "근거 없는 소문 또는 뒷말; 조직 내 비공식 정보",
-      "syns": ["gossip", "rumor", "hearsay"],
+      "syns": [
+        "gossip",
+        "rumor",
+        "hearsay"
+      ],
       "src": ""
     },
     {
       "w": "olfactory",
       "pos": "형용사",
       "def": "후각(嗅覺)에 관련된; 냄새 감지와 관련된",
-      "syns": ["nasal", "aromatic", "sensory"],
+      "syns": [
+        "nasal",
+        "aromatic",
+        "sensory"
+      ],
       "src": ""
     },
     {
       "w": "Islamism",
       "pos": "명사",
       "def": "이슬람 원리를 국가와 사회에 적용하려는 정치 이념; 이슬람주의",
-      "syns": ["political Islam", "Islamic fundamentalism", "jihadism"],
+      "syns": [
+        "political Islam",
+        "Islamic fundamentalism",
+        "jihadism"
+      ],
       "src": ""
     },
     {
       "w": "assimilate",
       "pos": "동사",
       "def": "다른 문화권에 흡수·통합되다; 새로운 환경의 규범을 내면화하다",
-      "syns": ["integrate", "absorb", "incorporate"],
+      "syns": [
+        "integrate",
+        "absorb",
+        "incorporate"
+      ],
       "src": ""
     },
     {
       "w": "painstakingly",
       "pos": "부사",
       "def": "극도로 세심하고 꼼꼼하게; 공들여",
-      "syns": ["meticulously", "assiduously", "diligently"],
+      "syns": [
+        "meticulously",
+        "assiduously",
+        "diligently"
+      ],
       "src": ""
     }
   ]
