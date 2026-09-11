@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "부통령 밴스, 이란전 관련 비공개 의견 수렴",
@@ -38,6 +39,7 @@
     },
     {
       "name": "The Wall Street Journal",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "연준 금리 인상 유력, 약 3년 만의 첫 인상",
@@ -67,6 +69,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "9·11 25주년: 반테러법이 낳은 황제적 대통령제",
@@ -112,6 +115,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "NFL 호주 개막전: 49ers, 램스 27-7 완파",
@@ -141,6 +145,7 @@
     },
     {
       "name": "Word Smarts",
+      "tag": "표현·언어",
       "stories": [
         {
           "lead": "X세대 은어 8선",
@@ -162,6 +167,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "잡식 식단이 채식보다 장수에 유리? 중국 연구 결과",
@@ -187,91 +193,160 @@
       "w": "presage",
       "pos": "verb/noun",
       "def": "예고하다, 전조가 되다; 또는 전조, 예감",
-      "syns": ["foretell", "portend", "augur", "foreshadow", "herald"],
+      "syns": [
+        "foretell",
+        "portend",
+        "augur",
+        "foreshadow",
+        "herald"
+      ],
       "src": ""
     },
     {
       "w": "luminary",
-      "pos": "noun",
+      "pos": "명사",
       "def": "저명인사, 권위자; 빛을 발하는 천체",
-      "syns": ["notable", "dignitary", "celebrity", "authority", "eminence"],
+      "syns": [
+        "notable",
+        "dignitary",
+        "celebrity",
+        "authority",
+        "eminence"
+      ],
       "src": ""
     },
     {
       "w": "aberration",
-      "pos": "noun",
+      "pos": "명사",
       "def": "이탈, 비정상적 현상; 광학적 수차",
-      "syns": ["anomaly", "deviation", "irregularity", "departure", "outlier"],
+      "syns": [
+        "anomaly",
+        "deviation",
+        "irregularity",
+        "departure",
+        "outlier"
+      ],
       "src": ""
     },
     {
       "w": "abatement",
-      "pos": "noun",
+      "pos": "명사",
       "def": "경감, 완화; 법률상 손해 감액 또는 소송 중지",
-      "syns": ["reduction", "diminution", "alleviation", "mitigation", "decrease"],
+      "syns": [
+        "reduction",
+        "diminution",
+        "alleviation",
+        "mitigation",
+        "decrease"
+      ],
       "src": ""
     },
     {
       "w": "centenarian",
-      "pos": "noun",
+      "pos": "명사",
       "def": "100세 이상의 사람",
-      "syns": ["hundredfold", "long-liver", "supercentenarian"],
+      "syns": [
+        "hundredfold",
+        "long-liver",
+        "supercentenarian"
+      ],
       "src": ""
     },
     {
       "w": "circumvention",
-      "pos": "noun",
+      "pos": "명사",
       "def": "우회, 규정 회피, 교묘한 회피",
-      "syns": ["evasion", "bypassing", "avoidance", "workaround", "skirting"],
+      "syns": [
+        "evasion",
+        "bypassing",
+        "avoidance",
+        "workaround",
+        "skirting"
+      ],
       "src": ""
     },
     {
       "w": "deadpan",
       "pos": "adjective/adverb",
       "def": "무표정한, 감정이나 유머를 전혀 드러내지 않는",
-      "syns": ["expressionless", "impassive", "straight-faced", "poker-faced", "blank"],
+      "syns": [
+        "expressionless",
+        "impassive",
+        "straight-faced",
+        "poker-faced",
+        "blank"
+      ],
       "src": ""
     },
     {
       "w": "matutinal",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "아침의, 이른 아침에 관한",
-      "syns": ["morning", "auroral", "early", "dawn"],
+      "syns": [
+        "morning",
+        "auroral",
+        "early",
+        "dawn"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "peripeteia",
-      "pos": "noun",
+      "pos": "명사",
       "def": "극적 급반전, 운명의 역전; 그리스 비극 이론의 핵심 개념",
-      "syns": ["reversal", "turnaround", "plot twist", "vicissitude", "about-face"],
+      "syns": [
+        "reversal",
+        "turnaround",
+        "plot twist",
+        "vicissitude",
+        "about-face"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "chiliad",
-      "pos": "noun",
+      "pos": "명사",
       "def": "천 개의 집합; 천 년의 기간",
-      "syns": ["millennium", "thousand", "millenary"],
+      "syns": [
+        "millennium",
+        "thousand",
+        "millenary"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "lacertilian",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "도마뱀 같은, 도마뱀류에 속하는",
-      "syns": ["lizard-like", "saurian", "reptilian"],
+      "syns": [
+        "lizard-like",
+        "saurian",
+        "reptilian"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "fulsome",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "풍부한, 넘치는; 또는 지나치게 아첨하는, 과도한",
-      "syns": ["copious", "abundant", "excessive", "effusive", "lavish"],
+      "syns": [
+        "copious",
+        "abundant",
+        "excessive",
+        "effusive",
+        "lavish"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "dromedary",
-      "pos": "noun",
+      "pos": "명사",
       "def": "단봉낙타; 특히 승용 또는 경주용으로 훈련된 아라비아 낙타",
-      "syns": ["Arabian camel", "one-humped camel", "riding camel"],
+      "syns": [
+        "Arabian camel",
+        "one-humped camel",
+        "riding camel"
+      ],
       "src": "Word Genius"
     }
   ]
