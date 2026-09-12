@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "The New York Times",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "걸프 유조선 석유 수출 위기",
@@ -18,6 +19,7 @@
     },
     {
       "name": "The Economist",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "치이카와 열풍",
@@ -59,6 +61,7 @@
     },
     {
       "name": "The New York Review of Books",
+      "tag": "Essays",
       "stories": [
         {
           "lead": "2026년 가을 문학 시즌 개막",
@@ -80,6 +83,7 @@
     },
     {
       "name": "The Athletic",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "US 오픈 결승",
@@ -101,6 +105,7 @@
     },
     {
       "name": "All Healthy",
+      "tag": "건강",
       "stories": [
         {
           "lead": "커피와 골밀도",
@@ -120,93 +125,145 @@
   "vocab": [
     {
       "w": "nodus",
-      "pos": "noun",
+      "pos": "명사",
       "def": "복잡한 상황; 문제의 핵심점 (a complication or difficult situation; a central point or focal issue)",
-      "syns": ["complication", "crux", "nexus"],
+      "syns": [
+        "complication",
+        "crux",
+        "nexus"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "anent",
-      "pos": "preposition",
+      "pos": "전치사",
       "def": "~에 관하여; ~에 대해 (concerning; about)",
-      "syns": ["concerning", "regarding", "apropos"],
+      "syns": [
+        "concerning",
+        "regarding",
+        "apropos"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "punctilious",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "격식과 예절을 세세하게 따지는; 꼼꼼한 (showing great attention to detail or correct behavior in etiquette)",
-      "syns": ["meticulous", "scrupulous", "fastidious"],
+      "syns": [
+        "meticulous",
+        "scrupulous",
+        "fastidious"
+      ],
       "src": "The Athletic"
     },
     {
       "w": "rambunctious",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "소란스러운; 통제하기 어려운 (uncontrollably exuberant; boisterous)",
-      "syns": ["boisterous", "unruly", "rowdy"],
+      "syns": [
+        "boisterous",
+        "unruly",
+        "rowdy"
+      ],
       "src": "The Athletic"
     },
     {
       "w": "seismic",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "엄청난 파급력을 지닌; 대격변적인 (of enormous proportions or effect; earth-shaking)",
-      "syns": ["momentous", "cataclysmic", "earth-shattering"],
+      "syns": [
+        "momentous",
+        "cataclysmic",
+        "earth-shattering"
+      ],
       "src": "The Athletic"
     },
     {
       "w": "wistful",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "그리움에 젖은; 아쉬운 듯한 (having or showing a feeling of vague or regretful longing)",
-      "syns": ["yearning", "nostalgic", "pensive"],
+      "syns": [
+        "yearning",
+        "nostalgic",
+        "pensive"
+      ],
       "src": "The New York Review of Books"
     },
     {
       "w": "acrid",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "씁쓸한; 신랄한; 자극적인 (having an irritatingly strong and unpleasant taste or smell; caustic in manner)",
-      "syns": ["pungent", "caustic", "bitter"],
+      "syns": [
+        "pungent",
+        "caustic",
+        "bitter"
+      ],
       "src": "The New York Review of Books"
     },
     {
       "w": "multifarious",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "매우 다양한; 다방면의 (many and of various types; having great variety)",
-      "syns": ["diverse", "manifold", "varied"],
+      "syns": [
+        "diverse",
+        "manifold",
+        "varied"
+      ],
       "src": "The New York Review of Books"
     },
     {
       "w": "circumscribed",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "한정된; 제한된 (restricted within limits; bounded)",
-      "syns": ["restricted", "limited", "bounded"],
+      "syns": [
+        "restricted",
+        "limited",
+        "bounded"
+      ],
       "src": "The New York Review of Books"
     },
     {
       "w": "imperilled",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "위험에 처한; 위기에 놓인 (put at risk of being harmed or endangered)",
-      "syns": ["endangered", "threatened", "jeopardized"],
+      "syns": [
+        "endangered",
+        "threatened",
+        "jeopardized"
+      ],
       "src": "The Economist"
     },
     {
       "w": "tantalizing",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "애태우는; 욕망이나 흥미를 자극하는 (tormenting or teasing with the sight of something desired; enticing)",
-      "syns": ["enticing", "alluring", "tempting"],
+      "syns": [
+        "enticing",
+        "alluring",
+        "tempting"
+      ],
       "src": "The New York Review of Books"
     },
     {
       "w": "behooves",
-      "pos": "verb",
+      "pos": "동사",
       "def": "~에게 마땅하다; ~의 의무이다 (it is necessary or appropriate for someone to do something)",
-      "syns": ["obligates", "befits", "is incumbent upon"],
+      "syns": [
+        "obligates",
+        "befits",
+        "is incumbent upon"
+      ],
       "src": "The Athletic"
     },
     {
       "w": "replicable",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "재현 가능한; 반복 가능한 (able to be replicated or reproduced under the same conditions)",
-      "syns": ["reproducible", "repeatable", "duplicable"],
+      "syns": [
+        "reproducible",
+        "repeatable",
+        "duplicable"
+      ],
       "src": "The Economist"
     }
   ]
