@@ -5,6 +5,7 @@
   "outlets": [
     {
       "name": "월스트리트저널 (WSJ)",
+      "tag": "Business · World",
       "stories": [
         {
           "lead": "트럼프, AI 안전 우려를 '사기'로 규정하며 규제 거부",
@@ -30,6 +31,7 @@
     },
     {
       "name": "이코노미스트 (The Economist)",
+      "tag": "World in Brief",
       "stories": [
         {
           "lead": "미 국채 금리 5% 돌파, 2023년 이후 최고치",
@@ -87,6 +89,7 @@
     },
     {
       "name": "뉴욕타임스 - The World (NYT)",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "후티 반군, 바브엘만데브 해협 장악... 사우디 마지막 석유 수출로 차단",
@@ -116,6 +119,7 @@
     },
     {
       "name": "뉴욕타임스 - 오늘의 헤드라인 (NYT)",
+      "tag": "Headlines · World",
       "stories": [
         {
           "lead": "실리콘밸리 일각, AI 개발 속도 조절 요구에 의문 제기",
@@ -129,6 +133,7 @@
     },
     {
       "name": "뉴욕서평 (NYRB)",
+      "tag": "Essays",
       "stories": [
         {
           "lead": "신간 'Heidegger Thinking', 존재와 시간 100주년 맞아 난해한 철학 대중에게 풀어내",
@@ -138,6 +143,7 @@
     },
     {
       "name": "All Healthy (건강)",
+      "tag": "건강",
       "stories": [
         {
           "lead": "플라바놀 섭취 충분한 사람 5분의 1 미만",
@@ -159,6 +165,7 @@
     },
     {
       "name": "Word Daily",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: ARBOREAL",
@@ -168,6 +175,7 @@
     },
     {
       "name": "Word Genius",
+      "tag": "News",
       "stories": [
         {
           "lead": "오늘의 단어: INSTAURATION",
@@ -177,6 +185,7 @@
     },
     {
       "name": "디 애슬레틱 (The Athletic)",
+      "tag": "Sports",
       "stories": [
         {
           "lead": "NFL 1주차: 자이언츠 28-20으로 카우보이스 꺾고 NFC 이스트 선두",
@@ -220,86 +229,134 @@
   "vocab": [
     {
       "w": "arboreal",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "나무 위에 사는 (동물에 주로 쓰임); 나무와 관련된",
-      "syns": ["sylvan", "dendrophilous", "arboraceous"],
+      "syns": [
+        "sylvan",
+        "dendrophilous",
+        "arboraceous"
+      ],
       "src": "Word Daily"
     },
     {
       "w": "instauration",
-      "pos": "noun",
+      "pos": "명사",
       "def": "무언가를 복원하거나 재건하는 행위",
-      "syns": ["restoration", "renewal", "reconstitution"],
+      "syns": [
+        "restoration",
+        "renewal",
+        "reconstitution"
+      ],
       "src": "Word Genius"
     },
     {
       "w": "windfall",
-      "pos": "noun",
+      "pos": "명사",
       "def": "뜻밖의 횡재, 예상치 못한 이익",
-      "syns": ["bonanza", "godsend", "boon"],
+      "syns": [
+        "bonanza",
+        "godsend",
+        "boon"
+      ],
       "src": ""
     },
     {
       "w": "amenable",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "기꺼이 따르는, 순응하는",
-      "syns": ["compliant", "receptive", "acquiescent"],
+      "syns": [
+        "compliant",
+        "receptive",
+        "acquiescent"
+      ],
       "src": ""
     },
     {
       "w": "baroque",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "과도하게 복잡한, 기이할 정도로 장식적인",
-      "syns": ["ornate", "flamboyant", "florid"],
+      "syns": [
+        "ornate",
+        "flamboyant",
+        "florid"
+      ],
       "src": ""
     },
     {
       "w": "esoteric",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "소수의 전문가만 이해하는, 난해한",
-      "syns": ["arcane", "abstruse", "recondite"],
+      "syns": [
+        "arcane",
+        "abstruse",
+        "recondite"
+      ],
       "src": ""
     },
     {
       "w": "propriety",
-      "pos": "noun",
+      "pos": "명사",
       "def": "올바른 행동, 예의범절의 적절성",
-      "syns": ["decorum", "rectitude", "seemliness"],
+      "syns": [
+        "decorum",
+        "rectitude",
+        "seemliness"
+      ],
       "src": ""
     },
     {
       "w": "wherewithal",
-      "pos": "noun",
+      "pos": "명사",
       "def": "필요한 수단이나 자원, 특히 돈",
-      "syns": ["means", "resources", "capability"],
+      "syns": [
+        "means",
+        "resources",
+        "capability"
+      ],
       "src": ""
     },
     {
       "w": "pariah",
-      "pos": "noun",
+      "pos": "명사",
       "def": "사회적 추방자, 왕따",
-      "syns": ["outcast", "leper", "persona non grata"],
+      "syns": [
+        "outcast",
+        "leper",
+        "persona non grata"
+      ],
       "src": ""
     },
     {
       "w": "sobering",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "진지하게 생각하게 만드는, 냉정하게 만드는",
-      "syns": ["grave", "chastening", "humbling"],
+      "syns": [
+        "grave",
+        "chastening",
+        "humbling"
+      ],
       "src": ""
     },
     {
       "w": "ineluctable",
-      "pos": "adjective",
+      "pos": "형용사",
       "def": "피할 수 없는, 불가피한",
-      "syns": ["inevitable", "inexorable", "unavoidable"],
+      "syns": [
+        "inevitable",
+        "inexorable",
+        "unavoidable"
+      ],
       "src": ""
     },
     {
       "w": "apercu",
-      "pos": "noun",
+      "pos": "명사",
       "def": "간결하고 재치 있는 논평 또는 통찰",
-      "syns": ["insight", "epigram", "bon mot"],
+      "syns": [
+        "insight",
+        "epigram",
+        "bon mot"
+      ],
       "src": ""
     }
   ]
