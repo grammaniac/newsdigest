@@ -78,8 +78,21 @@ def _syns(v):
 
 
 def normalize(raw, date):
+    # 루틴이 키 이름을 바꿔 보내는 날이 있다(2026-09-16: headline_summary/items/
+    # vocabulary/definition_ko). 계약을 벗어난 형태도 여기서 흡수한다.
+    heads = raw.get("headline_summary") or raw.get("headlines") or []
+    if isinstance(heads, str):
+        heads = [heads]
+    heads = [_text(h) for h in heads if _text(h)]
+
     hero = _text(raw.get("heroSummary") or raw.get("hero"))
-    big = _text(raw.get("bigPicture") or raw.get("big")) or hero
+    big = _text(raw.get("bigPicture") or raw.get("big"))
+    if not hero and heads:
+        hero = heads[0]          # 히어로 인용 박스 = 그날 머리기사 한 줄
+    if not big and heads:
+        big = " · ".join(heads)  # '오늘의 핵심' 본문 = 머리기사 전체
+    if not big:
+        big = hero
 
     outlets = []
     for o in raw.get("outlets") or []:
@@ -88,17 +101,18 @@ def normalize(raw, date):
         name = _text(o.get("name") or o.get("outlet"))
         if not name:
             continue
-        stories = [x for x in (_story(s) for s in (o.get("stories") or [])) if x and x["lead"]]
+        stories = [x for x in (_story(s) for s in (o.get("stories") or o.get("items") or o.get("articles") or [])) if x and x["lead"]]
         if stories:
             outlets.append({"name": name, "tag": tag_for(name), "stories": stories})
 
     vocab = []
     seen = set()
-    for v in raw.get("vocab") or []:
+    for v in raw.get("vocab") or raw.get("vocabulary") or []:
         if not isinstance(v, dict):
             continue
         w = _text(v.get("w") or v.get("word"))
-        d = _text(v.get("def") or v.get("definition") or v.get("meaning"))
+        d = _text(v.get("def") or v.get("definition") or v.get("meaning")
+              or v.get("definition_ko") or v.get("definition_en"))
         if not w or not d:
             continue
         k = w.lower()

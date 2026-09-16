@@ -1,3 +1,4 @@
 .daily_publish.log
 .today.txt
 __pycache__/
+.today.json
