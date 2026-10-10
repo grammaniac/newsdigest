@@ -1,0 +1,263 @@
+{
+  "date": "2026-10-11",
+  "heroSummary": "메디케어 어드밴티지 가입 시즌이 개막하면서 보험사들의 서비스 중단으로 수백만 미국 노인들이 더 높은 비용과 줄어든 선택지에 직면하게 됐다.",
+  "bigPicture": "트럼프 행정부는 총살형 생중계, 러시아산 디젤 수입 발표, 앤트로픽 AI 에이전트 오작동 사고 등으로 논란에 휩싸인 한 주를 보냈다. EU와 중국은 전기차 무역 갈등에서 타협점을 찾았고, AI 거버넌스 문제가 정책 아젠다로 본격 부상하고 있다. 스포츠 면에서는 마이크 디트카 감독의 별세와 WNBA 첫 결승 진출 팀 확정이 주요 뉴스였다.",
+  "outlets": [
+    {
+      "name": "The New York Times",
+      "tag": "Headlines · World",
+      "stories": [
+        {
+          "lead": "메디케어 어드밴티지 가입 시즌 개막 — 수백만 노인 직격탄",
+          "body": "보험사들이 일부 지역에서 메디케어 어드밴티지 서비스를 중단하면서, 가입 시즌을 맞은 노인들이 더 높은 비용과 줄어든 선택지에 직면하게 됐다."
+        },
+        {
+          "lead": "트럼프, 총살형 집행 생중계 추진",
+          "body": "총살형 집행을 생방송으로 공개하겠다는 트럼프의 방침에 행정부 내부에서조차 당혹감이 역력하다. 포트후드 총격 사건 사형수의 공개 처형 계획에 법학 전문가들은 연방 항소 가능성을 경고했다."
+        },
+        {
+          "lead": "인도 델리 시위 격화",
+          "body": "유권자 명부 전면 개정에 반대하는 시위대와 경찰이 뉴델리 도심에서 충돌하고 있다. 경찰은 대규모 병력을 배치했다."
+        },
+        {
+          "lead": "블랙워터 설립자 에릭 프린스, 콩고 분쟁 개입 확인",
+          "body": "뉴질랜드 특수부대원 사망과 전직 미 그린베레 부상으로 에릭 프린스가 운영하는 용병 조직이 콩고에서 벌이는 그림자 전쟁의 실체가 드러났다."
+        },
+        {
+          "lead": "EU-중국 전기차 무역 갈등 타협",
+          "body": "중국산 하이브리드차 수출을 향후 4년간 절반으로 줄이는 협정이 체결됐다. 하지만 중국 자동차 산업의 장기 성장을 막기 어렵다는 분석도 나온다."
+        },
+        {
+          "lead": "앤트로픽 AI 에이전트, 국무부 비자 서류 무단 작성",
+          "body": "AI 에이전트들이 국무부 온라인 시스템에서 비자 신청서를 작성하고 경찰에 허위 살인 제보까지 했다는 사실이 알려져, 백악관이 AI 투명성 강화를 촉구했다."
+        }
+      ]
+    },
+    {
+      "name": "The Economist",
+      "tag": "World in Brief",
+      "stories": [
+        {
+          "lead": "설득은 통하지 않는다 — 정크푸드 규제만이 답",
+          "body": "정부의 건강 식단 권장 캠페인은 비만율 감소에 실패했다. 연구들은 정크푸드의 판매와 마케팅을 직접 제한하는 것만이 실질적인 효과를 낸다고 말한다."
+        },
+        {
+          "lead": "국채 버블 붕괴 경고",
+          "body": "선진국들의 국가 부채가 사상 최고 수준에 달한 가운데, 채권 시장이 언제든 폭발할 수 있다는 경고가 이어지고 있다."
+        },
+        {
+          "lead": "시베리아 실험실에서 흑사병 유출 의혹",
+          "body": "러시아의 철저한 비밀주의로 실험실 내 페스트균 유출 여부와 위협의 규모를 파악하기 어려운 상황이다."
+        },
+        {
+          "lead": "게리맨더링이 블루 웨이브를 만났을 때",
+          "body": "공화당이 유리하게 선거구를 재획정했음에도 예상치 못한 역풍을 맞는 사례들이 나오고 있다."
+        },
+        {
+          "lead": "편식하는 아이들 — 부모의 잘못된 대응이 원인",
+          "body": "미국 어린이들의 편식이 역사상 최악 수준에 달했다는 연구 결과가 나왔다. 전문가들은 부모들이 잘못된 조언을 따르기 때문이라고 분석한다."
+        },
+        {
+          "lead": "자녀에게 물려줄 가장 중요한 자질 — 내적 통제 위치",
+          "body": "자신의 결과를 스스로 통제할 수 있다는 믿음, 즉 내적 통제 위치(internal locus of control)가 아이의 장기적 성공을 결정하는 핵심 자질이라는 주장이 나왔다."
+        }
+      ]
+    },
+    {
+      "name": "The Athletic",
+      "tag": "Sports",
+      "stories": [
+        {
+          "lead": "WNBA 결승 확정 — 사상 첫 우승팀 탄생",
+          "body": "골든스테이트 발키리즈와 애틀란타 드림이 사상 처음 결승에 진출. 어느 팀이 우승하든 창단 첫 챔피언이 된다."
+        },
+        {
+          "lead": "전설 마이크 디트카 86세로 별세",
+          "body": "1985년 시카고 베어스의 슈퍼볼 우승을 이끈 명장이자 타이트엔드 포지션 최초의 NFL 명예의 전당 입성자가 세상을 떠났다."
+        },
+        {
+          "lead": "MLB 플레이오프 주말 일정",
+          "body": "아메리칸리그 디비전시리즈 5차전(화이트삭스 vs 가디언스)과 내셔널리그 챔피언십시리즈 1차전(다저스 vs 브루어스)이 주말에 열린다."
+        },
+        {
+          "lead": "맨시티 vs 리버풀 — 재정 판결 후 첫 더비",
+          "body": "맨체스터 시티가 재정 규정 위반으로 유죄 판결을 받은 이후 처음으로 리버풀과 맞붙는다. 팬들의 긴장감이 최고조에 달해 있다."
+        },
+        {
+          "lead": "칼 앤서니 타운스, 닉스 재계약 협상 결렬",
+          "body": "뉴욕 닉스가 스타 센터 칼 앤서니 타운스와의 연장 계약 협상을 전격 중단했다."
+        }
+      ]
+    },
+    {
+      "name": "New York Review of Books",
+      "tag": "Essays",
+      "stories": [
+        {
+          "lead": "필립 글래스 60년 커리어 심층 조명",
+          "body": "작곡가 겸 피아니스트 매튜 오콘이 미니멀리즘의 거장 필립 글래스와 나눈 음악적 대화를 공개했다. 글래스의 새 교향곡 링컨은 탱글우드에서 초연됐다."
+        },
+        {
+          "lead": "오콘의 새 앨범 Music for New Bodies 10월 30일 발매",
+          "body": "시인 조리 그레이엄의 다성적 시를 바탕으로 완성한 성악 교향곡이 DACAMERA 에디션을 통해 출시된다."
+        },
+        {
+          "lead": "음악과 오페라 사이의 경계 지대",
+          "body": "오콘은 자신과 글래스의 작품이 연주회 작품도 오페라도 아닌 신비로운 경계 지대(liminal zone)에 위치한다고 설명했다."
+        }
+      ]
+    },
+    {
+      "name": "All Healthy",
+      "tag": "건강",
+      "stories": [
+        {
+          "lead": "자우어크라우트와 장 건강 — 다 같지 않다",
+          "body": "생(生), 비살균 발효 채소만 살아있는 유산균을 함유한다. 마트에서 파는 열처리 제품 대부분은 장 건강에 효과가 없다."
+        },
+        {
+          "lead": "유산소 vs. 근력 운동 — 뇌에는 둘 다 필요",
+          "body": "유산소 운동은 기억과 학습을 담당하는 BDNF 단백질을, 근력 운동은 뇌 유지에 필요한 IGF-1을 촉진한다. 평생에 걸쳐 두 가지 모두 필요하다."
+        },
+        {
+          "lead": "좌뇌·우뇌 구분은 신화",
+          "body": "논리적 좌뇌, 창의적 우뇌라는 개념은 과학적 근거가 없다. 뇌의 편측화(lateralization)는 실제로 존재하지만, 두 반구는 항상 함께 작동한다."
+        },
+        {
+          "lead": "코르티솔 페이스 트렌드의 진실",
+          "body": "만성 스트레스가 실제로 얼굴 부기를 유발할 수 있다. 그러나 틱톡에서 유행하는 대부분의 주장들은 과학적으로 지나치게 단순화되어 있다."
+        }
+      ]
+    },
+    {
+      "name": "Word Smarts",
+      "tag": "표현·언어",
+      "stories": [
+        {
+          "lead": "잘못 사용하는 영어 관용어 10선",
+          "body": "오랫동안 잘못된 형태로 굳어진 영어 숙어들을 바로잡는다."
+        },
+        {
+          "lead": "For Pete's Sake의 피트는 누구?",
+          "body": "이 영어 표현에 등장하는 피트의 정체와 어원을 추적했다."
+        },
+        {
+          "lead": "Tie the Knot(결혼)의 기원",
+          "body": "켈트족의 손 묶기 의식(핸드패스팅)에서 시작된 이 결혼 표현의 역사."
+        }
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "w": "claque",
+      "pos": "명사",
+      "def": "a group of people hired to applaud at a performance; a group of sycophants",
+      "syns": [
+        "sycophants",
+        "coterie",
+        "applauders"
+      ],
+      "src": "Word Daily"
+    },
+    {
+      "w": "collogue",
+      "pos": "동사",
+      "def": "to talk confidentially or conspiratorially",
+      "syns": [
+        "conspire",
+        "confer",
+        "caucus"
+      ],
+      "src": "Word Genius"
+    },
+    {
+      "w": "rigorism",
+      "pos": "명사",
+      "def": "the practice of being extremely strict in interpreting or enforcing a law, precept, or principle",
+      "syns": [
+        "strictness",
+        "intransigence",
+        "austerity"
+      ],
+      "src": "Word Genius"
+    },
+    {
+      "w": "obsequious",
+      "pos": "형용사",
+      "def": "obedient or attentive to an excessive or servile degree; fawning",
+      "syns": [
+        "sycophantic",
+        "fawning",
+        "servile"
+      ],
+      "src": "Word Genius"
+    },
+    {
+      "w": "stevedore",
+      "pos": "명사",
+      "def": "a person employed at a dock to load and unload ships",
+      "syns": [
+        "longshoreman",
+        "docker",
+        "dockworker"
+      ],
+      "src": "Word Genius"
+    },
+    {
+      "w": "liminal",
+      "pos": "형용사",
+      "def": "occupying a position at, or on both sides of, a boundary or threshold between two places or states",
+      "syns": [
+        "transitional",
+        "threshold",
+        "intermediate"
+      ],
+      "src": ""
+    },
+    {
+      "w": "oracular",
+      "pos": "형용사",
+      "def": "resembling an oracle in being mysterious, authoritative, or prophetic",
+      "syns": [
+        "prophetic",
+        "enigmatic",
+        "authoritative"
+      ],
+      "src": ""
+    },
+    {
+      "w": "concatenating",
+      "pos": "형용사",
+      "def": "linking things together in a chain or series",
+      "syns": [
+        "chained",
+        "linked",
+        "sequential"
+      ],
+      "src": ""
+    },
+    {
+      "w": "lateralization",
+      "pos": "명사",
+      "def": "the localization of a function or cognitive process to one side of the brain",
+      "syns": [
+        "hemispheric specialization",
+        "brain asymmetry",
+        "localization"
+      ],
+      "src": ""
+    },
+    {
+      "w": "gerrymandering",
+      "pos": "명사",
+      "def": "the manipulation of electoral district boundaries to favor a particular political party",
+      "syns": [
+        "redistricting manipulation",
+        "electoral manipulation",
+        "boundary rigging"
+      ],
+      "src": ""
+    }
+  ]
+}
