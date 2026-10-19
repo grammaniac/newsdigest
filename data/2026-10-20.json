@@ -1,0 +1,267 @@
+{
+  "date": "2026-10-20",
+  "heroSummary": "트럼프 전 대통령이 푸틴·시진핑과의 비핵화 3자 회담 의향을 밝혔다. 프랑스 폭동이 악화되며 마크롱 지지율이 15%까지 추락했고, 머스크는 미국 어린이 전원에게 스페이스X 지분을 기부하겠다고 선언했다. AI 업계는 막대한 부채로 투자자 불안이 고조되는 가운데 중국은 3분기 GDP 4.5% 성장을 기록했다.",
+  "bigPicture": "미국 정치 지형은 중간선거 3주를 앞두고 요동치고 있다. 트럼프는 우크라이나 전쟁 종결을 명분으로 전격적인 3자 정상회담 카드를 꺼냈고, 젤렌스키는 이를 항복 강요라고 맞받았다. 유럽에서는 프랑스 폭동이 마크롱 체제의 구조적 위기를 드러내는 한편, 르펜의 부상을 가속화하고 있다. AI와 우주 산업에서는 앤스로픽과 스페이스X가 각각 공익 기부와 가입자 성장으로 주목받았다.",
+  "outlets": [
+    {
+      "name": "The New York Times",
+      "tag": "Headlines · World",
+      "stories": [
+        {
+          "lead": "트럼프, 워싱턴에서의 불편한 한 주를 선거 유세로 돌파 시도",
+          "body": "중간선거 3주를 앞두고 트럼프가 캠페인 행보를 강화하며 워싱턴에서의 악재를 덮으려 하고 있다."
+        },
+        {
+          "lead": "프랑스 폭동 심화 — 체포자 2,000명 이상, 상점 3,000곳 이상 피해",
+          "body": "마크롱 대통령 지지율이 15%까지 추락했고 르펜은 대선 행보를 본격화하고 있다."
+        },
+        {
+          "lead": "젤렌스키, 트럼프가 우크라이나에 항복을 강요하고 있다고 비난",
+          "body": "트럼프의 3자 회담 제안을 둘러싸고 우크라이나와 미국 사이의 갈등이 표면화됐다."
+        },
+        {
+          "lead": "중국 3분기 GDP 4.5% 성장, 예측치 상회",
+          "body": "중국 경제가 예상보다 강한 회복세를 보이며 연간 목표 달성에 청신호가 켜졌다."
+        },
+        {
+          "lead": "머스크, 스페이스X 지분을 미국 어린이 전체에 기부 선언",
+          "body": "트럼프 계좌 프로그램과 연계해 약 110억 달러 상당의 주식을 기부할 계획을 밝혔다."
+        },
+        {
+          "lead": "예멘 후티 반군, 사우디 시설에 드론·미사일 공격",
+          "body": "사우디아라비아는 후티 공격을 이유로 FII 투자 포럼을 2027년으로 연기했다."
+        },
+        {
+          "lead": "O.J. 심슨, 수십 년간 비밀 정보원으로 활동했다는 의혹 조명",
+          "body": "심슨이 FBI 비밀 정보원으로 활동했다는 수십 년 묵은 미스터리를 NYT가 파헤쳤다."
+        }
+      ]
+    },
+    {
+      "name": "The Wall Street Journal",
+      "tag": "Business · World",
+      "stories": [
+        {
+          "lead": "트럼프, 비핵화 논의 위한 푸틴·시진핑 3자 회담 개방적 태도 표명",
+          "body": "젤렌스키 참여 여부와 무관하게 진행 가능하다고 밝혀 우크라이나 측의 반발을 샀다."
+        },
+        {
+          "lead": "머스크, 어린이 트럼프 계좌에 약 110억 달러 상당 스페이스X 주식 기부 계획",
+          "body": "미국에서 태어나는 모든 아이에게 지분을 배분하는 방식으로 추진된다."
+        },
+        {
+          "lead": "사우디 FII 포럼, 후티 공격 우려로 2027년으로 연기",
+          "body": "'사막의 다보스'로 불리는 미래투자이니셔티브 포럼이 안보 위협으로 전면 연기됐다."
+        },
+        {
+          "lead": "전 오픈AI 직원, 사내 도청·스파이 혐의로 기소 — 보석 신청 기각",
+          "body": "압둘라흐만 알포잔이 오픈AI 회의실에 도청 장치를 설치하고 사우디 왕실과 취업을 협의한 혐의로 기소됐다."
+        },
+        {
+          "lead": "경제학자 75%, 연말까지 미국 10년물 금리 5% 이상 전망",
+          "body": "WSJ 분기 설문에서 경제학자 대다수가 금리 고공행진 지속을 예측했다."
+        }
+      ]
+    },
+    {
+      "name": "The Economist",
+      "tag": "World in Brief",
+      "stories": [
+        {
+          "lead": "AI 업계 막대한 부채, 수익화 지연으로 투자자 불안 고조",
+          "body": "데이터센터 투자와 운영 비용은 폭증하는데 수익 창출 속도가 따라오지 못하며 거품 우려가 커지고 있다."
+        },
+        {
+          "lead": "텍사스 공화당, 중간선거 앞두고 정체성 위기",
+          "body": "이민, 경제, 낙태 문제를 놓고 텍사스 공화당 내부 균열이 선거전에서 드러나고 있다."
+        },
+        {
+          "lead": "프랑스 폭동, 마크롱 체제의 구조적 위기 신호",
+          "body": "마크롱이 내무장관 사임을 거부하며 사태 수습에 나섰지만 지지율 회복 전망은 어둡다."
+        },
+        {
+          "lead": "스페이스X 스타링크, 가입자 1,200만 명 돌파",
+          "body": "화요일 분기 실적 발표를 앞두고 스타링크의 급성장이 스페이스X 전체 수익을 견인하고 있다."
+        },
+        {
+          "lead": "캐나다 1인당 GDP 10년간 4% 성장 — 미국 23%의 6분의 1 수준",
+          "body": "캐나다의 생산성 침체가 국가 경쟁력 위기로 이어지고 있다는 경고가 커지고 있다."
+        },
+        {
+          "lead": "DOGE, 정부를 더 작게가 아니라 더 멍청하게 만들었다",
+          "body": "마이클 루이스의 신간은 DOGE가 역량 있는 공무원을 축출함으로써 정부 기능을 오히려 약화시켰다고 주장한다."
+        },
+        {
+          "lead": "케냐 컬트 지도자 폴 맥켄지, 191명 살해 혐의 유죄 선고",
+          "body": "희생자 대부분이 어린이였으며 컬트 신도들이 천국에 빨리 가기 위해 굶어 죽도록 강요한 것으로 드러났다."
+        },
+        {
+          "lead": "앤스로픽, 회사 지분 5%를 공익 펀드에 기부 약속",
+          "body": "AI 안전 연구에 주력하는 앤스로픽이 사회 환원 구조를 공식화했다."
+        },
+        {
+          "lead": "JAXA 화성 위성 탐사 미션(MMX) 발사",
+          "body": "일본이 포보스와 데이모스 샘플 채취를 목표로 화성 위성 탐사선을 발사했다."
+        }
+      ]
+    },
+    {
+      "name": "All Healthy",
+      "tag": "건강",
+      "stories": [
+        {
+          "lead": "장내 세균이 칼로리 흡수량에 영향 미친다는 새 연구 — 아리조나 주립대",
+          "body": "장내 미생물군 구성에 따라 같은 음식을 먹어도 흡수하는 칼로리가 달라진다는 연구 결과가 발표됐다."
+        },
+        {
+          "lead": "임산부 혈압 상승, 프탈레이트 노출과 연관 — 발생률 2016~2024년 73% 증가",
+          "body": "화장품·생활용품에 쓰이는 화학 가소제 프탈레이트가 임신 중 고혈압 위험을 높인다는 연구가 나왔다."
+        },
+        {
+          "lead": "BPC-157 '울버린 펩타이드', 6년 새 사용 건수 33배 급증 — FDA 미승인",
+          "body": "놀라운 치유 효과를 주장하는 BPC-157 펩타이드가 유행하고 있지만 안전성과 효능에 대한 검증이 부족하다."
+        }
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "w": "apothegm",
+      "pos": "명사",
+      "def": "간결한 격언; 경구; 아포리즘 — a concise saying or maxim",
+      "syns": [
+        "maxim",
+        "adage",
+        "aphorism",
+        "dictum"
+      ],
+      "src": "Word Daily"
+    },
+    {
+      "w": "repartee",
+      "pos": "명사",
+      "def": "재치 있는 즉각 응답; 위트 넘치는 대화 — conversation or speech characterized by quick, witty comments or replies",
+      "syns": [
+        "banter",
+        "wit",
+        "badinage",
+        "persiflage"
+      ],
+      "src": "Word Genius"
+    },
+    {
+      "w": "scrutator",
+      "pos": "명사",
+      "def": "면밀하게 조사하거나 감시하는 사람 — one who scrutinizes carefully",
+      "syns": [
+        "examiner",
+        "inspector",
+        "scrutineer"
+      ],
+      "src": "Word Genius"
+    },
+    {
+      "w": "percipient",
+      "pos": "형용사",
+      "def": "날카로운 지각력을 가진; 통찰력 있는 — having sharp perception or insight",
+      "syns": [
+        "perceptive",
+        "astute",
+        "discerning",
+        "keen"
+      ],
+      "src": "Word Genius"
+    },
+    {
+      "w": "eidolon",
+      "pos": "명사",
+      "def": "이상화된 이미지; 환상; 유령 같은 형상 — an idealized image or phantom",
+      "syns": [
+        "phantom",
+        "specter",
+        "apparition",
+        "ideal"
+      ],
+      "src": "Word Genius"
+    },
+    {
+      "w": "denuclearization",
+      "pos": "명사",
+      "def": "비핵화; 핵무기 철폐 과정 — the process of eliminating nuclear weapons from a region or state",
+      "syns": [
+        "disarmament",
+        "demilitarization"
+      ],
+      "src": ""
+    },
+    {
+      "w": "nativist",
+      "pos": "명사",
+      "def": "자국민 우선주의자; 이민자보다 토착민을 우대하는 정치 성향 — one who prioritizes native-born citizens over immigrants",
+      "syns": [
+        "isolationist",
+        "protectionist",
+        "nationalist"
+      ],
+      "src": ""
+    },
+    {
+      "w": "complacency",
+      "pos": "명사",
+      "def": "자기만족; 현실에 안주하는 태도 — a feeling of smug or uncritical satisfaction with oneself or one's achievements",
+      "syns": [
+        "self-satisfaction",
+        "smugness",
+        "inertia",
+        "torpor"
+      ],
+      "src": ""
+    },
+    {
+      "w": "subdue",
+      "pos": "동사",
+      "def": "진압하다; 억제하다; 통제하에 두다 — to overcome, quieten, or bring under control",
+      "syns": [
+        "suppress",
+        "quell",
+        "vanquish",
+        "overpower"
+      ],
+      "src": ""
+    },
+    {
+      "w": "lucrative",
+      "pos": "형용사",
+      "def": "수익성이 매우 높은; 돈이 되는 — producing a great deal of profit",
+      "syns": [
+        "profitable",
+        "remunerative",
+        "gainful",
+        "fruitful"
+      ],
+      "src": ""
+    },
+    {
+      "w": "conglomerate",
+      "pos": "명사",
+      "def": "복합 대기업; 다양한 산업을 아우르는 거대 기업 — a large corporation made up of a number of different companies in varied industries",
+      "syns": [
+        "cartel",
+        "syndicate",
+        "consortium",
+        "corporation"
+      ],
+      "src": ""
+    },
+    {
+      "w": "phthalates",
+      "pos": "명사",
+      "def": "프탈레이트; 화장품·플라스틱에 쓰이는 화학 가소제 — chemical compounds used as plasticizers in plastics and personal care products, linked to endocrine disruption",
+      "syns": [
+        "plasticizer",
+        "chemical additive"
+      ],
+      "src": ""
+    }
+  ]
+}
