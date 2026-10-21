@@ -1,0 +1,373 @@
+{
+  "date": "2026-10-22",
+  "heroSummary": "푸틴이 미국 중재 평화 협상에 원칙 동의하며 미국인 인질 스티브 허바드를 석방했다. 프랑스 채권 수익률이 2002년 이후 처음으로 5%를 돌파하며 포퓰리즘-채권시장 악순환이 심화되고 있다. 메타는 3분기 매출 646억 달러를 기록했지만 AI 투자 재원 마련을 위해 무의결권 신주 발행을 추진 중이다. AI가 발견한 PHP 보안 취약점이 전 세계 웹사이트 70%를 위협하고 있으며, 테슬라와 스페이스X의 합병 탐색이 수면 위로 드러났다.",
+  "bigPicture": "오늘의 공통 주제는 기존 질서의 균열이다. 러시아-우크라이나 전쟁 협상, 프랑스의 정치-경제 복합위기, 머스크의 자본 재편, 중동 동맹 구도 변화, AI의 보안 위협 등이 모두 기존 예측 가능한 틀에서 벗어나는 방향으로 전개되고 있다.",
+  "outlets": [
+    {
+      "name": "WSJ",
+      "tag": "Business · World",
+      "stories": [
+        {
+          "lead": "메타, AI 투자용 무의결권 신주 발행 추진 및 뉴멕시코 250억 달러 배상 판결",
+          "body": ""
+        },
+        {
+          "lead": "테슬라 3분기 흑자 전환, 스페이스X 합병 탐색",
+          "body": ""
+        },
+        {
+          "lead": "스타링크 속도 저하로 우크라이나 방어 차질, 의회 머스크 조사 요구",
+          "body": ""
+        },
+        {
+          "lead": "특사 위트코프 '푸틴은 인도주의자' 발언 논란",
+          "body": ""
+        },
+        {
+          "lead": "AI 도구가 PHP 치명적 취약점 발견, 웹사이트 70% 위협",
+          "body": ""
+        },
+        {
+          "lead": "리오그란데 강 고갈 위기",
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "The Economist World in Brief",
+      "tag": "World in Brief",
+      "stories": [
+        {
+          "lead": "푸틴 평화 협상 원칙 동의, 허바드 석방, 러-미 디젤 협정 논의",
+          "body": ""
+        },
+        {
+          "lead": "PHP 취약점 발견(오픈AI 모델), 웹사이트 70% 위험",
+          "body": ""
+        },
+        {
+          "lead": "메타 매출 급등, 신주 발행, 아동 안전 고소, 250억 달러 판결",
+          "body": ""
+        },
+        {
+          "lead": "테슬라 3분기 이익 787M 달러(-43% YoY), 스페이스X 44억 달러",
+          "body": ""
+        },
+        {
+          "lead": "프랑스 채권 수익률 5% 돌파, 2002년 이후 최초",
+          "body": ""
+        },
+        {
+          "lead": "EU 무역 도구 발동 검토",
+          "body": ""
+        },
+        {
+          "lead": "이베이 9% 감원",
+          "body": ""
+        },
+        {
+          "lead": "중국 역외 트러스트 20% 과세, 마감 목요일",
+          "body": ""
+        },
+        {
+          "lead": "인도-EU 무역협정 12월 서명 예정",
+          "body": ""
+        },
+        {
+          "lead": "터키 금리 결정 목요일(인플레이션 30% 미만 진입 후)",
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "The Economist Today",
+      "tag": "World in Brief",
+      "stories": [
+        {
+          "lead": "트럼프 외교정책이 '추 이론'을 붕괴시킨 분석",
+          "body": ""
+        },
+        {
+          "lead": "개인 AI 에이전트 시대 도래, 보안·신뢰성 검증 선결",
+          "body": ""
+        },
+        {
+          "lead": "미국 민주주의의 회복력은 정치인의 자제력이 아닌 제도에서",
+          "body": ""
+        },
+        {
+          "lead": "EU, 미국 우주 인프라 의존도 심각(위성 150억 유로 투자 중)",
+          "body": ""
+        },
+        {
+          "lead": "중국도 AI 안전을 우선시한다는 분석",
+          "body": ""
+        },
+        {
+          "lead": "브라질 대선 결선 접전",
+          "body": ""
+        },
+        {
+          "lead": "AI 산업 거대 부채로 투자자 불안",
+          "body": ""
+        },
+        {
+          "lead": "프랑스 정부 마비, 시위대 요구 수용 불가",
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "The Economist Insider",
+      "tag": "World in Brief",
+      "stories": [
+        {
+          "lead": "사우디-UAE 동맹 균열, 예멘·수단에서 각각 다른 편 지원",
+          "body": ""
+        },
+        {
+          "lead": "두 전쟁으로 수십만 명 사망, 2,000만 명 피란",
+          "body": ""
+        },
+        {
+          "lead": "MBS·MBZ 개인 갈등 및 금융·에너지·AI 허브 경쟁",
+          "body": ""
+        },
+        {
+          "lead": "홍해 항구 패권 다툼",
+          "body": ""
+        },
+        {
+          "lead": "이란 위협이 양국 재결속 변수",
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "NYT The World",
+      "tag": "Headlines · World",
+      "stories": [
+        {
+          "lead": "프랑스 포퓰리즘-채권시장 둠 루프, 르펜 vs 멜랑숑 2027 결선 전망",
+          "body": ""
+        },
+        {
+          "lead": "러시아 스티브 허바드 석방, 트럼프 환심 사려는 푸틴의 전략",
+          "body": ""
+        },
+        {
+          "lead": "트럼프 지지율 역대 최저, 중간선거 앞두고",
+          "body": ""
+        },
+        {
+          "lead": "테슬라-스페이스X 합병 시 기업가치 3조 달러 이상",
+          "body": ""
+        },
+        {
+          "lead": "메타 250억 달러 배상 명령",
+          "body": ""
+        },
+        {
+          "lead": "중국, AI 시스템 배포 추적·제한 규정",
+          "body": ""
+        },
+        {
+          "lead": "베네수엘라 공공주택 지진 붕괴, 설계 결함 확인",
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "NYT Today's Headlines",
+      "tag": "Headlines · World",
+      "stories": [
+        {
+          "lead": "억만장자, 트럼프 사면 위해 알리나 하바 가족에 5,000만 달러 계약 의혹",
+          "body": ""
+        },
+        {
+          "lead": "트럼프, 중간선거 막판 2주에 2억 7,700만 달러 선거자금 투입",
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "The Athletic",
+      "tag": "Sports",
+      "stories": [
+        {
+          "lead": "NBA 개막",
+          "body": "닉스 106-100 패배, 셀틱스 113-121 역전패, 선더 116-104 승리"
+        },
+        {
+          "lead": "NHL",
+          "body": "유타 매머스 파워플레이 36.1%, 맥데이빗 9경기 26포인트"
+        },
+        {
+          "lead": "오하이오 스테이트 QB 줄리안 세인 무기한 출전 불가, 시즌 위기",
+          "body": ""
+        },
+        {
+          "lead": "커맨더스 테리 맥클로린, 무릎 인대 파열로 시즌 아웃",
+          "body": ""
+        },
+        {
+          "lead": "NFL 파리 경기(스틸러스-세인츠) 폭동 속 강행",
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "All Healthy",
+      "tag": "건강",
+      "stories": [
+        {
+          "lead": "UPF 전체와 대장암 연관성 불명확, NCI 46만 명 연구",
+          "body": ""
+        },
+        {
+          "lead": "가공육은 여전히 대장암 위험 증가와 연관",
+          "body": ""
+        },
+        {
+          "lead": "개인화된 최적 수면 시간이 8시간보다 컨디션 예측력 높아",
+          "body": ""
+        }
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "w": "prefatory",
+      "pos": "형용사",
+      "def": "서론적인, 서문 역할을 하는 (serving as an introduction; introductory)",
+      "syns": [
+        "introductory",
+        "preliminary",
+        "opening"
+      ],
+      "src": "Word Genius"
+    },
+    {
+      "w": "aphyllous",
+      "pos": "형용사",
+      "def": "잎이 없는, 잎을 달지 않는 (destitute of foliage leaves)",
+      "syns": [
+        "leafless",
+        "bare",
+        "defoliated"
+      ],
+      "src": "Word Daily"
+    },
+    {
+      "w": "combustible",
+      "pos": "형용사",
+      "def": "불붙기 쉬운; (상황이) 폭발적으로 악화될 수 있는 (easily ignited; likely to cause conflict)",
+      "syns": [
+        "volatile",
+        "explosive",
+        "flammable"
+      ],
+      "src": ""
+    },
+    {
+      "w": "mollify",
+      "pos": "동사",
+      "def": "달래다, 진정시키다 (to appease the anger or anxiety of someone)",
+      "syns": [
+        "appease",
+        "placate",
+        "pacify"
+      ],
+      "src": ""
+    },
+    {
+      "w": "tumult",
+      "pos": "명사",
+      "def": "소란, 혼란, 격동 (a loud, confused noise; a state of confusion or disorder)",
+      "syns": [
+        "commotion",
+        "uproar",
+        "turmoil"
+      ],
+      "src": ""
+    },
+    {
+      "w": "quell",
+      "pos": "동사",
+      "def": "진압하다, 억제하다 (to put an end to a rebellion or other disorder by the use of force)",
+      "syns": [
+        "suppress",
+        "subdue",
+        "crush"
+      ],
+      "src": ""
+    },
+    {
+      "w": "tempestuous",
+      "pos": "형용사",
+      "def": "폭풍 같은, 격렬한 (characterized by strong and turbulent or conflicting emotions)",
+      "syns": [
+        "stormy",
+        "turbulent",
+        "volatile"
+      ],
+      "src": ""
+    },
+    {
+      "w": "adventurism",
+      "pos": "명사",
+      "def": "모험주의, 무모한 외교·군사적 개입 (the willingness to take risks in business or politics)",
+      "syns": [
+        "recklessness",
+        "brinkmanship",
+        "hawkishness"
+      ],
+      "src": ""
+    },
+    {
+      "w": "vying",
+      "pos": "동사",
+      "def": "경쟁하는, 다투는 (competing eagerly with someone for something)",
+      "syns": [
+        "competing",
+        "contending",
+        "rivaling"
+      ],
+      "src": ""
+    },
+    {
+      "w": "imperiling",
+      "pos": "동사",
+      "def": "위험에 빠뜨리는, 위태롭게 하는 (putting at risk of being harmed or destroyed)",
+      "syns": [
+        "endangering",
+        "jeopardizing",
+        "threatening"
+      ],
+      "src": ""
+    },
+    {
+      "w": "tussling",
+      "pos": "동사",
+      "def": "다투다, 실랑이하다 (engaging in a vigorous struggle or scuffle)",
+      "syns": [
+        "scuffling",
+        "wrestling",
+        "wrangling"
+      ],
+      "src": ""
+    },
+    {
+      "w": "recklessly",
+      "pos": "부사",
+      "def": "무모하게, 경솔하게 (without thinking or caring about the consequences of an action)",
+      "syns": [
+        "carelessly",
+        "rashly",
+        "heedlessly"
+      ],
+      "src": ""
+    }
+  ]
+}
