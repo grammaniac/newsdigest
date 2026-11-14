@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Morning Brief · 2026-11-15 — 뉴스 & GRE 어휘</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Newsreader:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f4f1ea; --bg-soft: #faf8f3; --ink: #1a1714; --ink-soft: #4a443c;
+    --line: #ddd6c8; --paper: #fffdf8; --accent: #9a2b2b; --accent-2: #b8863b;
+    --shadow: 30,25,20; --hero-grad-1: #2a2622; --hero-grad-2: #4a3b2a; --card-back: #1f1c18;
+  }
+  html[data-theme="dark"] {
+    --bg: #121010; --bg-soft: #1a1715; --ink: #ece6db; --ink-soft: #a89f90;
+    --line: #322d27; --paper: #1c1916; --accent: #e0716f; --accent-2: #d9ac5e;
+    --shadow: 0,0,0; --hero-grad-1: #0d0b0a; --hero-grad-2: #2a201a; --card-back: #0d0b0a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: "Noto Sans KR", system-ui, sans-serif; line-height: 1.7;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    transition: background .5s ease, color .5s ease;
+  }
+  .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1 !important; transform: none !important; } }
+  #progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%; z-index: 100;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width .1s linear; }
+  .topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 90;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 13px clamp(16px, 5vw, 60px); backdrop-filter: blur(12px);
+    background: color-mix(in srgb, var(--bg) 70%, transparent);
+    border-bottom: 1px solid transparent; transition: border-color .4s, background .4s; }
+  .topbar.scrolled { border-bottom-color: var(--line); }
+  .brand { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.05rem; letter-spacing: .5px; }
+  .brand b { color: var(--accent); }
+  .theme-toggle { background: none; border: 1px solid var(--line); color: var(--ink);
+    width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 1rem;
+    display: grid; place-items: center; transition: transform .4s, border-color .25s; }
+  .theme-toggle:hover { transform: rotate(20deg); border-color: var(--accent); }
+  .hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center;
+    padding: 110px clamp(20px, 6vw, 80px) 70px; position: relative; overflow: hidden;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 10%, color-mix(in srgb, var(--accent-2) 22%, transparent), transparent 60%),
+      linear-gradient(160deg, var(--hero-grad-1), var(--hero-grad-2));
+    color: #f4ede0; }
+  .hero::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E"); }
+  .hero-kicker { font-family: "Fraunces", serif; letter-spacing: 4px; text-transform: uppercase; font-size: .8rem; color: var(--accent-2); margin-bottom: 22px; }
+  .hero-date { display: inline-flex; align-items: center; gap: 10px; font-size: .9rem; color: #cbbfa9; margin-bottom: 18px; }
+  .hero-date .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 12px var(--accent-2); animation: pulse 2s infinite; }
+  .hero h1 { font-family: "Noto Serif KR", serif; font-weight: 900; font-size: clamp(2.4rem, 6.5vw, 5rem); line-height: 1.08; letter-spacing: -1px; max-width: 18ch; }
+  .hero h1 .accent { color: var(--accent-2); font-style: italic; font-family: "Fraunces", serif; }
+  .hero-summary { margin-top: 30px; max-width: 62ch; font-size: clamp(1rem, 1.6vw, 1.15rem); line-height: 1.9; color: #ded3c0; font-weight: 300; border-left: 2px solid var(--accent-2); padding-left: 22px; }
+  .hero-stats { margin-top: 44px; display: flex; flex-wrap: wrap; gap: clamp(24px, 5vw, 56px); }
+  .stat .num { font-family: "Fraunces", serif; font-size: 2.4rem; font-weight: 600; color: #fff; line-height: 1; }
+  .stat .lbl { font-size: .78rem; letter-spacing: 1px; text-transform: uppercase; color: #b3a888; margin-top: 6px; }
+  .scroll-cue { position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%); color: #b3a888; font-size: .72rem; letter-spacing: 2px; text-transform: uppercase; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .scroll-cue .line { width: 1px; height: 34px; background: linear-gradient(var(--accent-2), transparent); animation: cue 1.8s infinite; }
+  main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px, 5vw, 40px); }
+  .section { padding: 70px 0 10px; }
+  .section-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 36px; flex-wrap: wrap; }
+  .section-head h2 { font-family: "Noto Serif KR", serif; font-weight: 900; font-size: clamp(1.6rem, 3.5vw, 2.4rem); letter-spacing: -.5px; }
+  .section-head .en { font-family: "Fraunces", serif; font-style: italic; color: var(--accent); font-size: clamp(1rem, 2vw, 1.3rem); }
+  .section-head .rule { flex: 1; height: 1px; background: var(--line); min-width: 40px; }
+  .big-picture { font-size: clamp(1.05rem, 2vw, 1.3rem); line-height: 1.95; max-width: 68ch; color: var(--ink-soft); font-family: "Noto Serif KR", serif; }
+  .outlets { display: grid; gap: 26px; }
+  .outlet { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: clamp(22px, 4vw, 36px); position: relative; overflow: hidden; box-shadow: 0 1px 2px rgba(var(--shadow),.04); transition: box-shadow .35s, transform .25s, border-color .35s, background .5s; }
+  .outlet:hover { box-shadow: 0 18px 50px -22px rgba(var(--shadow),.32); transform: translateY(-3px); border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+  .outlet::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(var(--accent), var(--accent-2)); opacity: .85; }
+  .outlet-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+  .outlet-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.32rem; letter-spacing: .2px; }
+  .outlet-tag { font-size: .68rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); padding: 5px 12px; border-radius: 20px; white-space: nowrap; }
+  .stories { list-style: none; display: grid; gap: 15px; }
+  .story { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; }
+  .story .mark { font-family: "Fraunces", serif; font-weight: 600; color: var(--accent-2); font-size: .95rem; line-height: 1.9; }
+  .story p { font-size: .98rem; color: var(--ink-soft); line-height: 1.75; }
+  .story p b { color: var(--ink); font-weight: 700; }
+  .vocab-intro { color: var(--ink-soft); margin-bottom: 26px; max-width: 60ch; font-weight: 300; }
+  .vocab-intro b { color: var(--accent); font-weight: 500; }
+  .vocab-tools { display: flex; gap: 12px; margin-bottom: 28px; flex-wrap: wrap; }
+  .vbtn { font-family: "Noto Sans KR"; font-size: .82rem; font-weight: 500; cursor: pointer; background: var(--paper); border: 1px solid var(--line); color: var(--ink); padding: 9px 18px; border-radius: 30px; transition: all .25s; }
+  .vbtn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+  .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; perspective: 1600px; }
+  .card { position: relative; height: 250px; cursor: pointer; }
+  .card-inner { position: absolute; inset: 0; transition: transform .7s cubic-bezier(.4,.2,.2,1); transform-style: preserve-3d; }
+  .card:hover .card-inner, .card:focus .card-inner, .card.flipped .card-inner { transform: rotateY(180deg); }
+  .face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; border: 1px solid var(--line); overflow: hidden; }
+  .face-front { background: var(--paper); }
+  .face-front::after { content: ""; position: absolute; right: -30px; bottom: -30px; width: 120px; height: 120px; background: radial-gradient(circle, color-mix(in srgb, var(--accent-2) 18%, transparent), transparent 70%); border-radius: 50%; }
+  .pos { align-self: flex-start; font-size: .66rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); padding: 4px 11px; border-radius: 20px; margin-bottom: auto; }
+  .word { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.8rem; letter-spacing: -.5px; word-break: break-word; }
+  .word-sub { color: var(--ink-soft); font-size: .82rem; margin-top: 8px; font-weight: 300; }
+  .flip-hint { position: absolute; top: 18px; right: 18px; font-size: .7rem; color: var(--ink-soft); opacity: .55; }
+  .face-back { background: var(--card-back); color: #ece6db; transform: rotateY(180deg); border-color: transparent; justify-content: center; }
+  .face-back .def { font-family: "Noto Serif KR", serif; font-weight: 600; font-size: 1.2rem; line-height: 1.5; margin-bottom: 16px; color: #fff; }
+  .face-back .syn-label { font-size: .66rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent-2); margin-bottom: 8px; }
+  .face-back .syns { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+  .face-back .syns span { font-family: "Newsreader", serif; font-style: italic; font-size: .9rem; background: rgba(255,255,255,.08); padding: 3px 10px; border-radius: 12px; color: #e6d9c4; }
+  .face-back .src { font-size: .73rem; color: #9a9082; line-height: 1.5; border-top: 1px solid rgba(255,255,255,.1); padding-top: 12px; font-style: italic; }
+  footer { margin-top: 80px; padding: 56px clamp(16px,5vw,40px); border-top: 1px solid var(--line); text-align: center; color: var(--ink-soft); }
+  footer .f-brand { font-family: "Fraunces", serif; font-size: 1.3rem; color: var(--ink); margin-bottom: 10px; }
+  footer .f-brand b { color: var(--accent); }
+  footer .f-meta { font-size: .82rem; line-height: 1.8; }
+  @keyframes pulse { 0%,100%{ transform: scale(1); opacity: 1; } 50%{ transform: scale(1.5); opacity: .5; } }
+  @keyframes cue { 0%{ transform: scaleY(0); transform-origin: top; } 50%{ transform: scaleY(1); transform-origin: top; } 51%{ transform-origin: bottom; } 100%{ transform: scaleY(0); transform-origin: bottom; } }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; } }
+  @media (max-width: 520px) { .card { height: auto; min-height: 250px; } }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header class="topbar" id="topbar">
+  <div class="brand"><b>Morning</b> Brief</div>
+  <button class="theme-toggle" id="themeToggle" aria-label="테마 전환" title="다크/라이트 전환">◐</button>
+</header>
+
+<section class="hero">
+  <div class="hero-kicker">Daily News &amp; Vocabulary Digest</div>
+  <div class="hero-date"><span class="dot"></span><span>2026년 11월 15일 · 한국 시각 기준</span></div>
+  <h1>오늘 아침의 <span class="accent">세계</span>, 그리고 오늘의 <span class="accent">언어</span>.</h1>
+  <p class="hero-summary">FAA 전국 지상 대기 명령으로 미국 항공이 마비됐고, 엔비디아 스파이 스캔들과 마이크로소프트 전 세계 서비스 장애가 겹치며 기술·인프라 취약성이 부각된 하루였다.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="num" data-target="8">8</div><div class="lbl">News Outlets</div></div>
+    <div class="stat"><div class="num" data-target="36">36</div><div class="lbl">Stories</div></div>
+    <div class="stat"><div class="num" data-target="14">14</div><div class="lbl">GRE Words</div></div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<main>
+  <section class="section">
+    <div class="section-head"><h2>오늘의 핵심</h2><span class="en">The Big Picture</span><span class="rule"></span></div>
+    <p class="big-picture reveal">미국 국내에서는 기술 인프라(FAA, 마이크로소프트)의 연쇄 장애가 발생했고, 국제적으로는 AUKUS 잠수함 기지 확정, 러시아 사망자 수 유출, 이란 전쟁 확전, 중국 군부 숙청이 맞물리며 지정학적 긴장이 고조되고 있다. 국내 정치에서는 보버트 낙선 등 중도층 반발이 가시화됐고, AI를 이용한 사기 범죄가 새로운 사법 과제로 부상했다.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>매체별 브리핑</h2><span class="en">By Outlet</span><span class="rule"></span></div>
+    <div class="outlets">
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">NYT Today's Headlines</div><div class="outlet-tag">Headlines · World</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>FAA 전국 지상 대기 명령.</b> 항공 교통 관제 통신 장애로 미국 전역 이륙 일시 중단, 이후 해제</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>엔비디아 스캔들.</b> 직원의 중국 군사 기업 연루 의혹이 '스파이' 법적 정의 논쟁 촉발</p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">NYT The World</div><div class="outlet-tag">Headlines · World</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>프랑스 유도 챔피언 테디 리네르, 2027년 대선 출마 선언.</b> 중도 대안 세력으로 부상</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>AI 음성 복제 사기 3인 기소.</b> CEO·변호사 목소리 흉내 내 1억 2,900만 달러 편취</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>세계적 능력주의 붕괴.</b> 인도·프랑스 등에서 '노력하면 성공' 약속 흔들려</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>시진핑 군 고위직 대거 숙청.</b> 장성민 감찰 책임자 급부상, 대만 전쟁 준비 차질 우려</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>MLK '나에게는 꿈이 있다' 초안 발견.</b> 크리스티 경매 1,000만 달러 이상 예상</p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">WSJ What's News</div><div class="outlet-tag">Business · World</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>FAA 전국 지상 대기 명령.</b> 관제 센터 간 통신 장애 원인</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>로렌 보버트 낙선.</b> 콜로라도주에서 민주당 아일린 로바커(해군 소장 출신)에게 패배</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>마이크로소프트 전 세계 서비스 장애.</b> 70여 개국, Outlook·Teams 중단</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>메타, 예측 시장 앱 'Takes' 직원 대상 내부 테스트.</b> </p></li>
+          <li class="story"><span class="mark">▸</span><p><b>연방 의회 주치의 비위 조사 중 사임.</b> </p></li>
+          <li class="story"><span class="mark">▸</span><p><b>유니언퍼시픽·노퍽서던 713억 달러 합병.</b> 규제 당국 '심각한 우려' 표명</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>크리스마스 항공권 23% 급등.</b> 이란 전쟁발 항공유 가격 상승 원인</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>슈퍼 엘니뇨로 로키산맥 스키장 폭설 예상.</b> </p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">The Economist Today</div><div class="outlet-tag">World in Brief</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>AUKUS.</b> 호주 서부 가든 아일랜드, 2027년부터 미국 첫 해외 잠수함 기지(53년 만)</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>러시아군 우크라이나 사망자 수 유출.</b> 해커, 러시아 국방부 내부 통계 공개</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>이란인 호르무즈 해협 전선 직접 투입 보도.</b> </p></li>
+          <li class="story"><span class="mark">▸</span><p><b>자궁내막증 원인 메커니즘 과학자들이 처음으로 체계적 이해 시작.</b> </p></li>
+          <li class="story"><span class="mark">▸</span><p><b>퀘벡 전략 메이플시럽 비축량 고갈 위기.</b> </p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">The Economist This Week</div><div class="outlet-tag">World in Brief</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>미루기 습관의 과학.</b> 뇌 메커니즘과 고치는 법</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>스탠딩 데스크, 오래 앉는 것보다 건강에 더 낫지 않다는 연구 결과.</b> </p></li>
+          <li class="story"><span class="mark">▸</span><p><b>과학적 최적 수면량 분석.</b> </p></li>
+          <li class="story"><span class="mark">▸</span><p><b>도파민 디톡스 열풍에 대한 과학적 회의론.</b> </p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">The Athletic Pulse</div><div class="outlet-tag">Sports</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>FAA 지상 대기 명령으로 대학 미식축구·NBA·NHL·NFL·NWSL 팀 이동 차질, Ole Miss vs Oklahoma 일정 조정.</b> </p></li>
+          <li class="story"><span class="mark">▸</span><p><b>USMNT 감독 포체티노, 맨체스터 유나이티드(PL 18위)로 이임.</b> 펩 과르디올라 후임 거론</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>라마 잭슨, 오른쪽 엄지 골절·탈구로 6~10주 결장.</b> </p></li>
+          <li class="story"><span class="mark">▸</span><p><b>샘 하트먼(커맨더스 QB), 리얼리티 TV '더 배첼러' 출연 예정.</b> </p></li>
+          <li class="story"><span class="mark">▸</span><p><b>제이크 바우어스, 보스턴 레드삭스와 4년 5,800만 달러 계약.</b> </p></li>
+          <li class="story"><span class="mark">▸</span><p><b>USWNT 골키퍼 알리사 나에허 은퇴 선언.</b> </p></li>
+          <li class="story"><span class="mark">▸</span><p><b>F1, 르클레르 비판 기사 쓴 데일리 메일 기자 취재 금지 처분.</b> </p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">NYRB</div><div class="outlet-tag">Essays</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>영화 비평가 멜리사 앤더슨 인터뷰.</b> 감독 중심 비평, 독립 영화 건재(뉴욕), 영화 미래에 대한 낙관론</p></li>
+        </ul>
+      </article>
+
+      <article class="outlet reveal">
+        <div class="outlet-top"><div class="outlet-name">All Healthy</div><div class="outlet-tag">건강</div></div>
+        <ul class="stories">
+          <li class="story"><span class="mark">▸</span><p><b>미술관 방문이 코르티솔 22% 감소.</b> 킹스 칼리지 런던 연구, 원화가 복제품보다 효과 큼</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>하체 근력 운동과 뇌 건강.</b> 근육 젖산이 알츠하이머 예방과 연관</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>취침 전 바나나.</b> 마그네슘·칼륨·B6·트립토판으로 수면 질 향상</p></li>
+          <li class="story"><span class="mark">▸</span><p><b>감기약 복용 주의.</b> 여러 약 병용 시 동일 성분 과다 복용 위험</p></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>오늘의 고급 어휘</h2><span class="en">GRE &amp; Academic</span><span class="rule"></span></div>
+    <p class="vocab-intro">오늘 브리핑의 주제에서 뽑은 <b>GRE·논문 수준</b> 어휘입니다. 카드에 마우스를 올리거나 클릭하면 뜻·동의어·맥락이 나타납니다. 동의어는 그대로 GRE 동의어 연습에 쓰실 수 있습니다.</p>
+    <div class="vocab-tools">
+      <button class="vbtn" id="flipAll">전체 뒤집기</button>
+      <button class="vbtn" id="resetAll">처음으로</button>
+      <button class="vbtn" id="shuffle">섞기 🔀</button>
+    </div>
+    <div class="vocab-grid" id="vocabGrid">
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos"></span><span class="flip-hint">hover ⟳</span><div class="word">pinnate</div><div class="word-sub">깃털 모양의, 깃털처럼 양쪽에 가지나 잎이 나란히 늘어선</div></div>
+          <div class="face face-back"><div class="def">깃털 모양의, 깃털처럼 양쪽에 가지나 잎이 나란히 늘어선</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"></div><div class="src">Word Daily</div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos"></span><span class="flip-hint">hover ⟳</span><div class="word">opulence</div><div class="word-sub">엄청난 부, 사치스러운 풍요로움</div></div>
+          <div class="face face-back"><div class="def">엄청난 부, 사치스러운 풍요로움</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"></div><div class="src">Word Genius</div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos"></span><span class="flip-hint">hover ⟳</span><div class="word">labyrinthine</div><div class="word-sub">미로처럼 복잡하고 뒤얽힌</div></div>
+          <div class="face face-back"><div class="def">미로처럼 복잡하고 뒤얽힌</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"></div><div class="src">NYRB</div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos"></span><span class="flip-hint">hover ⟳</span><div class="word">sanguine</div><div class="word-sub">낙관적인, 희망에 찬</div></div>
+          <div class="face face-back"><div class="def">낙관적인, 희망에 찬</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"></div><div class="src">NYRB</div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos"></span><span class="flip-hint">hover ⟳</span><div class="word">hedonism</div><div class="word-sub">쾌락주의, 즐거움을 삶의 최고 목표로 여기는 사상</div></div>
+          <div class="face face-back"><div class="def">쾌락주의, 즐거움을 삶의 최고 목표로 여기는 사상</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"></div><div class="src">NYRB</div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos"></span><span class="flip-hint">hover ⟳</span><div class="word">habitue</div><div class="word-sub">단골손님, 특정 장소를 자주 찾는 사람</div></div>
+          <div class="face face-back"><div class="def">단골손님, 특정 장소를 자주 찾는 사람</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"></div><div class="src">NYRB</div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos"></span><span class="flip-hint">hover ⟳</span><div class="word">indelible</div><div class="word-sub">지울 수 없는, 영구적인, 강렬한 인상을 남기는</div></div>
+          <div class="face face-back"><div class="def">지울 수 없는, 영구적인, 강렬한 인상을 남기는</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"></div><div class="src">NYRB</div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos"></span><span class="flip-hint">hover ⟳</span><div class="word">waggishly</div><div class="word-sub">익살스럽게, 장난기 있게</div></div>
+          <div class="face face-back"><div class="def">익살스럽게, 장난기 있게</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"></div><div class="src">NYRB</div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos"></span><span class="flip-hint">hover ⟳</span><div class="word">debacle</div><div class="word-sub">갑작스러운 붕괴나 대참패, 완전한 실패</div></div>
+          <div class="face face-back"><div class="def">갑작스러운 붕괴나 대참패, 완전한 실패</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"></div><div class="src">The Athletic</div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos"></span><span class="flip-hint">hover ⟳</span><div class="word">acrimony</div><div class="word-sub">신랄함, 쓴소리, 적개심 어린 태도</div></div>
+          <div class="face face-back"><div class="def">신랄함, 쓴소리, 적개심 어린 태도</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"></div><div class="src">WSJ</div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos"></span><span class="flip-hint">hover ⟳</span><div class="word">inquisitor</div><div class="word-sub">심문관, 가혹한 조사를 수행하는 사람</div></div>
+          <div class="face face-back"><div class="def">심문관, 가혹한 조사를 수행하는 사람</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"></div><div class="src">NYT</div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos"></span><span class="flip-hint">hover ⟳</span><div class="word">embroiled</div><div class="word-sub">(분쟁·논란에) 깊이 말려든</div></div>
+          <div class="face face-back"><div class="def">(분쟁·논란에) 깊이 말려든</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"></div><div class="src">NYT</div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos"></span><span class="flip-hint">hover ⟳</span><div class="word">coveted</div><div class="word-sub">몹시 탐내는, 갈망하는</div></div>
+          <div class="face face-back"><div class="def">몹시 탐내는, 갈망하는</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"></div><div class="src">The Athletic</div></div>
+        </div>
+      </div>
+
+      <div class="card reveal" tabindex="0">
+        <div class="card-inner">
+          <div class="face face-front"><span class="pos"></span><span class="flip-hint">hover ⟳</span><div class="word">meritocratic</div><div class="word-sub">능력주의에 기반한, 실력에 따라 보상받는</div></div>
+          <div class="face face-back"><div class="def">능력주의에 기반한, 실력에 따라 보상받는</div><div class="syn-label">동의어 · Synonyms</div><div class="syns"></div><div class="src">NYT</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="f-brand"><b>Morning</b> Brief</div>
+  <div class="f-meta">
+    뉴스 &amp; GRE 어휘 다이제스트 · 2026년 11월 15일<br />
+    출처: NYT Today's Headlines · NYT The World · WSJ What's News · The Economist Today · The Economist This Week · The Athletic Pulse · NYRB · All Healthy<br />
+    GRE Verbal 송종옥
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  root.classList.add("js");
+  var reveals = [].slice.call(document.querySelectorAll(".reveal"));
+  function showAll() { reveals.forEach(function (el) { el.classList.add("in"); }); }
+  if (!("IntersectionObserver" in window)) {
+    showAll();
+  } else {
+    try {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      reveals.forEach(function (el) { io.observe(el); });
+    } catch (err) { showAll(); }
+  }
+  setTimeout(showAll, 1500);
+  try {
+    var saved = localStorage.getItem("mb-theme");
+    if (saved) root.setAttribute("data-theme", saved);
+  } catch (e) {}
+  var tgl = document.getElementById("themeToggle");
+  if (tgl) tgl.addEventListener("click", function () {
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("mb-theme", next); } catch (e) {}
+  });
+  var progress = document.getElementById("progress");
+  var topbar = document.getElementById("topbar");
+  window.addEventListener("scroll", function () {
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var sc = max > 0 ? h.scrollTop / max : 0;
+    if (progress) progress.style.width = (sc * 100) + "%";
+    if (topbar) topbar.classList.toggle("scrolled", h.scrollTop > 40);
+  }, { passive: true });
+  try {
+    var nums = [].slice.call(document.querySelectorAll(".stat .num[data-target]"));
+    nums.forEach(function (el) {
+      var target = parseInt(el.getAttribute("data-target"), 10) || 0;
+      var n = 0, step = Math.max(1, Math.round(target / 30));
+      el.textContent = "0";
+      var t = setInterval(function () {
+        n += step;
+        if (n >= target) { n = target; clearInterval(t); }
+        el.textContent = String(n);
+      }, 28);
+    });
+  } catch (e) {}
+  var cards = [].slice.call(document.querySelectorAll(".card"));
+  cards.forEach(function (c) {
+    c.addEventListener("click", function () { c.classList.toggle("flipped"); });
+  });
+  var flipAll = document.getElementById("flipAll");
+  var resetAll = document.getElementById("resetAll");
+  var shuffle = document.getElementById("shuffle");
+  if (flipAll) flipAll.addEventListener("click", function () { cards.forEach(function (c) { c.classList.add("flipped"); }); });
+  if (resetAll) resetAll.addEventListener("click", function () { cards.forEach(function (c) { c.classList.remove("flipped"); }); });
+  if (shuffle) shuffle.addEventListener("click", function () {
+    var grid = document.getElementById("vocabGrid");
+    if (!grid) return;
+    var items = [].slice.call(grid.children);
+    for (var i = items.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      grid.insertBefore(items[j], items[i].nextSibling);
+      items = [].slice.call(grid.children);
+    }
+  });
+})();
+</script>
+</body>
+</html>
